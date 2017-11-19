@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - HW 6</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h1><span class="h1-sub">A History of Social Sanctions at Harvard</span></h1>
+                <textarea id = "myTextArea" rows = "3" cols = "150">
+                    TEXT: A Broad overview of social spaces at Harvard before the sanctions </textarea>
+                <textarea id = "myTextArea" rows = "3" cols = "150">
+                    TEXT: Overview of what the sanctions are and explain who they apply to (USGSOs) </textarea>
+
+            </div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<!--<div id="categorical"></div>-->
+                <textarea id = "myTextArea" rows = "3" cols = "60">
+                    TEXT: Explanation of what constitues as a USGSO and more in-depth analysis of who the sanctions apply to </textarea>
+
+            </div>
+            <div class="col-md-6">
+                <textarea id = "myTextArea" rows = "3" cols = "60">
+                     VISUALIZATION: Test the user to see if they can identify which student groups are USGSOs out of a list of many student organizations.
+                     After the test, reveal the answers so that the user knows which organizations are USGSOs and are being targeted by this policy.</textarea>
+            </div>
+		</div>
+
+		<div class="row">
+            <div class="col-md-12">
+            <textarea id = "myTextArea" rows = "3" cols = "150">
+                       TEXT:What have the sanctions looked like since the beginning? </textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div id="timelinevis"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+            <textarea id = "myTextArea" rows = "3" cols = "150">
+                TEXT:How have the USGSOs responded? </textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                    <h1>USGSOs at Harvard</h1>
+                        <form>
+                            <input type="radio" name="stack" value="before">Before Sanctions<br>
+                            <input type="radio" name="stack" value="after" >After Sanctions<br>
+                        </form>
+                        <select class="form-control" id="sort-type" onchange="upateVis()">
+                            <option value="all">All</option>
+                            <option value="sor">Sororities</option>
+                            <option value="frat">Fraternities</option>
+                            <option value="ffc">Female Final Clubs</option>
+                            <option value="mfc">Male Final Clubs</option>
+                        </select>
+                        <div class="categories"></div>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+            <textarea id = "myTextArea" rows = "3" cols = "150">
+                TEXT: What are the driving forces behind the sanctions?
+                 Bulleted list of main reasons (one reason is comparison to other peer institutions who do not have USGSOs or got rid of them)</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+            <textarea id = "myTextArea" rows = "3" cols = "150">
+                TEXT: How does Harvard compare to its peer institutions?</textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" id="radarvis"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+            <textarea id = "myTextArea" rows = "3" cols = "150">
+                TEXT: Discussion of data presented. Moving forward/where are we now?</textarea>
+            </div>
+        </div>
+
+    </div>
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3 -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.js"></script>
+
+	<!-- Your implementation -->
+	<script src="js/categories.js"></script>
+	<script src="js/radarchart.js"></script>
+	<script src="js/radarvis.js"></script>
+    <script src="js/timelinevis.js"></script>
+    <script src="js/queue.v1.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

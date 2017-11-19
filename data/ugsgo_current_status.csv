@@ -1,0 +1,22 @@
+id,new_name,sor,frat,female_fc,male_fc,coed_fc
+0,Kappa Alpha Theta,1,0,0,0,0
+1,Kappa Kappa Gamma,1,0,0,0,0
+2,Delta Gamma,1,0,0,0,0
+3,Alpha Phi,1,0,0,0,0
+4,Sigma Chi,0,1,0,0,0
+5,KS Club,0,0,0,1,0
+6,Sigma Alpha Epsilon,0,1,0,0,0
+7,Aleph Club,0,0,0,1,0
+8,Bee Club,0,0,0,0,1
+9,IC Club,0,0,1,0,0
+10,Sabliere Club,0,0,0,0,1
+11,Pleiades Society,0,0,1,0,0
+12,La Vie Club,0,0,1,0,0
+13,AD Club,0,0,0,1,0
+14,Spee Club,0,0,0,0,1
+15,Fly Club,0,0,0,1,0
+16,Fox Club,0,0,0,1,0
+17,Owl Club,0,0,0,1,0
+18,Porcellian Club,0,0,0,1,0
+19,Phoenix S.K. Club,0,0,0,1,0
+20,Delphic Club,0,0,0,0,1

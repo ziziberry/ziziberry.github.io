@@ -1,0 +1,43 @@
+body
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    background-color: white;
+}
+h1
+{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+.chart-title
+{
+    font-weight: normal;
+    font-size: 20px;
+}
+.labels
+{
+    font-size: 12px;
+    fill: grey;
+}
+.area, .bar-rect
+{
+    fill: #02008e;
+}
+.x, .y
+{
+    stroke: red;
+}
+.y1, .y2
+{
+    font-weight: bold;
+}
+
+.form-control{
+    width: 200px;
+    margin-left: 25px;
+}
+
+form {
+    margin-left: 25px;
+    padding: 5px;
+}
