@@ -44,6 +44,8 @@ TimelineVis.prototype.wrangleData = function(){
 TimelineVis.prototype.updateVis = function(){
     var vis = this;
 
+    console.log(vis.filteredData);
+
     vis.svg.append("line")
     .style("stroke", "black")
     .attr("x1", 20)
