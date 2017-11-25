@@ -22,13 +22,6 @@ RadarVis.prototype.initVis = function(){
     // vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right,
     vis.width = 500 - vis.margin.left - vis.margin.right,
         vis.height = 500 - vis.margin.top - vis.margin.bottom;
-
-    // SVG drawing area
-    vis.svg = d3.select("#" + vis.parentElement).append("svg")
-        .attr("width", vis.width + vis.margin.left + vis.margin.right)
-        .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
-        .append("g")
-        .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
     
     vis.configs = {
       w: vis.width,
@@ -39,6 +32,7 @@ RadarVis.prototype.initVis = function(){
     };
     
     vis.colorscale = d3.scaleOrdinal(d3.schemeCategory10);
+    
     
     this.wrangleData();
 };
@@ -69,14 +63,19 @@ RadarVis.prototype.updateVis = function(){
     
     RadarChart.draw("#" + vis.parentElement, vis.displaydata, vis.configs);
 
-    vis.legend = vis.svg.append("g")
-	.attr("class", "legend")
+    vis.svg = d3.select("#radarvis")
+	.selectAll('svg')
+	.append('svg')
+	.attr("width", vis.width + 500)
+	.attr("height", vis.height)
+    
+    vis.radarlegend = vis.svg.append("g")
+    .attr("class", "radarlegend")
 	.attr("height", 100)
 	.attr("width", 200)
-	.attr('transform', 'translate(100,20)');
+	.attr('transform', 'translate(150,20)');
     
-    
-	vis.legend.selectAll("rect")
+	vis.radarlegend.selectAll("rect")
 	  .data(Object.keys(vis.data))
 	  .enter()
 	  .append("rect")
@@ -86,14 +85,16 @@ RadarVis.prototype.updateVis = function(){
 	  .attr("height", 10)
 	  .style("fill", function(d, i){ return vis.colorscale(i);});
     
-	//Create text next to squares
-	vis.legend.selectAll("text")
+    console.log(Object.keys(vis.data));
+    
+	vis.radarlegend.selectAll("text")
 	  .data(Object.keys(vis.data))
 	  .enter()
 	  .append("text")
-	  .attr("x", vis.width - 50)
+	  .attr("x", vis.width - 70)
 	  .attr("y", function(d, i){ return i * 20 + 10;})
 	  .attr("fill", "#737373")
 	  .text(function(d) { return d; });	
+    
 
 };
