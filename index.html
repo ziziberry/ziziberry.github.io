@@ -101,19 +101,29 @@
 
         <div class="row">
             <div class="col-md-12">
-                    <h1>USGSOs at Harvard</h1>
-                        <form>
-                            <input type="radio" name="stack" value="before">Before Sanctions<br>
-                            <input type="radio" name="stack" value="after" >After Sanctions<br>
-                        </form>
-                        <select class="form-control" id="sort-type" onchange="upateVis()">
-                            <option value="all">All</option>
-                            <option value="sor">Sororities</option>
-                            <option value="frat">Fraternities</option>
-                            <option value="ffc">Female Final Clubs</option>
-                            <option value="mfc">Male Final Clubs</option>
-                        </select>
+                    <h2>USGSOs at Harvard</h2>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <form>
+                                <input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions<br>
+                                <input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions<br>
+                            </form>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" id="sort-type" onchange="filterView()">
+                                <option value="all">All</option>
+                                <option value="sor">Sororities</option>
+                                <option value="frat">Fraternities</option>
+                                <option value="ffc">Female Final Clubs</option>
+                                <option value="mfc">Male Final Clubs</option>
+                            </select>
+                        </div>
+                    </div>
                         <div class="categories"></div>
+                    <div class="but-cont">
+                        <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
+                    </div>
+
                 </div>
         </div>
 
