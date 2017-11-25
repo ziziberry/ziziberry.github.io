@@ -48,11 +48,21 @@ TimelineVis.prototype.updateVis = function(){
 
     vis.svg.append("line")
     .style("stroke", "black")
-    .attr("x1", 20)
+    .attr("x1", 0)
     .attr("y1", 80)
-    .attr("x2", 15*40 + 20)
+    .attr("x2", vis.width)
     .attr("y2", 80)
     .attr("class", "timeline");
+
+    var formatTime = d3.timeFormat("%B %d, %Y");
+    formatTime(new Date); // "June 30, 2015"
+
+    var parseTime = d3.timeParse("%d-%B-%y");
+    // console.log(parseTime("6-May-16"));
+
+    var timeScale = d3.scaleTime()
+        .domain([new Date(2016, 4, 1), new Date(2017, 10, 1)])
+        .range([0, vis.width])
     
     vis.circle = vis.svg.selectAll("circle")
         .data(vis.filteredData);
@@ -63,7 +73,9 @@ TimelineVis.prototype.updateVis = function(){
     // update
         .merge(vis.circle)
         .attr("r", 5)
-        .attr("cx", function(d, i) { return (i * 40) + 20 })
+        .attr("cx", function(d, i) {
+            return timeScale(parseTime(d.date))
+        })
         .attr("cy", 80)
         .attr("fill", function(d, i) {
             if (i % 4 == 0) {
