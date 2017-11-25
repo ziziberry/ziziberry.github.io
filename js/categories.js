@@ -5,14 +5,13 @@
  * @param _data						-- the dataset 'household characteristics'
  */
 
-Categories = function(_parentElement, _data){
+Categories = function(_parentElement, _initialData, _currentData){
     this.parentElement = _parentElement;
-    this.data = _data;
+    this.idata = _initialData;
+    this.cdata = _currentData;
 
     this.initVis();
-}
-
-
+};
 
 /*
  * Initialize visualization (static content; e.g. SVG area, axes, brush component)
@@ -24,7 +23,8 @@ Categories.prototype.initVis = function(){
     // * TO-DO *
     vis.margin = { top: 30, right: 0, bottom: 20, left: 40 };
 
-    vis.w = $(".categories").width();
+    //vis.w = $(".categories").width();
+    vis.w = 1000;
     vis.width = vis.w - vis.margin.left - vis.margin.right,
         vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
@@ -39,6 +39,8 @@ Categories.prototype.initVis = function(){
     vis.radius = 80;
     vis.spacing = 375;
 
+    vis.sorgroup = vis.svg.append("g");
+
     vis.sor = vis.svg.append("circle")
         .attr("cx", 50)
         .attr("cy", 100)
@@ -46,9 +48,9 @@ Categories.prototype.initVis = function(){
         .attr("fill", "none")
         .attr("stroke", "red");
 
-    vis.svg.append("text")
+    vis.sorlab = vis.svg.append("text")
         .text("Sororities")
-        .attr("x", 0)
+        .attr("x", 20)
         .attr("y", 0);
 
     vis.frat = vis.svg.append("circle")
@@ -58,9 +60,9 @@ Categories.prototype.initVis = function(){
         .attr("fill", "none")
         .attr("stroke", "red");
 
-    vis.svg.append("text")
+    vis.fratlab = vis.svg.append("text")
         .text("Fraternities")
-        .attr("x", vis.spacing)
+        .attr("x", 15 + vis.spacing)
         .attr("y", 0);
 
     vis.ffc = vis.svg.append("circle")
@@ -70,9 +72,9 @@ Categories.prototype.initVis = function(){
         .attr("fill", "none")
         .attr("stroke", "red");
 
-    vis.svg.append("text")
+    vis.ffclab = vis.svg.append("text")
         .text("Female Final Clubs")
-        .attr("x", 0)
+        .attr("x", -5)
         .attr("y", vis.spacing);
 
     vis.mfc = vis.svg.append("circle")
@@ -82,7 +84,7 @@ Categories.prototype.initVis = function(){
         .attr("fill", "none")
         .attr("stroke", "red");
 
-    vis.svg.append("text")
+    vis.mfclab = vis.svg.append("text")
         .text("Male Final Clubs")
         .attr("x", vis.spacing)
         .attr("y", vis.spacing);
@@ -94,15 +96,13 @@ Categories.prototype.initVis = function(){
         .attr("fill", "none")
         .attr("stroke", "red");
 
-    vis.svg.append("text")
+    vis.coedlab = vis.svg.append("text")
         .text("Co-Ed (Non-USGSO)")
-        .attr("x", vis.spacing/2)
+        .attr("x", vis.spacing/2 - 10)
         .attr("y", vis.spacing/2);
 
-
-    // (Filter, aggregate, modify data)
     vis.wrangleData();
-}
+};
 
 
 /*
@@ -112,116 +112,226 @@ Categories.prototype.initVis = function(){
 Categories.prototype.wrangleData = function(){
     var vis = this;
 
-    // (1) Group data by date and count survey results for each day
-    // (2) Sort data by day
-    vis.sorpics = [];
-    vis.fratpics = [];
-    vis.ffcpics = [];
-    vis.mfcpics = [];
-
-    vis.data.forEach(function (d){
+    console.log("wrangle")
+    // make dictionary of their positions in the circles
+    vis.positions = {};
+    // initial positions
+    var malec = 0;
+    var fratc = 1;
+    var fmalec = 0;
+    vis.idata.forEach(function (d, i){
+        var x = 0;
+        var y = 0;
         if(d.sor === 1){
-            vis.sorpics.push("img/" + d.img);
+            x = 35;
+            y = 30 + i*35;
         }
         else if(d.frat === 1){
-            vis.fratpics.push("img/" + d.img);
+            x = 35 + vis.spacing;
+            y = fratc*35;
+            fratc++;
         }
         if(d.female_fc === 1){
-            vis.ffcpics.push("img/" + d.img);
+            if (fmalec >= 3){x = 55}
+            else {x = 15};
+            if (fmalec >= 3){y = 30 + vis.spacing + (fmalec-3)*35}
+            else {y = 30 + vis.spacing + fmalec*35}
+            fmalec++;
         }
         if(d.male_fc === 1){
-            vis.mfcpics.push("img/" + d.img);
+            if (malec >= 4){x = 55 + vis.spacing}
+            else {x = 15 + vis.spacing}
+            if (malec >= 4){y = 30 + vis.spacing + (malec-4)*35}
+            else {y = 30 + vis.spacing + malec*35}
+            malec++;
         }
+        if(d.coed_fc === 1){
+            x = (70 + vis.spacing)/2;
+            y = (50 + vis.spacing)/2 + i*35;
+        }
+        vis.positions[d.id] = [x, y];
+    });
+    // final positions
+    malec = 0;
+    fratc = 1;
+    fmalec = 0;
+    coedc = 0;
+    vis.cdata.forEach(function (d, i){
+        var x = 0;
+        var y = 0;
+        if(d.sor === 1){
+            x = 35;
+            y = 30 + i*35;
+        }
+        else if(d.frat === 1){
+            x = 35 + vis.spacing;
+            y = fratc*35;
+            fratc++;
+        }
+        if(d.female_fc === 1){
+            if (fmalec >= 3){x = 55}
+            else {x = 15};
+            if (fmalec >= 3){y = 30 + vis.spacing + (fmalec-3)*35}
+            else {y = 30 + vis.spacing + fmalec*35}
+            fmalec++;
+        }
+        if(d.male_fc === 1){
+            if (malec >= 4){x = 55 + vis.spacing}
+            else {x = 15 + vis.spacing}
+            if (malec >= 4){y = 30 + vis.spacing + (malec-4)*35}
+            else {y = 30 + vis.spacing + malec*35}
+            malec++;
+        }
+        if(d.coed_fc === 1){
+            x = (70 + vis.spacing)/2;
+            y = (50 + vis.spacing)/2 + coedc*35;
+            coedc++;
+        }
+        vis.positions[d.id].push(x);
+        vis.positions[d.id].push(y);
     });
 
-    //console.log(vis.group)
-    // Update the visualization
-    vis.updateVis();
-}
+    vis.idata.forEach(function (d){
+        var img = "img/" + d.img;
+        vis.positions[d.id].push(img);
+        vis.positions[d.id].push(d.old_name);
+    });
 
-
-/*
- * The drawing function
- */
+    //vis.updateVis();
+};
 
 Categories.prototype.updateVis = function(){
     var vis = this;
 
-    // * TO-DO *
+    console.log("update")
 
+    vis.listpos = [];
+    for (var i = 0; i < 21; i++) {
+        vis.listpos.push(vis.positions[i])
+    }
 
-    console.log(vis.mfcpics)
+    vis.legendicon = vis.svg.selectAll("image.legend")
+        .data(vis.listpos);
 
-    vis.svg.selectAll("image.sor")
-        .data(vis.sorpics)
-        .enter()
-        .append("image")
-        .attr("class", "sor")
-        .attr('xlink:href',function (d) { return d; })
-        .attr("x", 35)
-        .attr("y", function (d, i) {
-            return 30 + i*35;
-
+    vis.legendicon.enter().append("image")
+        .attr("class", "legend")
+        .attr('xlink:href', function(d){return d[4];})
+        .attr("x", function(d, i){
+            if (i >= 11){return 800}
+            else {return 600}
+        })
+        .attr("y", function(d, i){
+            if (i >= 11){return (i-11)*30}
+            else {return i*30}
         })
         .attr("height", 30)
-        .attr("width", 30)
+        .attr("width", 30);
 
-    vis.svg.selectAll("image.frat")
-        .data(vis.fratpics)
-        .enter()
-        .append("image")
-        .attr("class", "frat")
-        .attr('xlink:href',function (d) { return d; })
-        .attr("x", 35 + vis.spacing)
-        .attr("y", function (d, i) {
-            return 30 + i*35;
 
+    var space = 35;
+    var space2 = 20;
+
+    vis.legendlabel = vis.svg.selectAll("text.legend")
+        .data(vis.listpos);
+
+    vis.legendicon.enter().append("text")
+        .attr("class", "legend")
+        .attr("x", function(d, i){
+            if (i >= 11){return 800 + space}
+            else {return 600 + space}
         })
+        .attr("y", function(d, i){
+            if (i >= 11){return (i-11)*30 + space2}
+            else {return i*30 + space2}
+        })
+        .text(function(d){return d[5]});
+
+
+
+    vis.sortpics = vis.svg.selectAll("image.usgso")
+        .data(vis.listpos);
+
+    vis.sortpics.enter().append("image")
+        .merge(vis.sortpics)
+        .transition()
+        .duration(1000)
+        .attr("class", "usgso")
+        .attr('xlink:href', function(d){return d[4];})
+        .attr("x", function(d){return d[0]})
+        .attr("y", function(d){return d[1]})
         .attr("height", 30)
-        .attr("width", 30)
+        .attr("width", 30);
 
-    vis.svg.selectAll("image.ffc")
-        .data(vis.ffcpics)
-        .enter()
-        .append("image")
-        .attr("class", "ffc")
-        .attr('xlink:href',function (d) { return d; })
-        .attr("x", function (d, i){
-            if (i >= 3){return 55}
-            else {return 15}
+};
 
-        })
-        .attr("y", function (d, i) {
-            if (i >= 3){return 30 + vis.spacing + (i-3)*35}
-            else {return 30 + vis.spacing + i*35}
+Categories.prototype.current = function(){
+    var vis = this;
 
-        })
-        .attr("height", 30)
-        .attr("width", 30)
+    console.log("current")
 
-    vis.svg.selectAll("image.mfc")
-        .data(vis.mfcpics)
-        .enter()
-        .append("image")
-        .attr("class", "mfc")
-        .attr('xlink:href',function (d) { return d; })
-        .attr("x", function (d, i){
-            if (i >= 4){return 55 + vis.spacing}
-            else {return 15 + vis.spacing}
-
-        })
-        .attr("y", function (d, i) {
-            if (i >= 4){return 30 + vis.spacing + (i-4)*35}
-            else {return 30 + vis.spacing + i*35}
-
-        })
-        .attr("height", 30)
-        .attr("width", 30)
+    vis.sortpics.transition()
+        .duration(1000)
+        .attr("x", function(d){return d[2]})
+        .attr("y", function(d){return d[3]});
+};
 
 
+Categories.prototype.filter = function(){
+    var vis = this;
 
+    var category = d3.select("#sort-type").property("value");
 
+    vis.sorpics = [];
+    vis.fratpics = [];
+    vis.ffcpics = [];
+    vis.mfcpics = [];
+    vis.coedpics = [];
 
+    vis.cdata.forEach(function (d){
+        var id = d.id;
+        var img = "img/" + vis.idata[id].img;
+        if(d.sor === 1){
+            vis.sorpics.push(img);
+        }
+        else if(d.frat === 1){
+            vis.fratpics.push(img);
+        }
+        if(d.female_fc === 1){
+            vis.ffcpics.push(img);
+        }
+        if(d.male_fc === 1){
+            vis.mfcpics.push(img);
+        }
+        if(d.coed_fc ===1){
+            vis.coedpics.push(img);
+        }
+    });
+
+    // sororities: 0-3
+    // frats: 4-7
+    // ffc: 8-12
+    // mfc: 13-20
+
+    vis.sortpics.attr("opacity", function(d, i){
+        switch(category){
+            case "all":
+                return 1;
+            case "sor":
+                if(i <= 3){return 1;}
+                else{return 0;}
+            case "frat":
+                if(i > 3 && i <= 7){return 1;}
+                else{return 0;}
+            case "ffc":
+                if(i > 7 && i <= 12){return 1;}
+                else{return 0;}
+            case "mfc":
+                if(i > 12 && i <= 20){return 1;}
+                else{return 0;}
+        }
+    })
 
 }
+
+
 

@@ -41,3 +41,17 @@ form {
     margin-left: 25px;
     padding: 5px;
 }
+.but-cont {
+    text-align: center;
+}
+button {
+    position: absolute;
+    padding: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    top: 50%;
+    right: 48%;
+    background-color: red;
+    font-weight: bold;
+    font-size: 25px;
+}
