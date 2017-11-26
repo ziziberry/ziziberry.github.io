@@ -19,8 +19,8 @@ TimelineVis.prototype.initVis = function(){
     vis.margin = { top: 20, right: 20, bottom: 20, left: 50 };
 
     // vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right,
-    vis.width = 1000 - vis.margin.left - vis.margin.right,
-        vis.height = 200 - vis.margin.top - vis.margin.bottom;
+    vis.width = 1000 - vis.margin.left - vis.margin.right;
+    vis.height = 200 - vis.margin.top - vis.margin.bottom;
 
     // SVG drawing area
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -54,7 +54,7 @@ TimelineVis.prototype.updateVis = function(){
     .attr("y2", 80)
     .attr("class", "timeline");
 
-    var formatTime = d3.timeFormat("%B %d, %Y");
+    var formatTime = d3.timeFormat("%b-%d-%y");
     formatTime(new Date); // "June 30, 2015"
 
     var parseTime = d3.timeParse("%d-%b-%y");
@@ -68,21 +68,76 @@ TimelineVis.prototype.updateVis = function(){
         .data(vis.filteredData);
 
     vis.labels = vis.svg.selectAll("text")
-        .data(vis.filteredData)
-    
+        .data(vis.filteredData);
     // enter
     vis.circle.enter()
         .append("circle")
     // update
         .merge(vis.circle)
-        .attr("r", 5)
+        .attr("r", 10)
+        .attr("fill-opacity", 0.2)
         .attr("cx", function(d, i) {
             console.log(d.date, parseTime(d.date), i)
             console.log(timeScale(parseTime(d.date)))
             return timeScale(parseTime(d.date))-2.5
         })
         .attr("cy", 80)
-        .attr("fill", "lightblue")
+        .attr("stroke", "black")
+        .attr("fill", function(d){
+            if (d.author=="faculty")
+                return "blue"
+            else
+                return "green"
+        })
+        .on("mouseover", handleMouseOver)
+        .on("mouseout", handleMouseOut)
+        .on("click", function(d) {
+            if (d.article_link != "")
+                window.open(d.article_link)
+        });
+
+    vis.labels.enter()
+        .append("text")
+        .merge(vis.labels)
+        .attr("x", function(d, i) {
+            console.log(d.date, parseTime(d.date), i)
+            console.log(timeScale(parseTime(d.date)))
+            return timeScale(parseTime(d.date))-2.5
+        })
+        .attr("y", function(d,i) {
+            if (i%4==0)
+                return 70;
+            else if (i%4==1)
+                return 62;
+            else if (i%4==2)
+                return 54;
+            else if (i%4==3)
+                return 46;
+        })
+        .style("font-size", 10)
+        .text(function(d) {
+            return formatTime(parseTime(d.date));
+        })
+
+    function handleMouseOver(d,i)
+    {
+
+        vis.svg.append("text")
+            .attr("id", "t" + i)
+            .attr("x", function() {
+                    console.log("hi");
+                    return timeScale(parseTime(d.date)); })
+            .attr("y", function() { return 105; })
+            .text(function() {
+                // return "hi";
+                return d.title;  // Value of the text
+            });
+    }
+
+    function handleMouseOut(d,i)
+    {
+        d3.select("#t" + i).remove();  // Remove text location
+    }
     //     .attr("fill", function(d, i) {
     //         if (i % 4 == 0) {
     //             return "lightblue";
