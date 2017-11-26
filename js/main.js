@@ -107,4 +107,8 @@ function filterView() {
     categories.filter();
 }
 
+function myFunction() {
+    console.log("scrolled")
+}
+
 

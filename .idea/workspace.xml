@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="fc0bca81-6be9-458a-8faa-d4c9d133ffe8" name="Default" comment="" />
+=======
     <list default="true" id="fc0bca81-6be9-458a-8faa-d4c9d133ffe8" name="Default" comment="">
 <<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/timelinevis.js" afterPath="$PROJECT_DIR$/js/timelinevis.js" />
@@ -8,6 +11,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
 >>>>>>> d6cbc07ed34df87b44ad92151c179db073c2e4c5
     </list>
+>>>>>>> refs/remotes/origin/master
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -181,12 +185,19 @@
       <workItem from="1511453200720" duration="1930000" />
 =======
       <workItem from="1511453200720" duration="817000" />
+<<<<<<< HEAD
+      <workItem from="1511581139862" duration="1140000" />
+=======
       <workItem from="1511581139862" duration="1023000" />
 >>>>>>> d6cbc07ed34df87b44ad92151c179db073c2e4c5
+>>>>>>> refs/remotes/origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="1957000" />
+=======
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="1930000" />
   </component>
@@ -197,6 +208,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1294964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
 =======
     <option name="totallyTimeSpent" value="1840000" />
+>>>>>>> refs/remotes/origin/master
   </component>
   <component name="ToolWindowManager">
     <frame x="669" y="23" width="771" height="815" extended-state="0" />

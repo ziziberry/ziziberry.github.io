@@ -1,197 +1,171 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>CS171 - HW 6</title>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>fullPage.js One Page Scroll Sites</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
+	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+
+
+	<style>
+		/* Sections
+		 * --------------------------------------- */
+		#section0 img,
+		#section1 img{
+			margin: 20px 0 0 0;
+		}
+		#section2 img{
+			margin: 20px 0 0 52px;
+		}
+		#section3 img{
+			bottom: 0px;
+			position: absolute;
+			margin-left: -420px;
+		}
+		.intro p{
+			width: 50%;
+			margin: 0 auto;
+			font-size: 1.5em;
+		}
+		.twitter-share-button{
+			position: absolute;
+			z-index: 99;
+			right: 149px;
+			top: 9px;
+		}
+	</style>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				menu: '#menu',
+				scrollingSpeed: 1000
+			});
+		});
+	</script>
+	<!-- Load JS libraries: jQuery, bootstrap, D3 -->
+
+    	<!-- Your implementation -->
+    	<script src="js/d3.js"></script>
+    	<script src="js/categories.js"></script>
+    	<script src="js/radarchart.js"></script>
+    	<script src="js/radarvis.js"></script>
+        <script src="js/timelinevis.js"></script>
+        <script src="js/queue.v1.min.js"></script>
+    	<script src="js/main.js"></script>
+
+
 </head>
 <body>
 
+<ul id="menu">
+	<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+	<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+	<li data-menuanchor="5thpage"><a href="#5thpage">Fifth slide</a></li>
+</ul>
 
-	<div class="container">
 
-		<div class="row">
-			<div class="col-md-12">
-				<h1><span class="h1-sub">A History of Social Sanctions at Harvard</span></h1>
-                <div class="container">
-                    <h2>Temporary Carousel</h2>
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                            <!--<li data-target="#myCarousel" data-slide-to="3"></li>-->
-                        </ol>
+<div id="fullpage">
 
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="container item active">
-                                <div class="row">
-                                    <h2>Social Spaces at Harvard Before Social Sanctions</h2>
-                                    <div class="col-md-6">
-                                        <img src="img/yarfest.jpg" height="50%" width="50%" alt="Good Visualization 2">
-                                        <p>http://blogs.harvard.edu/collegeadmissionsstudentblog/tag/yardfest/</p>
-                                   </div>
-                                    <div class="col-md-6">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container item">
-                                <div class="row">
-                                <h2>What Is A USGSO?</h2>
-                                    <div class="col-md-6">
-                                        <img src="img/usgsopic.jpg" height="50%" width="50%" alt="Good Visualization 2">
-                                        <p>http://www.thecrimson.com/article/2017/7/13/new-sanctions/</p>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Unrecognized Single Gender Social Organization. According to the Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations released on February 17, 2017, “An Unrecognized Single Gender Social Organization is any selective-membership, singlegender organization, whose primary purpose is social, including but not limited to final clubs, fraternities and sororities, that has a membership that is comprised entirely of Harvard students and/or Harvard alumni. This definition does not include Harvard Recognized Independent Student Organizations (ISOs), Sponsored Student Organizations (SSOs)..., or other non-Harvard entities whose membership draws from individuals beyond the Harvard community such as city-wide chapters of national organizations...”</p>
-                                    </div>
-                                </div>
-                            </div>
+	<div class="section" id="section0">
+	    <img src="img/hearherharvard.png" alt="fullPage" />
+		<!--http://www.thecrimson.com/article/2017/2/8/where-sanctions-stand-explainer/-->
+	</div>
+	<div class="section" id="section1">
+		<div class="slide">
+			<div class="intro">
+				<h1>Carousel</h1>
+				<p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
+				<img src="imgs/slider.png" alt="slider" />
+			</div>
 
-                            <div class="container item">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h2>What Are The Social Sanctions?</h2>
-                                    </div>
-                                    <div class="col-md-6"></div>
-                                </div>
-                            </div>
-
-                            <div class="container item">
-                                <div class="row">
-                                    <div class="col-md-6">Testimonials</div>
-                                    <div class="col-md-6"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+		</div>
+		<div class="slide">
+			<div class="intro">
+				<h2>Social Spaces at Harvard Before Social Sanctions</h2>
+                <img src="img/yarfest.jpg" height="50%" width="50%" alt="Good Visualization 2">
+                <p>http://blogs.harvard.edu/collegeadmissionsstudentblog/tag/yardfest/</p>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+				<h2>What Is A USGSO?</h2>
+                <img src="img/usgsopic.jpg" height="50%" width="50%" alt="Good Visualization 2">
+                <p>http://www.thecrimson.com/article/2017/7/13/new-sanctions/</p>
+                <p>Unrecognized Single Gender Social Organization. According to the Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations released on February 17, 2017, “An Unrecognized Single Gender Social Organization is any selective-membership, singlegender organization, whose primary purpose is social, including but not limited to final clubs, fraternities and sororities, that has a membership that is comprised entirely of Harvard students and/or Harvard alumni. This definition does not include Harvard Recognized Independent Student Organizations (ISOs), Sponsored Student Organizations (SSOs)..., or other non-Harvard entities whose membership draws from individuals beyond the Harvard community such as city-wide chapters of national organizations...”</p>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+				<h2>What Are The Social Sanctions?</h2>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<div id="timelinevis"></div>
+		</div>
+	</div>
+	<div class="section" id="section3">
+		<div class="intro">
+			<h2>USGSOs at Harvard</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <form>
+                            <input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions<br>
+                            <input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions<br>
+                        </form>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-control" id="sort-type" onchange="filterView()">
+                            <option value="all">All</option>
+                            <option value="sor">Sororities</option>
+                            <option value="frat">Fraternities</option>
+                            <option value="ffc">Female Final Clubs</option>
+                            <option value="mfc">Male Final Clubs</option>
+                        </select>
                     </div>
                 </div>
-                <textarea id = "myTextArea" rows = "3" cols = "150">
-                    TEXT: A Broad overview of social spaces at Harvard before the sanctions </textarea>
-                <textarea id = "myTextArea" rows = "3" cols = "150">
-                    TEXT: Overview of what the sanctions are and explain who they apply to (USGSOs) </textarea>
-
-            </div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-6">
-				<!--<div id="categorical"></div>-->
-                <textarea id = "myTextArea" rows = "3" cols = "60">
-                    TEXT: Explanation of what constitues as a USGSO and more in-depth analysis of who the sanctions apply to </textarea>
-
-            </div>
-            <div class="col-md-6">
-                <textarea id = "myTextArea" rows = "3" cols = "60">
-                     VISUALIZATION: Test the user to see if they can identify which student groups are USGSOs out of a list of many student organizations.
-                     After the test, reveal the answers so that the user knows which organizations are USGSOs and are being targeted by this policy.</textarea>
-            </div>
-		</div>
-
-		<div class="row">
-            <div class="col-md-12">
-            <textarea id = "myTextArea" rows = "3" cols = "150">
-                       TEXT:What have the sanctions looked like since the beginning? </textarea>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div id="timelinevis"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-            <textarea id = "myTextArea" rows = "3" cols = "150">
-                TEXT:How have the USGSOs responded? </textarea>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                    <h2>USGSOs at Harvard</h2>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <form>
-                                <input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions<br>
-                                <input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions<br>
-                            </form>
-                        </div>
-                        <div class="col-md-2">
-                            <select class="form-control" id="sort-type" onchange="filterView()">
-                                <option value="all">All</option>
-                                <option value="sor">Sororities</option>
-                                <option value="frat">Fraternities</option>
-                                <option value="ffc">Female Final Clubs</option>
-                                <option value="mfc">Male Final Clubs</option>
-                            </select>
-                        </div>
-                    </div>
-                        <div class="categories"></div>
-                    <div class="but-cont">
-                        <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
-                    </div>
-
+                    <div class="categories"></div>
+                <div class="but-cont">
+                    <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
                 </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-            <textarea id = "myTextArea" rows = "3" cols = "150">
-                TEXT: What are the driving forces behind the sanctions?
-                 Bulleted list of main reasons (one reason is comparison to other peer institutions who do not have USGSOs or got rid of them)</textarea>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-            <textarea id = "myTextArea" rows = "3" cols = "150">
-                TEXT: How does Harvard compare to its peer institutions?</textarea>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12" id="radarvis"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-            <textarea id = "myTextArea" rows = "3" cols = "150">
-                TEXT: Discussion of data presented. Moving forward/where are we now?</textarea>
-            </div>
-        </div>
-
+		</div>
+	</div>`
+	<div class="section" id="section4">
+    		<div class="intro">
+    			<p>How Does Harvard Compare to Peer Institutions?</p>
+    		</div>
     </div>
-
-	<!-- Load JS libraries: jQuery, bootstrap, D3 -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/d3.js"></script>
-
-	<!-- Your implementation -->
-	<script src="js/categories.js"></script>
-	<script src="js/radarchart.js"></script>
-	<script src="js/radarvis.js"></script>
-    <script src="js/timelinevis.js"></script>
-    <script src="js/queue.v1.min.js"></script>
-	<script src="js/main.js"></script>
+    <div class="section" id="section5">
+        <div class="intro">
+            <div id="radarvis"></div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

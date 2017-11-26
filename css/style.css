@@ -2,6 +2,7 @@ body
 {
     font-family: Tahoma, Geneva, sans-serif;
     background-color: white;
+    color: black;
 }
 h1
 {
@@ -54,4 +55,12 @@ button {
     background-color: red;
     font-weight: bold;
     font-size: 25px;
+}
+
+.fp-section {
+    background-color: black;
+}
+
+#fp-section1, #fp-section2, #section3, #section4 {
+    background-color: white;
 }
