@@ -57,15 +57,18 @@ TimelineVis.prototype.updateVis = function(){
     var formatTime = d3.timeFormat("%B %d, %Y");
     formatTime(new Date); // "June 30, 2015"
 
-    var parseTime = d3.timeParse("%d-%B-%y");
+    var parseTime = d3.timeParse("%d-%b-%y");
     // console.log(parseTime("6-May-16"));
 
     var timeScale = d3.scaleTime()
-        .domain([new Date(2016, 4, 1), new Date(2017, 10, 1)])
+        .domain([new Date(2016, 2, 1), new Date(2017, 10, 1)])
         .range([0, vis.width])
     
     vis.circle = vis.svg.selectAll("circle")
         .data(vis.filteredData);
+
+    vis.labels = vis.svg.selectAll("text")
+        .data(vis.filteredData)
     
     // enter
     vis.circle.enter()
@@ -74,14 +77,17 @@ TimelineVis.prototype.updateVis = function(){
         .merge(vis.circle)
         .attr("r", 5)
         .attr("cx", function(d, i) {
-            return timeScale(parseTime(d.date))
+            console.log(d.date, parseTime(d.date), i)
+            console.log(timeScale(parseTime(d.date)))
+            return timeScale(parseTime(d.date))-2.5
         })
         .attr("cy", 80)
-        .attr("fill", function(d, i) {
-            if (i % 4 == 0) {
-                return "lightblue";
-            } else {
-                return "green";
-            }
-    })
+        .attr("fill", "lightblue")
+    //     .attr("fill", function(d, i) {
+    //         if (i % 4 == 0) {
+    //             return "lightblue";
+    //         } else {
+    //             return "green";
+    //         }
+    // })
 };
