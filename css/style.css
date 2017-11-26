@@ -56,3 +56,11 @@ button {
     font-weight: bold;
     font-size: 25px;
 }
+
+.fp-section {
+    background-color: black;
+}
+
+#fp-section1, #fp-section2, #section3, #section4 {
+    background-color: white;
+}
