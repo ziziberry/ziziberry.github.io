@@ -51,12 +51,8 @@ var RadarChart = {
 			;
 
     // initialize tooltip 
-	var tooltip = d3.tip().attr('class', 'd3-tip tooltip-title');
-    tooltip.offset([-15, 0]);
-
-    // invoke tooltip 
-    g.call(tooltip)
-	
+	var tooltip; 
+      
 	//Circular segments
 	for(var j=0; j<cfg.levels-1; j++){
 	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
@@ -185,8 +181,8 @@ var RadarChart = {
 		})
 		.attr("data-id", function(j){return j.axis})
 		.style("fill", cfg.color(series)).style("fill-opacity", .9)
-        .on('mouseover', tip.show)
-        .on('mouseout', tip.hide)
+//        .on('mouseover', tip.show)
+//        .on('mouseout', tip.hide)
 //		.on('mouseover', function (d){
 //					newX =  parseFloat(d3.select(this).attr('cx')) - 10;
 //					newY =  parseFloat(d3.select(this).attr('cy')) - 5;
@@ -220,6 +216,12 @@ var RadarChart = {
 
 	  series++;
 	});
+    tooltip = d3.tip().attr('class', 'd3-tip tooltip-title').html(function(d) { return d.label }); 
+    tooltip.offset([-15, 0]);
+
+    // invoke tooltip 
+    g.call(tooltip)
+	
 //	//Tooltip
 //	tooltip = g.append('text')
 //			   .style('opacity', 0)
