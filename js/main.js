@@ -5,7 +5,6 @@ var peerinstitutions_norm = [];
 var timelineData;
 var usgso_initialData;
 var categories;
-var count = 0;
 
 
 // queue to load datasets
@@ -105,10 +104,6 @@ function afterSanctions() {
 }
 
 function filterView() {
-    if (count === 0){
-        categories.updateVis();
-        count++;
-    }
     categories.filter();
 }
 
