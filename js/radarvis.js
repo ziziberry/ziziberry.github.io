@@ -43,12 +43,12 @@ RadarVis.prototype.wrangleData = function(){
     vis.displaydata = [];
     
     for(var key in vis.data_norm) {
-        vis.displaydata.push([{axis: "Student Body", value: vis.data_norm[key].student_body, label: vis.data[key].student_body}, 
-                         {axis: "Tutition Cost", value: vis.data_norm[key].tuition, label: "$" + vis.data[key].tuition}, 
-                         {axis: "Acceptance Rate", value: vis.data_norm[key].acceptance_rate, label: vis.data[key].acceptance_rate + "%"},
-                         {axis: "Students in School Housing", value: vis.data_norm[key].student_housing, label: vis.data[key].student_housing + "%"},
-                         {axis: "Athletics", value: vis.data_norm[key].athletics, label: vis.data[key].athletics + "%"},
-                         {axis: "Median Family Income", value: vis.data_norm[key].median_family_income, label: "$" +  vis.data[key].median_family_income}
+        vis.displaydata.push([{school: vis.data[key].school, axis: "Student Body", value: vis.data_norm[key].student_body, label: vis.data[key].student_body}, 
+                         {school: vis.data[key].school, axis: "Tutition Cost", value: vis.data_norm[key].tuition, label: "$" + vis.data[key].tuition}, 
+                         {school: vis.data[key].school, axis: "Acceptance Rate", value: vis.data_norm[key].acceptance_rate, label: vis.data[key].acceptance_rate + "%"},
+                         {school: vis.data[key].school, axis: "Students in School Housing", value: vis.data_norm[key].student_housing, label: vis.data[key].student_housing + "%"},
+                         {school: vis.data[key].school, axis: "Athletics", value: vis.data_norm[key].athletics, label: vis.data[key].athletics + "%"},
+                         {school: vis.data[key].school, axis: "Median Family Income", value: vis.data_norm[key].median_family_income, label: "$" +  vis.data[key].median_family_income}
                         ])
     };
     
@@ -98,8 +98,7 @@ RadarVis.prototype.updateVis = function(){
 	  .append("text")
 	  .attr("x", vis.width - 70)
 	  .attr("y", function(d, i){ return i * 20 + 10;})
-	  .attr("fill", "#737373")
+	  .attr("fill", "#a7a7a7")
 	  .text(function(d) { return d; });	
-    
 
 };
