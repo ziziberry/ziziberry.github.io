@@ -69,7 +69,7 @@ TimelineVis.prototype.updateVis = function(){
 
     var timeScale = d3.scaleTime()
         .domain([new Date(2016, 2, 1), new Date(2017, 10, 1)])
-        .range([0, vis.width])
+        .range([0, vis.width-10])
     
     vis.circle = vis.svg.selectAll("circle")
         .data(vis.filteredData);
