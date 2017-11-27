@@ -3,6 +3,9 @@
 // SOURCE: http://bl.ocks.org/nbremer/6506614
 // base code from https://github.com/alangrafu/radar-chart-d3
 
+
+// d3-tip js library adapted from previous homeworks and labs in class
+
 // modifications have been made to this code to suit the needs for our visualization 
 
 var RadarChart = {
@@ -47,7 +50,12 @@ var RadarChart = {
 			.attr("transform", "translate(" + cfg.TranslateX + "," + cfg.TranslateY + ")");
 			;
 
-	var tooltip;
+    // initialize tooltip 
+	var tooltip = d3.tip().attr('class', 'd3-tip tooltip-title');
+    tooltip.offset([-15, 0]);
+
+    // invoke tooltip 
+    svg.call(tip)
 	
 	//Circular segments
 	for(var j=0; j<cfg.levels-1; j++){
@@ -186,7 +194,7 @@ var RadarChart = {
 						.attr('y', newY)
 						.text((d.label))
 						.transition(200)
-                        .attr('class', 'radar-tooltip')
+                        .attr('class', 'd3-tip')
 						.style('opacity', 1);
 						
 					z = "polygon."+d3.select(this).attr("class");
