@@ -10,8 +10,12 @@ h1
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    color: black;
-    margin-bottom: 20px;
+    color: #ededed;
+    margin-bottom: 25px;
+}
+
+.maintitle {
+    font-size: 50px; 
 }
 
 .intro p{
@@ -19,6 +23,7 @@ h1
     margin: 0;
     font-size: .9em;
     text-align: left;
+    color: #adadad;
 }
 
 .white

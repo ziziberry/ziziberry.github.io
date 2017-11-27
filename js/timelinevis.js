@@ -54,7 +54,7 @@ TimelineVis.prototype.updateVis = function(){
     console.log(vis.filteredData);
 
     vis.svg.append("line")
-    .style("stroke", "black")
+    .style("stroke", "#ffffff")
     .attr("x1", 0)
     .attr("y1", 80)
     .attr("x2", vis.width)
@@ -124,6 +124,7 @@ TimelineVis.prototype.updateVis = function(){
         //         return 46;
         // })
         .style("font-size", 10)
+        .attr("fill", "#ffffff")
         .text(function(d) {
             return formatTime(parseTime(d.date));
         })
