@@ -105,3 +105,12 @@ td {
   top: 100%;
   left: 0;
 }
+
+.tooltip-top {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tooltip-desc {
+    font-size: 11px;
+}

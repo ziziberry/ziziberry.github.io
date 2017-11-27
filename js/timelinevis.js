@@ -29,6 +29,13 @@ TimelineVis.prototype.initVis = function(){
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
     
+    // initialize tooltip 
+    vis.tooltip = d3.tip().attr('class', 'd3-tip tooltip-title').html(function(d) { return "<span class='tooltip-top'>" + d.date + "<br /> </span>" + "<span class='tooltip-desc'>" + d.title + "</span>"})
+    vis.tooltip.offset([-15, 0]);
+
+    // invoke tooltip 
+    vis.svg.call(vis.tooltip)
+    
     this.wrangleData();
 };
 
@@ -81,6 +88,7 @@ TimelineVis.prototype.updateVis = function(){
             console.log(timeScale(parseTime(d.date)))
             return timeScale(parseTime(d.date))-2.5
         })
+        .attr("class", "timeline-circle")
         .attr("cy", 80)
         .attr("stroke", "black")
         .attr("fill", function(d){
@@ -89,11 +97,12 @@ TimelineVis.prototype.updateVis = function(){
             else
                 return "green"
         })
-        .on("mouseover", handleMouseOver)
-        .on("mouseout", handleMouseOut)
+        .on("mouseover", vis.tooltip.show)
+        .on("mouseout", vis.tooltip.hide)
         .on("click", function(d) {
-            if (d.article_link != "")
-                window.open(d.article_link)
+            if (d.article_link != "") {
+                window.open(d.article_link); 
+            }
         });
 
     vis.labels.enter()
@@ -119,30 +128,27 @@ TimelineVis.prototype.updateVis = function(){
             return formatTime(parseTime(d.date));
         })
 
-    function handleMouseOver(d,i)
-    {
+//    function handleMouseOver(d,i)
+//    {
+//        vis.tooltip.show(); 
+//        
+//        vis.svg.append("text")
+//            .attr("id", "t" + i)
+//            .attr("x", function() {
+//                    console.log("hi");
+//                    return timeScale(parseTime(d.date)); })
+//            .attr("y", function() { return 105; })
+//            .text(function() {
+//                // return "hi";
+//                return d.title;  // Value of the text
+//            });
+//    }
+//
+//    function handleMouseOut(d,i)
+//    {
+//        vis.tooltip.hide()
+//        
+//        d3.select("#t" + i).remove();  // Remove text location
+//    }
 
-        vis.svg.append("text")
-            .attr("id", "t" + i)
-            .attr("x", function() {
-                    console.log("hi");
-                    return timeScale(parseTime(d.date)); })
-            .attr("y", function() { return 105; })
-            .text(function() {
-                // return "hi";
-                return d.title;  // Value of the text
-            });
-    }
-
-    function handleMouseOut(d,i)
-    {
-        d3.select("#t" + i).remove();  // Remove text location
-    }
-    //     .attr("fill", function(d, i) {
-    //         if (i % 4 == 0) {
-    //             return "lightblue";
-    //         } else {
-    //             return "green";
-    //         }
-    // })
 };

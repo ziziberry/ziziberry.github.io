@@ -52,6 +52,12 @@ var RadarChart = {
 
     // initialize tooltip 
 	var tooltip; 
+            
+    tooltip = d3.tip().attr('class', 'd3-tip tooltip-title').html(function(d) { return d.label }); 
+    tooltip.offset([-15, 0]);
+
+    // invoke tooltip 
+    g.call(tooltip)
       
 	//Circular segments
 	for(var j=0; j<cfg.levels-1; j++){
@@ -216,11 +222,6 @@ var RadarChart = {
 
 	  series++;
 	});
-    tooltip = d3.tip().attr('class', 'd3-tip tooltip-title').html(function(d) { return d.label }); 
-    tooltip.offset([-15, 0]);
-
-    // invoke tooltip 
-    g.call(tooltip)
 	
 //	//Tooltip
 //	tooltip = g.append('text')
