@@ -55,7 +55,7 @@ var RadarChart = {
     tooltip.offset([-15, 0]);
 
     // invoke tooltip 
-    svg.call(tip)
+    g.call(tooltip)
 	
 	//Circular segments
 	for(var j=0; j<cfg.levels-1; j++){
@@ -185,43 +185,45 @@ var RadarChart = {
 		})
 		.attr("data-id", function(j){return j.axis})
 		.style("fill", cfg.color(series)).style("fill-opacity", .9)
-		.on('mouseover', function (d){
-					newX =  parseFloat(d3.select(this).attr('cx')) - 10;
-					newY =  parseFloat(d3.select(this).attr('cy')) - 5;
-					
-					tooltip
-						.attr('x', newX)
-						.attr('y', newY)
-						.text((d.label))
-						.transition(200)
-                        .attr('class', 'd3-tip')
-						.style('opacity', 1);
-						
-					z = "polygon."+d3.select(this).attr("class");
-					g.selectAll("polygon")
-						.transition(200)
-						.style("fill-opacity", 0.1); 
-					g.selectAll(z)
-						.transition(200)
-						.style("fill-opacity", .7);
-				  })
-		.on('mouseout', function(){
-					tooltip
-						.transition(200)
-						.style('opacity', 0);
-					g.selectAll("polygon")
-						.transition(200)
-						.style("fill-opacity", cfg.opacityArea);
-				  })
+        .on('mouseover', tip.show)
+        .on('mouseout', tip.hide)
+//		.on('mouseover', function (d){
+//					newX =  parseFloat(d3.select(this).attr('cx')) - 10;
+//					newY =  parseFloat(d3.select(this).attr('cy')) - 5;
+//					
+//					tooltip
+//						.attr('x', newX)
+//						.attr('y', newY)
+//						.text((d.label))
+//						.transition(200)
+//                        .attr('class', 'd3-tip')
+//						.style('opacity', 1);
+//						
+//					z = "polygon."+d3.select(this).attr("class");
+//					g.selectAll("polygon")
+//						.transition(200)
+//						.style("fill-opacity", 0.1); 
+//					g.selectAll(z)
+//						.transition(200)
+//						.style("fill-opacity", .7);
+//				  })
+//		.on('mouseout', function(){
+//					tooltip
+//						.transition(200)
+//						.style('opacity', 0);
+//					g.selectAll("polygon")
+//						.transition(200)
+//						.style("fill-opacity", cfg.opacityArea);
+//				  })
 		.append("svg:title")
 		.text(function(j){return Math.max(j.value, 0)});
 
 	  series++;
 	});
-	//Tooltip
-	tooltip = g.append('text')
-			   .style('opacity', 0)
-			   .style('font-family', 'sans-serif')
-			   .style('font-size', '13px');
+//	//Tooltip
+//	tooltip = g.append('text')
+//			   .style('opacity', 0)
+//			   .style('font-family', 'sans-serif')
+//			   .style('font-size', '13px');
   }
 };
