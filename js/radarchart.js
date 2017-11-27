@@ -53,7 +53,7 @@ var RadarChart = {
     // initialize tooltip 
 	var tooltip; 
             
-    tooltip = d3.tip().attr('class', 'd3-tip tooltip-title').html(function(d) { return d.label }); 
+    tooltip = d3.tip().attr('class', 'd3-tip tooltip-radar').html(function(d) { return  "<span class='tooltip-radar-title'>" + d.school + "</span> <br /> <span class='tooltip-radar-subtitle'>" + d.axis + "</span> <br />" + "<span class='tooltip-radar-desc'>" + d.label + "</span>" }); 
     tooltip.offset([-15, 0]);
 
     // invoke tooltip 
@@ -187,8 +187,8 @@ var RadarChart = {
 		})
 		.attr("data-id", function(j){return j.axis})
 		.style("fill", cfg.color(series)).style("fill-opacity", .9)
-//        .on('mouseover', tip.show)
-//        .on('mouseout', tip.hide)
+        .on('mouseover', tooltip.show)
+        .on('mouseout', tooltip.hide)
 //		.on('mouseover', function (d){
 //					newX =  parseFloat(d3.select(this).attr('cx')) - 10;
 //					newY =  parseFloat(d3.select(this).attr('cy')) - 5;

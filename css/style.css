@@ -106,6 +106,7 @@ td {
   left: 0;
 }
 
+/* timeline tooltips */
 .tooltip-top {
     font-size: 16px;
     font-weight: bold;
@@ -113,4 +114,29 @@ td {
 
 .tooltip-desc {
     font-size: 11px;
+}
+
+/* radar chart tooltips */
+.tooltip-radar {
+}
+
+.tooltip-radar-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    opacity: 70%;
+    width: 150px; 
+    float: left; 
+}
+
+.tooltip-radar-subtitle {
+    font-size: 11px;
+    float: left; 
+    width: 150px; 
+}
+
+.tooltip-radar-desc {
+    font-size: 15px;
+    text-align: right;
+    float: right;
+    width: 100px; 
 }
