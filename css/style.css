@@ -149,3 +149,7 @@ td {
     float: right;
     width: 100px; 
 }
+
+table{
+    margin: 20px;
+}
