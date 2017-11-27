@@ -9,6 +9,7 @@ h1
     font-weight: bold;
     font-size: 30px;
     text-align: center;
+    color: white;
 }
 .chart-title
 {
@@ -63,4 +64,7 @@ button {
 
 #fp-section1, #fp-section2, #section3, #section4 {
     background-color: white;
+}
+td {
+    padding: 0;
 }
