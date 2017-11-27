@@ -56,11 +56,6 @@
         }
 
 	</style>
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
@@ -71,7 +66,7 @@
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				sectionsColor: ['#c30000', '#c30000', '#c30000', '#c30000', '#c30000', '#c30000', '#c30000'],
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
 				menu: '#menu',
 				scrollingSpeed: 500
 			});
@@ -91,122 +86,139 @@
 
 
 </head>
-<body>
+    <body>
 
-<ul id="menu">
-	<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-	<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
-	<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
-	<li data-menuanchor="5thpage"><a href="#5thpage">Fifth slide</a></li>
-	<li data-menuanchor="6thpage"><a href="#6thpage">Sixth slide</a></li>
-	<li data-menuanchor="7thpage"><a href="#7thpage">Seventh slide</a></li>
-</ul>
+    <ul id="menu">
+        <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+        <li data-menuanchor="4thPage"><a href="#4thPage">Fourth slide</a></li>
+        <li data-menuanchor="5thPage"><a href="#5thPage">Fifth slide</a></li>
+        <li data-menuanchor="6thPage"><a href="#6thPage">Sixth slide</a></li>
+        <li data-menuanchor="7thPage"><a href="#7thPage">Seventh slide</a></li>
+    </ul>
 
 
-<div id="fullpage">
+    <div id="fullpage">
 
-	<div class="section" id="section0">
-        <div class="container">
-          <img src="img/hearherharvard.png" alt="hearherharvard">
-          <div class="centered"><h1>A History Of Social Sanctions at Harvard (Change Title)</h1></div>
-        </div>
-	    <!--img src="img/hearherharvard.png" alt="fullPage" />
-	    <h1>A History Of Social Sanctions at Harvard (Change Title)</h1>
-		<!--http://www.thecrimson.com/article/2017/2/8/where-sanctions-stand-explainer/-->
-	</div>
-	<div class="section" id="section1">
-		<div class="slide">
-			<div class="intro">
-				<h1>Social Spaces at Harvard Before Social Sanctions</h1>
-                <table width="100%">
-                    <tr>
-                        <td width="50%"><img src="img/yarfest.jpg" width="75%" alt="Good Visualization 2"></td>
-                        <td width="50%">
-                            <p>TEXT</p>
-                        </td>
-                    </tr>
-                </table>
-                <!--http://blogs.harvard.edu/collegeadmissionsstudentblog/tag/yardfest/</p-->
-			</div>
-		</div>
-		<div class="slide">
-			<div class="intro">
-                <h1>What Is A USGSO?</h1>
-                <table width="100%">
-                    <tr>
-                        <td width="50%"><img src="img/usgsopic.jpg" width="75%" alt="Good Visualization 2"></td>
-                        <td width="50%">
-                            <p>Unrecognized Single Gender Social Organization. According to the Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations released on February 17, 2017, “An Unrecognized Single Gender Social Organization is any selective-membership, singlegender organization, whose primary purpose is social, including but not limited to final clubs, fraternities and sororities, that has a membership that is comprised entirely of Harvard students and/or Harvard alumni. This definition does not include Harvard Recognized Independent Student Organizations (ISOs), Sponsored Student Organizations (SSOs)..., or other non-Harvard entities whose membership draws from individuals beyond the Harvard community such as city-wide chapters of national organizations...”</p>
-                        </td>
-                    </tr>
-                </table>
+        <!--<div class="section" id="section0">-->
 
-                <!--http://www.thecrimson.com/article/2017/7/13/new-sanctions/-->
+            <!--&lt;!&ndash;img src="img/hearherharvard.png" alt="fullPage" />-->
+            <!--<h1>A History Of Social Sanctions at Harvard (Change Title)</h1>-->
+            <!--&lt;!&ndash;http://www.thecrimson.com/article/2017/2/8/where-sanctions-stand-explainer/&ndash;&gt;-->
+        <!--</div>-->
+
+
+
+        <div class="section" id="section0">
+            <div class="container">
+                <img src="img/usgsopic.jpg" alt="hearherharvard">
+                <div class="centered"><h1>A History Of Social Sanctions at Harvard (Change Title)</h1></div>
             </div>
-		</div>
-		<div class="slide">
-			<div class="intro">
-			    <h1>What Are The Social Sanctions?</h1>
-                <table width="100%">
-                    <tr>
-                        <td width="50%"><img src="img/nothing.jpg" width="75%" alt="Image"></td>
-                        <td width="50%">
-                            <p>TEXT</p>
-                        </td>
-                    </tr>
-                </table>
-\			</div>
-		</div>
-	</div>
-	<div class="section" id="section2">
-		<div class="intro">
-			<div id="timelinevis"></div>
-		</div>
-	</div>
-	<div class="section" id="section3">
-		<div class="intro">
-			<h1>How Have The USGSOs Responded To The Sanctions?</h1>
-                <div class="row">
-                    <div class="col-md-3">
-                        <form>
-                            <input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions<br>
-                            <input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions<br>
-                        </form>
-                    </div>
-                    <div class="col-md-2">
-                        <select class="form-control" id="sort-type" onchange="filterView()">
-                            <option value="all">All</option>
-                            <option value="sor">Sororities</option>
-                            <option value="frat">Fraternities</option>
-                            <option value="ffc">Female Final Clubs</option>
-                            <option value="mfc">Male Final Clubs</option>
-                        </select>
-                    </div>
-                </div>
-                    <div class="categories"></div>
-                <div class="but-cont">
-                    <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
-                </div>
-		</div>
-	</div>`
-	<div class="section" id="section4">
-    		<div class="intro">
-    			<h1>How Does Harvard Compare to Peer Institutions?</h1>
-    			<p>More text about harvard and the sanctions and ish</p>
-    		</div>
-    </div>
-    <div class="section" id="section5">
-        <div class="intro">
-            <div id="radarvis"></div>
         </div>
-    </div>
-    <div class="section" id="section6">
+
+
+        <div class="section" id="section1">
+            <div class="intro">
+                <div class="slide">
+                    <div class="intro">
+                        <h1>Social Spaces at Harvard Before Social Sanctions</h1>
+                        <table width="100%">
+                            <tr>
+                                <td width="50%"><img src="img/yardfest.jpg" width="75%" alt="Good Visualization 2"></td>
+                                <td width="50%">
+                                    <p>TEXT</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--http://blogs.harvard.edu/collegeadmissionsstudentblog/tag/yardfest/</p-->
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="intro">
+                        <h1>What Is A USGSO?</h1>
+                        <table width="100%">
+                            <tr>
+                                <td width="50%"><img src="img/usgsopic.jpg" width="75%" alt="Good Visualization 2"></td>
+                                <td width="50%">
+                                    <p>Unrecognized Single Gender Social Organization. According to the Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations released on February 17, 2017, “An Unrecognized Single Gender Social Organization is any selective-membership, singlegender organization, whose primary purpose is social, including but not limited to final clubs, fraternities and sororities, that has a membership that is comprised entirely of Harvard students and/or Harvard alumni. This definition does not include Harvard Recognized Independent Student Organizations (ISOs), Sponsored Student Organizations (SSOs)..., or other non-Harvard entities whose membership draws from individuals beyond the Harvard community such as city-wide chapters of national organizations...”</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <!--http://www.thecrimson.com/article/2017/7/13/new-sanctions/-->
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="intro">
+                        <h1>What Are The Social Sanctions?</h1>
+                        <table width="100%">
+                            <tr>
+                                <td width="50%"><img src="img/nothing.jpg" width="75%" alt="Image"></td>
+                                <td width="50%">
+                                    <p>TEXT</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section2">
+            <div class="intro">
+                <div id="timelinevis"></div>
+            </div>
+        </div>
+
+        <div class="section" id="section3">
+            <h1>How Have The USGSOs Responded To The Sanctions?</h1>
+                <div class="intro">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <form>
+                                <input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions<br>
+                                <input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions<br>
+                            </form>
+                        </div>
+                        <div class="categories"></div>
+                        <div class="but-cont">
+                            <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" id="sort-type" onchange="filterView()">
+                                <option value="all">All</option>
+                                <option value="sor">Sororities</option>
+                                <option value="frat">Fraternities</option>
+                                <option value="ffc">Female Final Clubs</option>
+                                <option value="mfc">Male Final Clubs</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+        </div>
+
+
+        <div class="section" id="section4">
+            <div class="intro">
+                <h1>How Does Harvard Compare to Peer Institutions?</h1>
+                <p>More text about harvard and the sanctions and ish</p>
+            </div>
+        </div>
+
+        <div class="section" id="section5">
+            <div class="intro">
+                <div id="radarvis"></div>
+            </div>
+        </div>
+
+        <div class="section" id="section6">
             <div class="intro">
                 <h1>Discussion of Data and shit like that</h1>
             </div>
+        </div>
     </div>
-</div>
 
-</body>
+    </body>
 </html>
