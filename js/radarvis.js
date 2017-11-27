@@ -19,8 +19,8 @@ RadarVis.prototype.initVis = function(){
 
     vis.margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
-    vis.width = 500 - vis.margin.left - vis.margin.right,
-        vis.height = 500 - vis.margin.top - vis.margin.bottom;
+    vis.width = 450 - vis.margin.left - vis.margin.right,
+        vis.height = 450 - vis.margin.top - vis.margin.bottom;
     
     // visual settings
     vis.configs = {

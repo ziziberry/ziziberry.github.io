@@ -1,15 +1,24 @@
 body
 {
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: Barlow, Tahoma, Geneva, sans-serif;
     background-color: white;
     color: black;
 }
+
 h1
 {
     font-weight: bold;
     font-size: 30px;
     text-align: center;
     color: black;
+    margin-bottom: 20px;
+}
+
+.intro p{
+    width: 85%;
+    margin: 0;
+    font-size: .9em;
+    text-align: left;
 }
 
 .white
