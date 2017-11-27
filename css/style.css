@@ -9,6 +9,14 @@ h1
     font-weight: bold;
     font-size: 30px;
     text-align: center;
+    color: black;
+}
+
+.white
+{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
     color: white;
 }
 .chart-title
@@ -47,15 +55,15 @@ form {
     text-align: center;
 }
 button {
-    position: absolute;
+    /*position: absolute;*/
     padding: 50px;
     padding-left: 100px;
     padding-right: 100px;
     top: 50%;
     right: 48%;
-    background-color: red;
+    background-color: #97ffeb;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .fp-section {
