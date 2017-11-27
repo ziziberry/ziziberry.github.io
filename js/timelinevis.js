@@ -99,28 +99,52 @@ TimelineVis.prototype.updateVis = function(){
     vis.labels.enter()
         .append("text")
         .merge(vis.labels)
-        .attr("x", function(d, i) {
-            console.log(d.date, parseTime(d.date), i)
-            console.log(timeScale(parseTime(d.date)))
-            return timeScale(parseTime(d.date))-2.5
-        })
-        .attr("y", function(d,i) {
-            if (i%4==0)
-                return 70;
-            else if (i%4==1)
-                return 62;
-            else if (i%4==2)
-                return 54;
-            else if (i%4==3)
-                return 46;
-        })
+        // .attr("x", function(d, i) {
+        //     console.log(d.date, parseTime(d.date), i)
+        //     console.log(timeScale(parseTime(d.date)))
+        //     return timeScale(parseTime(d.date))-2.5
+        // })
+        // .attr("y", function(d,i) {
+        //     if (i%4==0)
+        //         return 70;
+        //     else if (i%4==1)
+        //         return 62;
+        //     else if (i%4==2)
+        //         return 54;
+        //     else if (i%4==3)
+        //         return 46;
+        // })
         .style("font-size", 10)
         .text(function(d) {
             return formatTime(parseTime(d.date));
         })
+        .style("font-size", 10)
+        .style("text-anchor", "end")
+        .attr("transform", function(d, i) {
+            var temp = timeScale(parseTime(d.date));
+            var rotation = -40;
+            console.log(formatTime(parseTime(d.date)), i)
+            if (i==0)
+                return "translate(" + (temp+15) + ", " + 50 + ") rotate(" + rotation + ")";
+            else if (i==1)
+                return "translate(" + (temp-5) + ", " + 100 + ") rotate(" + rotation + ")";
+            else if (i==2)
+                return "translate(" + (temp+35) + ", " + 40 + ") rotate(" + rotation + ")";
+            else if (i==3)
+                return "translate(" + (temp+50) + ", " + 40 + ") rotate(" + rotation + ")";
+            else if (i==9)
+                return "translate(" + (temp+40) + ", " + 40 + ") rotate(" + rotation + ")";
+            else
+                return "translate(" + (temp+15) + ", " + 50 + ") rotate(" + rotation + ")";
+        })
+        .style("text-anchor", "end");
 
     function handleMouseOver(d,i)
     {
+        d3.select(this).attr({
+            fill: "orange",
+            r: 40
+        });
 
         vis.svg.append("text")
             .attr("id", "t" + i)
@@ -136,6 +160,11 @@ TimelineVis.prototype.updateVis = function(){
 
     function handleMouseOut(d,i)
     {
+        d3.select(this).attr({
+            fill: "black",
+            r: 10
+        });
+
         d3.select("#t" + i).remove();  // Remove text location
     }
     //     .attr("fill", function(d, i) {
