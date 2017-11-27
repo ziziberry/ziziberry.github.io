@@ -128,6 +128,9 @@ TimelineVis.prototype.updateVis = function(){
             return formatTime(parseTime(d.date));
         })
 
+    
+    // old tooltips
+    
 //    function handleMouseOver(d,i)
 //    {
 //        vis.tooltip.show(); 
