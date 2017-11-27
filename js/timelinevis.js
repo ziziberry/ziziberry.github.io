@@ -99,52 +99,25 @@ TimelineVis.prototype.updateVis = function(){
     vis.labels.enter()
         .append("text")
         .merge(vis.labels)
-        .text(function(d) {
-            return formatTime(parseTime(d.date))
+        .attr("x", function(d, i) {
+            console.log(d.date, parseTime(d.date), i)
+            console.log(timeScale(parseTime(d.date)))
+            return timeScale(parseTime(d.date))-2.5
         })
-        // .attr("x", function(d, i) {
-        //     console.log(d.date, parseTime(d.date), i)
-        //     console.log(timeScale(parseTime(d.date)))
-        //     return timeScale(parseTime(d.date))-2.5
-        // })
-        // .attr("y", 70)
-        //.attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")")
-        // .attr("y", function(d,i) {
-        //     if (i%4==0)
-        //         return 70;
-        //     else if (i%4==1)
-        //         return 62;
-        //     else if (i%4==2)
-        //         return 54;
-        //     else if (i%4==3)
-        //         return 46;
-        // })
-
+        .attr("y", function(d,i) {
+            if (i%4==0)
+                return 70;
+            else if (i%4==1)
+                return 62;
+            else if (i%4==2)
+                return 54;
+            else if (i%4==3)
+                return 46;
+        })
         .style("font-size", 10)
-        .style("text-anchor", "end")
-        .attr("transform", function(d, i) {
-            var temp = timeScale(parseTime(d.date));
-            var rotation = -40;
-            console.log(formatTime(parseTime(d.date)), i)
-            if (i==0)
-                return "translate(" + (temp+15) + ", " + 50 + ") rotate(" + rotation + ")";
-            else if (i==1)
-                return "translate(" + (temp-5) + ", " + 100 + ") rotate(" + rotation + ")";
-            else if (i==2)
-                return "translate(" + (temp+35) + ", " + 40 + ") rotate(" + rotation + ")";
-            else if (i==3)
-                return "translate(" + (temp+50) + ", " + 40 + ") rotate(" + rotation + ")";
-            else if (i==9)
-                return "translate(" + (temp+40) + ", " + 40 + ") rotate(" + rotation + ")";
-            else
-                return "translate(" + (temp+15) + ", " + 50 + ") rotate(" + rotation + ")";
+        .text(function(d) {
+            return formatTime(parseTime(d.date));
         })
-        .style("text-anchor", "end");
-
-
-
-
-
 
     function handleMouseOver(d,i)
     {
