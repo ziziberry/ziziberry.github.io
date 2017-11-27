@@ -19,10 +19,10 @@ RadarVis.prototype.initVis = function(){
 
     vis.margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
-    // vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right,
     vis.width = 500 - vis.margin.left - vis.margin.right,
         vis.height = 500 - vis.margin.top - vis.margin.bottom;
     
+    // visual settings
     vis.configs = {
       w: vis.width,
       h: vis.height,
@@ -31,8 +31,8 @@ RadarVis.prototype.initVis = function(){
       ExtraWidthX: 300
     };
     
+    // color scale
     vis.colorscale = d3.scaleOrdinal(d3.schemeCategory10);
-    
     
     this.wrangleData();
 };
@@ -61,8 +61,11 @@ RadarVis.prototype.wrangleData = function(){
 RadarVis.prototype.updateVis = function(){
     var vis = this;
     
+    // draw radar chart
     RadarChart.draw("#" + vis.parentElement, vis.displaydata, vis.configs);
 
+    // create legend
+    // draw legend svg
     vis.svg = d3.select("#radarvis")
 	.selectAll('svg')
 	.append('svg')
@@ -75,6 +78,7 @@ RadarVis.prototype.updateVis = function(){
 	.attr("width", 200)
 	.attr('transform', 'translate(150,20)');
     
+    // create rects of corresponding color
 	vis.radarlegend.selectAll("rect")
 	  .data(Object.keys(vis.data))
 	  .enter()
@@ -87,6 +91,7 @@ RadarVis.prototype.updateVis = function(){
     
     console.log(Object.keys(vis.data));
     
+    // create text labels for legend
 	vis.radarlegend.selectAll("text")
 	  .data(Object.keys(vis.data))
 	  .enter()
