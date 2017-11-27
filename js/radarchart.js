@@ -215,8 +215,8 @@ var RadarChart = {
 //						.transition(200)
 //						.style("fill-opacity", cfg.opacityArea);
 //				  })
-		.append("svg:title")
-		.text(function(j){return Math.max(j.value, 0)});
+////		.append("svg:title")
+//		.text(function(j){return Math.max(j.value, 0)});
 
 	  series++;
 	});
