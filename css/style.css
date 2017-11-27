@@ -51,16 +51,15 @@ form {
     margin-left: 25px;
     padding: 5px;
 }
-.but-cont {
-    text-align: center;
-}
+
 button {
     /*position: absolute;*/
+    text-align: center;
     padding: 50px;
     padding-left: 100px;
     padding-right: 100px;
     top: 50%;
-    right: 48%;
+    right: 50%;
     background-color: #97ffeb;
     font-weight: bold;
     font-size: 20px;
