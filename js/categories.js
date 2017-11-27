@@ -37,7 +37,7 @@ Categories.prototype.initVis = function(){
 
     // 5 circles
     vis.radius = 80;
-    vis.spacing = 375;
+    vis.spacing = 300;
 
     vis.sorgroup = vis.svg.append("g");
 
@@ -74,7 +74,7 @@ Categories.prototype.initVis = function(){
 
     vis.ffclab = vis.svg.append("text")
         .text("Female Final Clubs")
-        .attr("x", -5)
+        .attr("x", -20)
         .attr("y", vis.spacing);
 
     vis.mfc = vis.svg.append("circle")
@@ -98,7 +98,7 @@ Categories.prototype.initVis = function(){
 
     vis.coedlab = vis.svg.append("text")
         .text("Co-Ed (Non-USGSO)")
-        .attr("x", vis.spacing/2 - 10)
+        .attr("x", vis.spacing/2 - 20)
         .attr("y", vis.spacing/2);
 
     vis.wrangleData();
