@@ -1,8 +1,9 @@
 // RADAR CHART
 
-//http://bl.ocks.org/nbremer/6506614
-
+// SOURCE: http://bl.ocks.org/nbremer/6506614
 // base code from https://github.com/alangrafu/radar-chart-d3
+
+// modifications have been made to this code to suit the needs for our visualization 
 
 var RadarChart = {
   draw: function(id, d, options){

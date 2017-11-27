@@ -1,5 +1,5 @@
-﻿school,student_body,tuition,student_housing,athletics,acceptance_rate,median_family_income,top_20_percent
+school,student_body,tuition,student_housing,athletics,acceptance_rate,median_family_income,top_20_percent
 Williams,0.336466775,1,0.948979592,1,1,0.948443083,0.971014493
-Amherst,0.299675851,0.969571751,1,0.9125,0.777777778,0.807554875,0.869565217
 Bowdoin,0.292544571,0.973854245,0.897959184,0.9125,0.833333333,1,1
+Amherst,0.299675851,0.969571751,1,0.9125,0.777777778,0.807554875,0.869565217
 Harvard,1,0.812922615,1,0.5,0.277777778,0.861664114,0.971014493

@@ -1,13 +1,14 @@
-allData = [];
+// Initialize variables to save the charts later
+var allData = [];
 var peerinstitutions = [];
 var peerinstitutions_norm = [];
 var timelineData;
 var usgso_initialData;
 var categories;
 var count = 0;
-// Initialize variables to save the charts later
 
 
+// queue to load datasets
 queue()
     .defer(d3.csv,"data/timeline.csv")
     .defer(d3.csv,"data/ugsgo_initial_status.csv")
@@ -60,7 +61,6 @@ function loadVis(error, timelineData, usgso_initialData, usgso_currentData, peer
 
 
     // map data
-
     peerinstitutionsData.forEach(function(d) {
         peerinstitutions[d.school] = d;
     })
@@ -74,11 +74,16 @@ function loadVis(error, timelineData, usgso_initialData, usgso_currentData, peer
     console.log(usgso_currentData);
     console.log(peerinstitutions);
     console.log(peerinstitutions_norm);
+    
+    // initialize visualizations
 
+    // radar chart of peer instituions
     var radarvis = new RadarVis("radarvis", peerinstitutions, peerinstitutions_norm)
 
+    // timeline of important dates and decisions
     var timelinevis = new TimelineVis("timelinevis", timelineData);
 
+    // categorical depiction of USGSOs
     categories = new Categories("categories", usgso_initialData, usgso_currentData);
 };
 
