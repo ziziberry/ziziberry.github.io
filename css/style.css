@@ -170,3 +170,7 @@ td {
 table{
     margin: 20px;
 }
+
+label {
+    color: white;
+}
