@@ -249,6 +249,7 @@ Categories.prototype.updateVis = function(){
             if (i >= 11){return (i-11)*30 + space2}
             else {return i*30 + space2}
         })
+        .attr("stroke", "white")
         .text(function(d){return d[5]});
 
 
