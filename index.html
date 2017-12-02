@@ -53,7 +53,17 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				sectionsColor: ['#adadad', "adadad", "adadad", "adadad", "adadad", "adadad","adadad"],
+                
+                // navigation
+                menu: '#menu',
+                lockAnchors: false,
+                navigation: true,
+                navigationPosition: 'right',
+                showActiveTooltip: false,
+                slidesNavigation: false,
+                slidesNavPosition: 'bottom',
+                
+				sectionsColor: ['#adadad', "adadad", "adadad", "adadad", "adadad", "adadad", "adadad","adadad"],
 				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
 				menu: '#menu',
 				scrollingSpeed: 500
