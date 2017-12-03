@@ -1,75 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>A History of Social Sanctions at Harvard</title>
+	<title>Responsive Width - fullPage.js</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+	<meta name="Resource-type" content="Document" />
+
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/examples.css" />
-    <link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
-
 	<style>
-	/* adapted from https://github.com/alvarotrigo/fullPage.js#introduction */
-        
-		/* Sections
-		 * --------------------------------------- */
-		#section0 img,
-		#section1 img{
-			margin: 0 0 0 0;
-		}
-        
-		/* adapted from https://www.w3schools.com/howto/howto_css_image_text.asp */
-		.centered, .but-cont{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        
-		#section2 img{
-			margin: 20px 0 0 0px;
-		}
-        
-		#section3 img{
-			bottom: 0px;
-			position: absolute;
-			margin-left: -420px;
-		}
 
-		/* Container holding the image and the text */
-        .container {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 1em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
 
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+    #section0 img,
+    #section1 img{
+        margin: 0 0 0 0;
+    }
+
+    /* adapted from https://www.w3schools.com/howto/howto_css_image_text.asp */
+    .centered, .but-cont{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #section2 img{
+        margin: 20px 0 0 0px;
+    }
+
+    #section3 img{
+        bottom: 0px;
+        position: absolute;
+        margin-left: -420px;
+    }
+    /* Container holding the image and the text */
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
 	</style>
 
-	
-    <script src="js/jquery.min.js"></script>
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="vendors/scrolloverflow.js"></script>
+
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="js/examples.js"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-                
-                // navigation
-                menu: '#menu',
-                lockAnchors: false,
-                navigation: true,
-                navigationPosition: 'right',
-                showActiveTooltip: false,
-                slidesNavigation: false,
-                slidesNavPosition: 'bottom',
-                
-				sectionsColor: ['#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc'],
-				anchors: ['1stPage', '2ndPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
-				menu: '#menu',
-				scrollingSpeed: 500
+				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
+				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B', '#1BBC9B', '#1BBC9B'],
+				navigation: true,
+				navigationPosition: 'right',
+				responsiveWidth: 900,
+				afterResponsive: function(isResponsive){
+
+				}
+
 			});
 		});
 	</script>
+
 	<!-- Load JS libraries: jQuery, bootstrap, D3 -->
 
     	<!-- Your implementation -->
@@ -87,27 +114,6 @@
 </head>
     
 <body>
-<!--
-    <ul id="menu">
-<<<<<<< HEAD
-        <li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Social Spaces at Harvard</a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage">Timeline of Events</a></li>
-        <li data-menuanchor="4thpage"><a href="#4thpage">USGSO Response</a></li>
-        <li data-menuanchor="5thpage"><a href="#5thpage">Harvard vs. Peer Institutions</a></li>
-<!--
-=======
-        <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
-        <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
-        <li data-menuanchor="5thpage"><a href="#5thpage">Fifth slide</a></li>
->>>>>>> 27eb880e5d91b9b6be942b317d2a116a83db0d83
-        <li data-menuanchor="6thpage"><a href="#6thpage">Sixth slide</a></li>
-        <li data-menuanchor="7thpage"><a href="#7thpage">Seventh slide</a></li>
--->
-<!--    </ul>-->
-
 
     <div id="fullpage">
 
@@ -122,63 +128,45 @@
         </div>
 
         <div class="section" id="section1">
-            <div class="slide">
-                <div class="intro">
-                    <h1>Social Spaces at Harvard Before Social Sanctions</h1>
-                    <table width="100%">
-                        <tr>
-                            <td width="50%"><img src="img/yarfest.jpg" width="75%" alt="Good Visualization 2"></td>
-                            <td width="50%">
-                                <p>The undergraduate social life at Harvard College spans a wide range of organizations and interests, encompassing a diverse student body of around 6,700 undergraduates from 50 states and over 80 countries. According to Harvard’s website, there are “over 400 official student organizations including extracurricular, co-curricular and athletic opportunities in addition to academics”. In terms of the “party scene”, many of these groups serve both a practical and social purpose, with various clubs hosting campus-wide parties and social functions. Particularly noteworthy is the College Events Board, which plans annual events open to the entire campus, including YardFest, a Spring concert in Tercentenary Theater (Old Harvard Yard), and Camp Harvard, a Fall back-to-school outdoors BBQ. Certain student dorms which have large, party-friendly suites also host open parties, while unofficial, primarily social organizations, including the unrecognized single-gender social organizations (USGSOs) in question, i.e. final clubs (Harvard-specific) and Greek organizations (affiliated with broader national associations). </p>
-                            </td>
-                        </tr>
-                    </table>
-                    <!--http://blogs.harvard.edu/collegeadmissionsstudentblog/tag/yardfest/</p-->
-                </div>
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <h1>What Is a USGSO?</h1>
-                    <table width="100%">
-                        <tr>
-                            <td width="50%"><img src="img/usgsopic.jpg" width="75%" alt="Good Visualization 2"></td>
-                            <td width="50%">
-                                <p><span class="usgso-emphasis">USGSO</span> <br /> <span class="usgso-desc">Unrecognized Single Gender Social Organization</span></p>
-                                <br />
-                                <p>
-                                According to the Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations released on February 17, 2017, “An Unrecognized Single Gender Social Organization is any selective-membership, singlegender organization, whose primary purpose is social, including but not limited to final clubs, fraternities and sororities, that has a membership that is comprised entirely of Harvard students and/or Harvard alumni. This definition does not include Harvard Recognized Independent Student Organizations (ISOs), Sponsored Student Organizations (SSOs)..., or other non-Harvard entities whose membership draws from individuals beyond the Harvard community such as city-wide chapters of national organizations...”</p>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <!--http://www.thecrimson.com/article/2017/7/13/new-sanctions/-->
-                </div>
-            </div>
-            <div class="slide">
-                <div class="intro">
-                    <h1>What Are The Social Sanctions?</h1>
-                    <table width="100%">
-                        <tr>
-                            <td width="05%"></td>
-                            <td width="50%">
-                                <p>The social sanctions are a faculty-driven initiative to institute penalties on USGSOs, Unrecognized Single Gender Social Organizations. The Committee on the Unrecognized Single-Gender Social Organizations defended the sanctions as part of Harvard College’s commitment to non-discrimination, inclusion, and a healthy social climate. Under these sanctions, participants in USGSOs will no longer be eligible for College-endorsed fellowships, leadership positions, and captaincies. This policy is to apply to students entering Harvard College starting in the fall of 2018 (Class of 2022). All currently enrolled undergraduates are exempt from the effects of this policy for the duration of their time at Harvard. An expansion of the original proposal has called for an outright ban on social groups and phased out from the campus completely by the year 2022.</p>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="intro">
+              <h1>Overview SS/What is USGSO?</h1>
             </div>
         </div>
-        
+
         <div class="section" id="section2">
             <div class="intro">
-                <h1>Timeline of Important Dates and Decisions</h1>
-                <div id="timelinevis"></div>
+                  <h1>Categories USGSO</h1>
             </div>
-		</div>
-        
+        </div>
+
         <div class="section" id="section3">
             <div class="intro">
-                <h1>How Have The USGSOs Responded To The Sanctions?</h1>
+                  <h1>VIS: IS THIS A USGSO</h1>
+            </div>
+        </div>
+
+        <div class="section" id="section4">
+            <div class="intro">
+                  <h1>Timeline of Important Dates and Decisions</h1>
+                  <div id="timelinevis"></div>
+            </div>
+        </div>
+
+        <div class="section" id="section5">
+            <div class="slide">
+                <div class="intro">
+                    <h1>How Does Harvard Compare to Peer Institutions?</h1>
+                    <div id="radarvis"></div>
+                </div>
+            </div>
+            <div class="slide active">
+                <div class="intro">
+                    <h1>TESTIMONIALS</h1>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="intro">
+                    <h1>How Have The USGSOs Responded To The Sanctions?</h1>
                     <div class="row">
                         <div class="col-md-3">
                             <form>
@@ -200,37 +188,16 @@
                     <div class="but-cont">
                         <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
                     </div>
-            </div>
-        </div>
-        
-        <div class="section" id="section4">
-                <div class="intro">
-                   <h1>Motivations Behind the Social Sanctions</h1>
-                     <table width="100%">
-                         <tr>
-                             <td width="50%"><img src="img/motivation.jpg" width="75%" alt="Image"></td>
-                             <td width="50%">
-                                 <p><span class="usgso-emphasis">Peer Institutions</span></p>
-                                 <p>According to the Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations released on February 17, 2017, "As part of its work, the Committee sought examples from peer institutions who have dealt with similar issues. For example, liberal arts colleges including Amherst, Bowdoin, Williams and Middlebury, have generally decided to ban fraternity and sorority life...Overall, these institutions have consistently viewed social life organized by gender as incompatible with creating an inclusive campus. Those institutions that have had the most success addressing the influence of single gender social organizations and fraternity systems did so by taking bold steps to implement policies that eliminated the presence of such organizations combined with significant investment in alternatives including re-organizing their residential systems to promote and institutionalize inclusive social communities. Those that took half measures or changed course did not realize the same level of positive change in the undergraduate experience."</p>
-                             </td>
-                             <!--http://www.thecrimson.com/article/2016/5/10/women-oppose-sanctions/-->
-                         </tr>
-                     </table>
                 </div>
-        </div>
-        <div class="section" id="section5">
-            <div class="intro">
-                <h1>How Does Harvard Compare to Peer Institutions?</h1>
-                <div id="radarvis"></div>
             </div>
         </div>
-<!--
+
         <div class="section" id="section6">
-                <div class="intro">
-                    <h1>Discussion of Data and shit like that</h1>
-                </div>
+            <div class="intro">
+                <h1>Discussion</h1>
+            </div>
         </div>
--->
+
     </div>
 
 
