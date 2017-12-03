@@ -208,22 +208,28 @@ Categories.prototype.wrangleData = function(){
 Categories.prototype.updateVis = function(){
     var vis = this;
 
-    console.log("update")
-
     vis.listpos = [];
     for (var i = 0; i < 21; i++) {
         vis.listpos.push(vis.positions[i])
     }
 
-    var space = 35;
-    var space2 = 20;
+    /* Initialize tooltip */
+    vis.tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+            return d[5];
+        });
 
+    vis.svg.call(vis.tip);
 
     vis.sortpics = vis.svg.selectAll("image.usgso")
         .data(vis.listpos);
 
     vis.sortpics.enter().append("image")
         .merge(vis.sortpics)
+        .on('mouseover', vis.tip.show)
+        .on('mouseout', vis.tip.hide)
         .transition()
         .duration(1000)
         .attr("class", "usgso")
@@ -231,7 +237,8 @@ Categories.prototype.updateVis = function(){
         .attr("x", function(d){return d[0]})
         .attr("y", function(d){return d[1]})
         .attr("height", 30)
-        .attr("width", 30);
+        .attr("width", 30)
+
 
 };
 
