@@ -240,10 +240,14 @@
                     <h1>How Have The USGSOs Responded To The Sanctions?</h1>
                     <div class="row">
                         <div class="col-md-3">
-                            <form>
-                                <label><input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
-                                <label><input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions</label><br>
-                            </form>
+                            <!--https://stackoverflow.com/questions/39846282/how-to-add-the-text-on-and-off-to-toggle-button-->
+                            <label class="switch">
+                                <input type="checkbox" id="togBtn">
+                                <div class="slider">
+                                    <span class="on" onChange="beforeSanctions()">Before Sanctions</span>
+                                    <span class="off" onChange="afterSanctions()">After Sanctions</span>
+                                </div>
+                            </label>
                         </div>
                         <div class="col-md-2">
                             <select class="form-control" id="sort-type" onchange="filterView()">
