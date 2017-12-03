@@ -175,3 +175,7 @@ table{
 label {
     color: white;
 }
+
+tr {
+    border: 1px;
+}
