@@ -215,43 +215,8 @@ Categories.prototype.updateVis = function(){
         vis.listpos.push(vis.positions[i])
     }
 
-    vis.legendicon = vis.svg.selectAll("image.legend")
-        .data(vis.listpos);
-
-    vis.legendicon.enter().append("image")
-        .attr("class", "legend")
-        .attr('xlink:href', function(d){return d[4];})
-        .attr("x", function(d, i){
-            if (i >= 11){return 800}
-            else {return 600}
-        })
-        .attr("y", function(d, i){
-            if (i >= 11){return (i-11)*30}
-            else {return i*30}
-        })
-        .attr("height", 30)
-        .attr("width", 30);
-
-
     var space = 35;
     var space2 = 20;
-
-    vis.legendlabel = vis.svg.selectAll("text.legend")
-        .data(vis.listpos);
-
-    vis.legendicon.enter().append("text")
-        .attr("class", "legend")
-        .attr("x", function(d, i){
-            if (i >= 11){return 800 + space}
-            else {return 600 + space}
-        })
-        .attr("y", function(d, i){
-            if (i >= 11){return (i-11)*30 + space2}
-            else {return i*30 + space2}
-        })
-        .attr("stroke", "white")
-        .text(function(d){return d[5]});
-
 
 
     vis.sortpics = vis.svg.selectAll("image.usgso")

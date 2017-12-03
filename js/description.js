@@ -50,7 +50,7 @@ Description.prototype.initVis = function(){
         .enter().append("text")
         .attr("class", "sor")
         .attr("x", 35)
-        .attr("y", function(d, i){return 20 + i*30})
+        .attr("y", function(d, i){return 20 + i*35})
         .text(function(d){return d.old_name});
 
 
@@ -60,7 +60,7 @@ Description.prototype.initVis = function(){
         .attr("class", "sor")
         .attr('xlink:href', function(d){return "img/" + d.img;})
         .attr("x", 0)
-        .attr("y", function(d, i){return i*30})
+        .attr("y", function(d, i){return i*35})
         .attr("height", 30)
         .attr("width", 30);
 
@@ -69,7 +69,7 @@ Description.prototype.initVis = function(){
         .enter().append("text")
         .attr("class", "frat")
         .attr("x", 35)
-        .attr("y", function(d, i){return 20 + i*30})
+        .attr("y", function(d, i){return 20 + i*35})
         .text(function(d){return d.old_name});
 
 
@@ -79,7 +79,7 @@ Description.prototype.initVis = function(){
         .attr("class", "frat")
         .attr('xlink:href', function(d){return "img/" + d.img;})
         .attr("x", 0)
-        .attr("y", function(d, i){return i*30})
+        .attr("y", function(d, i){return i*35})
         .attr("height", 30)
         .attr("width", 30);
 
@@ -91,8 +91,8 @@ Description.prototype.initVis = function(){
             if (i > 3) {return 150}
             else {return 35}})
         .attr("y", function(d, i){
-            if (i > 3) {return 20 + (i-4)*30 }
-            else {return 20 + i*30}})
+            if (i > 3) {return 20 + (i-4)*35 }
+            else {return 20 + i*35}})
         .text(function(d){return d.old_name});
 
 
@@ -105,8 +105,8 @@ Description.prototype.initVis = function(){
             if (i > 3) {return 115}
             else {return 0}})
         .attr("y", function(d, i){
-            if (i > 3) {return (i-4)*30 }
-            else {return i*30}})
+            if (i > 3) {return (i-4)*35 }
+            else {return i*35}})
         .attr("height", 30)
         .attr("width", 30);
 
@@ -118,8 +118,8 @@ Description.prototype.initVis = function(){
             if (i > 3) {return 150}
             else {return 35}})
         .attr("y", function(d, i){
-            if (i > 3) {return 20 + (i-4)*30 }
-            else {return 20 + i*30}})
+            if (i > 3) {return 20 + (i-4)*35 }
+            else {return 20 + i*35}})
         .text(function(d){return d.old_name});
 
 
@@ -132,8 +132,8 @@ Description.prototype.initVis = function(){
             if (i > 3) {return 115}
             else {return 0}})
         .attr("y", function(d, i){
-            if (i > 3) {return (i-4)*30 }
-            else {return i*30}})
+            if (i > 3) {return (i-4)*35 }
+            else {return i*35}})
         .attr("height", 30)
         .attr("width", 30);
 
