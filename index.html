@@ -2,42 +2,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Responsive Width - fullPage.js</title>
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
-	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
-	<meta name="Resource-type" content="Document" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Responsive Width - fullPage.js</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen navigation and sections control menu." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+    <meta name="Resource-type" content="Document" />
 
 
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="css/examples.css" />
-	<link rel="stylesheet" href="css/style.css">
-	<style>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
 
-	/* Style for our header texts
-	* --------------------------------------- */
-	h1{
-		font-size: 1em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-	}
-	.intro p{
-		color: #fff;
-	}
+    /* Style for our header texts
+    * --------------------------------------- */
+    h1{
+        font-size: 1em;
+        font-family: arial,helvetica;
+        color: #fff;
+        margin:0;
+    }
+    .intro p{
+        color: #fff;
+    }
 
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-	}
+    /* Centered texts in each section
+    * --------------------------------------- */
+    .section{
+        text-align:center;
+    }
 
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
-	}
+    /* Bottom menu
+    * --------------------------------------- */
+    #infoMenu li a {
+        color: #fff;
+    }
     #section0 img,
     #section1 img{
         margin: 0 0 0 0;
@@ -66,58 +66,73 @@
         text-align: center;
         color: white;
     }
-
-    tr {
+    .center {
+        margin: auto;
+        width: 90%;
+    }
+    td {
+        padding: 7px;
+    }
+    .desc{
         text-align: left;
     }
-	</style>
+    ul{
+        padding-right: 15px;
+    }
+    li, #names{
+        padding: 5px;
+    }
 
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    </style>
 
-	<script type="text/javascript" src="vendors/scrolloverflow.js"></script>
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
 
-	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="js/examples.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
-				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B', '#1BBC9B', '#1BBC9B'],
-				navigation: true,
-				navigationPosition: 'right',
-				responsiveWidth: 900,
-				afterResponsive: function(isResponsive){
+    <script type="text/javascript" src="vendors/scrolloverflow.js"></script>
 
-				}
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
 
-			});
-		});
-	</script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
+                sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#C63D0F', '#1BBC9B', '#1BBC9B', '#1BBC9B'],
+                navigation: true,
+                navigationPosition: 'right',
+                responsiveWidth: 900,
+                afterResponsive: function(isResponsive){
 
-	<!-- Load JS libraries: jQuery, bootstrap, D3 -->
+                }
 
-    	<!-- Your implementation -->
-    	<script src="js/d3.js"></script>
-    	<script src="js/categories.js"></script>
-    	<script src="js/radarchart.js"></script>
-    	<script src="js/radarvis.js"></script>
+            });
+        });
+    </script>
+
+    <!-- Load JS libraries: jQuery, bootstrap, D3 -->
+
+        <!-- Your implementation -->
+        <script src="js/d3.js"></script>
+        <script src="js/categories.js"></script>
+        <script src="js/radarchart.js"></script>
+        <script src="js/radarvis.js"></script>
         <script src="js/timelinevis.js"></script>
+        <script src="js/description.js"></script>
         <script src="js/queue.v1.min.js"></script>
         <script src="js/d3-tip.js"></script>
         <script src="js/bootstrap.min.js"></script>
-    	<script src="js/main.js"></script>
+        <script src="js/main.js"></script>
 
 
 </head>
-    
+
 <body>
 
     <div id="fullpage">
@@ -141,149 +156,54 @@
         <div class="section" id="section2">
             <div class="intro">
                   <h1>Categories USGSO</h1>
-                  <table width="100%">
-                    <tr>
-                        <td width="25%">Sororities</td>
-                        <td width="25%">Fraternities</td>
-                        <td width="25%">Female Final Clubs</td>
-                        <td width="25%">Male Final Clubs</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <ul>
-                                <li>Greek letter organization</li>
-                                <li>Membership: Female-identifying individuals initiated as undergraduates</li>
-                                <li>Purpose: Social and philanthropic</li>
-                                <li>Level: International/National organization with college chapters</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Greek letter organization</li>
-                                <li>Membership: Male-identifying individuals initiated as undergraduates</li>
-                                <li>Purpose: Social and philanthropic</li>
-                                <li>Level: International/National organization with college chapters</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Membership: Female-identifying individuals initiated as undergraduates</li>
-                                <li>Purpose: Social</li>
-                                <li>Level: Harvard College specific</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <ul>
-                                <li>Membership: Male-identifying individuals initiated as undergraduates</li>
-                                 <li>Purpose: Social</li>
-                                 <li>Level: Harvard College specific</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <table>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/theta.png"></td>
-                                    <td>Kappa Alpha Theta</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/kappa.png"></td>
-                                    <td>Kappa Kappa Gamma</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/dg.png"></td>
-                                    <td>Delta Gamma</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/aphi.png"></td>
-                                    <td>Alpha Phi</td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/sigchi.png"></td>
-                                    <td>Sigma Chi</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/kappasig.png"></td>
-                                    <td>Kappa Sigma</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/sae.png"></td>
-                                    <td>Sigma Alpha Epsilon</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/aepi.gif"></td>
-                                    <td>Alpha Epsilon Pi</td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/bee.png"></td>
-                                    <td>The Bee Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/ic.png"></td>
-                                    <td>The IC Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/sab.png"></td>
-                                    <td>The Sabliere Society</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/lavie.png"></td>
-                                    <td>La Vie Club Inc.</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="30px" height='auto' src="img/pleiades.png"></td>
-                                    <td>The Pleiades Society</td>
-                                </tr>
-                            </table>
-                        </td>
-                        <td>
-                            <table>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/ad.png"></td>
-                                    <td>A.D. Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/delphic.png"></td>
-                                    <td>Delphic Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/fox.png"></td>
-                                    <td>The Fox Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/psk.png"></td>
-                                    <td>Phoenix S.K. Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/fly.png"></td>
-                                    <td>The Fly Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/pc.png"></td>
-                                    <td>The Porcellian Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/owl.png"></td>
-                                    <td>The Owl Club</td>
-                                </tr>
-                                <tr>
-                                    <td><img width="auto" height='30px' src="img/spee.png"></td>
-                                    <td>The Spee Club</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-
-                  </table>
+                  <div class="center">
+                      <table width="100%">
+                        <tr id="names">
+                            <td width="25%">Sororities</td>
+                            <td width="25%">Fraternities</td>
+                            <td width="25%">Female Final Clubs</td>
+                            <td width="25%">Male Final Clubs</td>
+                        </tr>
+                        <tr valign="top">
+                            <td>
+                                <ul style="list-style-type:disc" class="desc">
+                                    <li>Greek letter organization</li>
+                                    <li>Membership: Female-identifying individuals initiated as undergraduates</li>
+                                    <li>Purpose: Social and philanthropic</li>
+                                    <li>Level: International/National organization with college chapters</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul style="list-style-type:disc" class="desc">
+                                    <li>Greek letter organization</li>
+                                    <li>Membership: Male-identifying individuals initiated as undergraduates</li>
+                                    <li>Purpose: Social and philanthropic</li>
+                                    <li>Level: International/National organization with college chapters</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul style="list-style-type:disc" class="desc">
+                                    <li>Membership: Female-identifying individuals initiated as undergraduates</li>
+                                    <li>Purpose: Social</li>
+                                    <li>Level: Harvard College specific</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul style="list-style-type:disc" class="desc">
+                                    <li>Membership: Male-identifying individuals initiated as undergraduates</li>
+                                     <li>Purpose: Social</li>
+                                     <li>Level: Harvard College specific</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr valign="top">
+                            <td id="sor"></td>
+                            <td id="frat"></td>
+                            <td id="ffc"></td>
+                            <td id="mfc"></td>
+                        </tr>
+                      </table>
+                  </div>
             </div>
         </div>
 

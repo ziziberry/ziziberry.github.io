@@ -84,6 +84,8 @@ function loadVis(error, timelineData, usgso_initialData, usgso_currentData, peer
 
     // categorical depiction of USGSOs
     categories = new Categories("categories", usgso_initialData, usgso_currentData);
+
+    var description = new Description("description", usgso_initialData);
 };
 
 function gatherData() {
