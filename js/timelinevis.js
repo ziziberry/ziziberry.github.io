@@ -124,7 +124,7 @@ TimelineVis.prototype.updateVis = function(){
         //         return 46;
         // })
         .style("font-size", 10)
-        .attr("fill", "#ffffff")
+        .attr("fill", "#000000")
         .text(function(d) {
             return formatTime(parseTime(d.date));
         })

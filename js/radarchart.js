@@ -59,14 +59,6 @@ var RadarChart = {
     // invoke tooltip 
     g.call(tooltip)
       
-    // initialize school label 
-	var label; 
-            
-    label = d3.tip()
-
-    // invoke tooltip 
-    g.call(label)
-    
 	//Circular segments
 	for(var j=0; j<cfg.levels-1; j++){
 	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
@@ -101,7 +93,7 @@ var RadarChart = {
 //	   .attr("fill", "#737373")
 //	   .text(Format((j+1)*cfg.maxValue/cfg.levels));
 //	}
-	
+//	
 	series = 0;
 
 	var axis = g.selectAll(".axis")
@@ -131,15 +123,9 @@ var RadarChart = {
 		.attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-60*Math.sin(i*cfg.radians/total);})
 		.attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total))-20*Math.cos(i*cfg.radians/total);});
 
-      
-    label_school = [];
  
 	d.forEach(function(y, x){
-      console.log(y)
 	  dataValues = [];
-      label_school[series] = y[0].school;
-      console.log(label_school[series]);
-      label.attr('class', 'd3-tip tooltip-radar').html(function(d) { return "<span class='tooltip-radar-title'>" + label_school[series] + "</span>" }); 
 	  g.selectAll(".nodes")
 		.data(y, function(j, i){
 		  dataValues.push([
@@ -153,7 +139,6 @@ var RadarChart = {
 					 .enter()
 					 .append("polygon")
 					 .attr("class", "radar-chart-serie"+series)
-                     .attr("class", label_school[series])
 					 .style("stroke-width", "2px")
 					 .style("stroke", cfg.color(series))
 					 .attr("points",function(d) {
@@ -173,17 +158,11 @@ var RadarChart = {
 										g.selectAll(z)
 										 .transition(200)
 										 .style("fill-opacity", .7);
-                                        g.append("text")
-                                        .attr('x', 180)
-						                .attr('y', 200)
-                                        .attr("class", "radar-label")
-                                        .text(d3.select(this).attr("class"));
 									  })
 					 .on('mouseout', function(){
 										g.selectAll("polygon")
 										 .transition(200)
 										 .style("fill-opacity", cfg.opacityArea);
-                                        g.selectAll("text").remove()
 					 });
 	  series++;
 	});
@@ -244,7 +223,7 @@ var RadarChart = {
 
 	  series++;
 	});
-//	
+	
 //	//Tooltip
 //	tooltip = g.append('text')
 //			   .style('opacity', 0)

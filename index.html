@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Responsive Width - fullPage.js</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen navigation and sections control menu." />
+    <meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+    <meta name="Resource-type" content="Document" />
 
     <title>A History of Social Sanctions at Harvard</title>
+
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
     <link rel="stylesheet" href="css/style.css">
     <style>
+
+    /* Style for our header texts
+    * --------------------------------------- */
+    h1{
+        font-size: 1em;
+        font-family: arial,helvetica;
+        color: #fff;
+        margin:0;
+    }
+    .intro p{
+        color: #fff;
+    }
+
+    /* Centered texts in each section
+    * --------------------------------------- */
+    .section{
+        text-align:center;
+    }
+
+    /* Bottom menu
+    * --------------------------------------- */
+    #infoMenu li a {
+        color: #fff;
+    }
+    #section0 img,
+    #section1 img{
+        margin: 0 0 0 0;
+    }
 
     /* adapted from https://www.w3schools.com/howto/howto_css_image_text.asp */
     .centered, .but-cont{
@@ -25,18 +60,117 @@
         position: absolute;
         margin-left: -420px;
     }
+    /* Container holding the image and the text */
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .center {
+        margin: 4%;
+        width: 90%;
+    }
+    td {
+        padding: 7px;
+    }
+    .desc{
+        text-align: left;
+    }
+    ul{
+        padding: 2px;
+    }
+    li{
+        padding: 5px;
+    }
+    #names{
+        font-weight: bold;
+    }
+
 
     </style>
 
-    <!-- load jquery at fullpage.js -->
-    <script src="js/jquery.min.js"></script>
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
     <script type="text/javascript" src="vendors/scrolloverflow.js"></script>
+
     <script type="text/javascript" src="js/jquery.fullPage.js"></script>
     <script type="text/javascript" src="js/examples.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
+                sectionsColor: ['#e1e3e8', '#e1e3e8', '#e1e3e8', '#e1e3e8', '#e1e3e8', '#e1e3e8', '#e1e3e8'],
+                navigation: true,
+                navigationPosition: 'right',
+                responsiveWidth: 900,
+                afterResponsive: function(isResponsive){
+
+                }
+
+            });
+        });
+    </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>A History of Social Sanctions at Harvard</title>
+
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	<style>
+	/* adapted from https://github.com/alvarotrigo/fullPage.js#introduction */
+        
+		/* Sections
+		 * --------------------------------------- */
+		#section0 img,
+		#section1 img{
+			margin: 0 0 0 0;
+		}
+        
+		/* adapted from https://www.w3schools.com/howto/howto_css_image_text.asp */
+		.centered, .but-cont{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+		#section2 img{
+			margin: 20px 0 0 0px;
+		}
+        
+		#section3 img{
+			bottom: 0px;
+			position: absolute;
+			margin-left: -420px;
+		}
+
+		/* Container holding the image and the text */
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+	</style>
+
+	
+    <script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="js/examples.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+                
                 // navigation
                 menu: '#menu',
                 lockAnchors: false,
@@ -46,51 +180,49 @@
                 slidesNavigation: false,
                 slidesNavPosition: 'bottom',
                 
-				sectionsColor: ['#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc'],
-				anchors: ['1stPage', '2ndPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', '9thpage', '10thpage'],
+				sectionsColor: ['#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc'],
+				anchors: ['1stPage', '2ndPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage'],
 				menu: '#menu',
-				scrollingSpeed: 500,
-                responsiveWidth: 900,
-                afterResponsive: function(isResponsive){
+				scrollingSpeed: 500
+			});
+		});
+	</script>
+	<!-- Load JS libraries: jQuery, bootstrap, D3 -->
 
-                }
+    <!-- Load JS libraries: jQuery, bootstrap, D3 -->
 
-            });
-        });
-    </script>
-
-    <!-- javascript lbiraries -->
-    <script src="js/d3.js"></script>
-    <script src="js/categories.js"></script>
-    <script src="js/radarchart.js"></script>
-    <script src="js/radarvis.js"></script>
-    <script src="js/timelinevis.js"></script>
-    <script src="js/description.js"></script>
-    <script src="js/queue.v1.min.js"></script>
-    <script src="js/d3-tip.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+        <!-- Your implementation -->
+        <script src="js/d3.js"></script>
+        <script src="js/categories.js"></script>
+        <script src="js/radarchart.js"></script>
+        <script src="js/radarvis.js"></script>
+        <script src="js/timelinevis.js"></script>
+        <script src="js/description.js"></script>
+        <script src="js/queue.v1.min.js"></script>
+        <script src="js/d3-tip.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
 
 
 </head>
 
 <body>
 
-    <ul id="menu">
-        <li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Social Spaces at Harvard</a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage">Timeline of Events</a></li>
-        <li data-menuanchor="4thpage"><a href="#4thpage">USGSO Response</a></li>
-        <li data-menuanchor="5thpage"><a href="#5thpage">Harvard vs. Peer Institutions</a></li>
+    <!--<ul id="menu">-->
+        <!--<li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>-->
+        <!--<li data-menuanchor="secondPage"><a href="#secondPage">Social Spaces at Harvard</a></li>-->
+        <!--<li data-menuanchor="3rdPage"><a href="#3rdPage">Timeline of Events</a></li>-->
+        <!--<li data-menuanchor="4thpage"><a href="#4thpage">USGSO Response</a></li>-->
+        <!--<li data-menuanchor="5thpage"><a href="#5thpage">Harvard vs. Peer Institutions</a></li>-->
 
-        <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
-        <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-        <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
-        <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
-        <li data-menuanchor="5thpage"><a href="#5thpage">Fifth slide</a></li>
-        <li data-menuanchor="6thpage"><a href="#6thpage">Sixth slide</a></li>
-        <li data-menuanchor="7thpage"><a href="#7thpage">Seventh slide</a></li>
-    </ul>
+        <!--<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>-->
+        <!--<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>-->
+        <!--<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>-->
+        <!--<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>-->
+        <!--<li data-menuanchor="5thpage"><a href="#5thpage">Fifth slide</a></li>-->
+        <!--<li data-menuanchor="6thpage"><a href="#6thpage">Sixth slide</a></li>-->
+        <!--<li data-menuanchor="7thpage"><a href="#7thpage">Seventh slide</a></li>-->
+    <!--</ul>-->
 
 
     <div id="fullpage">
@@ -211,7 +343,6 @@
         </div>
 
         <div class="section" id="section5">
-
             <div class="slide">
                 <div class="intro">
                     <h1>Social Spaces at Harvard Before Social Sanctions</h1>
@@ -314,7 +445,13 @@
                 <div id="radarvis"></div>
             </div>
         </div>
-
+<!--
+        <div class="section" id="section6">
+                <div class="intro">
+                    <h1>Discussion of Data and shit like that</h1>
+                </div>
+        </div>
+-->
     </div>
 
 
