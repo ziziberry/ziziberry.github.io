@@ -46,11 +46,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "white");
+        .attr("stroke", "red");
 
     vis.sorlab = vis.svg.append("text")
         .text("Sororities")
-        .attr("stroke", "white")
+        .attr("stroke", "black")
         .attr("x", 20)
         .attr("y", 0);
 
@@ -59,11 +59,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "white");
+        .attr("stroke", "red");
 
     vis.fratlab = vis.svg.append("text")
         .text("Fraternities")
-        .attr("stroke", "white")
+        .attr("stroke", "black")
         .attr("x", 15 + vis.spacing)
         .attr("y", 0);
 
@@ -72,11 +72,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100 + vis.spacing)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "white");
+        .attr("stroke", "red");
 
     vis.ffclab = vis.svg.append("text")
         .text("Female Final Clubs")
-        .attr("stroke", "white")
+        .attr("stroke", "black")
         .attr("x", -20)
         .attr("y", vis.spacing);
 
@@ -85,11 +85,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100 + vis.spacing)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "white");
+        .attr("stroke", "red");
 
     vis.mfclab = vis.svg.append("text")
         .text("Male Final Clubs")
-        .attr("stroke", "white")
+        .attr("stroke", "black")
         .attr("x", vis.spacing)
         .attr("y", vis.spacing);
 
@@ -98,11 +98,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100 + vis.spacing/2)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "white");
+        .attr("stroke", "green");
 
     vis.coedlab = vis.svg.append("text")
         .text("Co-Ed (Non-USGSO)")
-        .attr("stroke", "white")
+        .attr("stroke", "black")
         .attr("x", vis.spacing/2 - 20)
         .attr("y", vis.spacing/2);
 
@@ -251,6 +251,48 @@ Categories.prototype.current = function(){
         .duration(1000)
         .attr("x", function(d){return d[2]})
         .attr("y", function(d){return d[3]});
+
+    vis.gendesc = vis.svg.append("text")
+        .text("Only _/_ USGSOs have gone co-ed to avoid penalty")
+        .attr("x", 500)
+        .attr("y", 0)
+
+    vis.sordesc = vis.svg.append("text")
+        .text("0/4 Sororities have gone co-ed to avoid penalty")
+        .attr("x", 500)
+        .attr("y", 0)
+
+    vis.fratdesc = vis.svg.append("text")
+        .text("Only _/_ Fraternities have gone co-ed to avoid penalty")
+        .attr("x", 500)
+        .attr("y", 0)
+
+    vis.ffcdesc = vis.svg.append("text")
+        .text("Only _/_ Female Final Clubs have gone co-ed to avoid penalty")
+        .attr("x", 500)
+        .attr("y", 0)
+
+    vis.mfcdesc = vis.svg.append("text")
+        .text("Only _/_ Male Final Clubs have gone co-ed to avoid penalty")
+        .attr("x", 500)
+        .attr("y", 0)
+
+    vis.svg.append("text")
+        .text("Coed Definition")
+        .attr("x", 500)
+        .attr("y", 30)
+
+    vis.svg.append("text")
+        .text("All remaining USGSOs are still affected by the sanctions. Any new members that they initiate will be ineligible for _____. ")
+        .attr("x", 500)
+        .attr("y", 60);
+
+    vis.svg.append("text")
+        .text("Statement about resistence")
+        .attr("x", 500)
+        .attr("y", 90);
+
+    vis.filter();
 };
 
 
@@ -308,6 +350,42 @@ Categories.prototype.filter = function(){
                 else{return 0;}
         }
     })
+
+    if (category === "all"){
+        vis.gendesc.attr("opacity", 1)
+        vis.sordesc.attr("opacity", 0)
+        vis.fratdesc.attr("opacity", 0)
+        vis.ffcdesc.attr("opacity", 0)
+        vis.mfcdesc.attr("opacity", 0)
+    }
+    else if (category === "sor"){
+        vis.gendesc.attr("opacity", 0)
+        vis.sordesc.attr("opacity", 1)
+        vis.fratdesc.attr("opacity", 0)
+        vis.ffcdesc.attr("opacity", 0)
+        vis.mfcdesc.attr("opacity", 0)
+    }
+    else if (category === "frat"){
+        vis.gendesc.attr("opacity", 0)
+        vis.sordesc.attr("opacity", 0)
+        vis.fratdesc.attr("opacity", 1)
+        vis.ffcdesc.attr("opacity", 0)
+        vis.mfcdesc.attr("opacity", 0)
+    }
+    else if (category === "ffc"){
+        vis.gendesc.attr("opacity", 0)
+        vis.sordesc.attr("opacity", 0)
+        vis.fratdesc.attr("opacity", 0)
+        vis.ffcdesc.attr("opacity", 1)
+        vis.mfcdesc.attr("opacity", 0)
+    }
+    else{
+        vis.gendesc.attr("opacity", 0)
+        vis.sordesc.attr("opacity", 0)
+        vis.fratdesc.attr("opacity", 0)
+        vis.ffcdesc.attr("opacity", 0)
+        vis.mfcdesc.attr("opacity", 1)
+    }
 
 }
 
