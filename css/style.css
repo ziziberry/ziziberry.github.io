@@ -170,6 +170,17 @@ td {
     width: 100px; 
 }
 
+/* radar chart school labels */
+.radar-label-school { 
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px; 
+    opacity: 70%;
+    width: 150px; 
+    fill: #ffffff;
+    font-family: Barlow, Tahoma, Geneva, sans-serif;
+}
+
 table{
     margin: 20px;
 }
@@ -180,4 +191,8 @@ label {
 
 tr {
     border: 1px;
+}
+
+/* RADAR CHART */
+.peerinstitutions {
 }
