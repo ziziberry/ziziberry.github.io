@@ -42,6 +42,7 @@ RadarVis.prototype.wrangleData = function(){
     
     vis.displaydata = [];
     
+    // display data for the radarchart
     for(var key in vis.data_norm) {
         vis.displaydata.push([{school: vis.data[key].school, axis: "Student Body", value: vis.data_norm[key].student_body, label: vis.data[key].student_body}, 
                          {school: vis.data[key].school, axis: "Tutition Cost", value: vis.data_norm[key].tuition, label: "$" + vis.data[key].tuition}, 
@@ -51,8 +52,31 @@ RadarVis.prototype.wrangleData = function(){
                          {school: vis.data[key].school, axis: "Median Family Income", value: vis.data_norm[key].median_family_income, label: "$" +  vis.data[key].median_family_income}
                         ])
     };
+        
+    // label data for the axes 
+    vis.axisdata = [];
     
-    console.log(vis.displaydata);
+    // initialize array
+    for(var key in vis.data) {
+        for (var prop in vis.data[key]) {
+                vis.axisdata[prop] = 0
+            }
+        }
+    
+    // take maximum value for each property 
+    for(var key in vis.data) {
+        for (var prop in vis.data[key]) {
+            if (vis.data[key][prop] >= vis.axisdata[prop]) {
+                vis.axisdata[prop] = vis.data[key][prop]
+            }
+        }
+    }
+
+    // delete school category
+    delete vis.axisdata.school; 
+    delete vis.axisdata.top_20_percent; 
+    
+    console.log(vis.axisdata)
     
     this.updateVis();
 
@@ -62,7 +86,7 @@ RadarVis.prototype.updateVis = function(){
     var vis = this;
     
     // draw radar chart
-    RadarChart.draw("#" + vis.parentElement, vis.displaydata, vis.configs);
+    RadarChart.draw("#" + vis.parentElement, vis.displaydata, vis.axisdata, vis.configs);
 
     // create legend
     // draw legend svg

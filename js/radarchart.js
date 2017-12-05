@@ -9,7 +9,7 @@
 // modifications have been made to this code to suit the needs for our visualization 
 
 var RadarChart = {
-  draw: function(id, d, options){
+  draw: function(id, d, axisdata, options){
   var cfg = {
 	 radius: 5,
 	 w: 600,
@@ -85,23 +85,6 @@ var RadarChart = {
 	   .attr("transform", "translate(" + (cfg.w/2-levelFactor) + ", " + (cfg.h/2-levelFactor) + ")");
 	}
 
-//	//Text indicating at what % each level is
-//	for(var j=0; j<cfg.levels; j++){
-//	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
-//	  g.selectAll(".levels")
-//	   .data([1]) //dummy data
-//	   .enter()
-//	   .append("svg:text")
-//	   .attr("x", function(d){return levelFactor*(1-cfg.factor*Math.sin(0));})
-//	   .attr("y", function(d){return levelFactor*(1-cfg.factor*Math.cos(0));})
-//	   .attr("class", "legend")
-//	   .style("font-family", "sans-serif")
-//	   .style("font-size", "10px")
-//	   .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
-//	   .attr("fill", "#737373")
-//	   .text(Format((j+1)*cfg.maxValue/cfg.levels));
-//	}
-//	
 	series = 0;
 
 	var axis = g.selectAll(".axis")
@@ -251,6 +234,29 @@ var RadarChart = {
 
 	  series++;
 	});
+	
+      
+    console.log(axisdata); 
+      
+    var axisMaxValues = (d.map(function(i, j){return i.axis}));
+      
+    // labels for axes
+	for(var j=0; j<cfg.levels; j++){
+	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
+	  g.selectAll(".levels")
+	   .data(allAxis) //dummy data
+	   .enter()
+	   .append("text")
+	   .attr("x", function(d, i){return levelFactor*(1-cfg.factor*Math.sin(i*cfg.radians/total));})
+	   .attr("y", function(d, i){return levelFactor*(1-cfg.factor*Math.cos(i*cfg.radians/total));})
+	   .attr("class", "legend")
+	   .style("font-family", "sans-serif")
+	   .style("font-size", "10px")
+	   .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
+	   .attr("fill", "#606060")
+//	   .text(((j+1)*cfg.maxValue/cfg.levels*axisdata[allAxis][0]/100));
+	}
+      
 	
 //	//Tooltip
 //	tooltip = g.append('text')
