@@ -14,6 +14,10 @@ h1
     margin-bottom: 25px;
 }
 
+.section{
+    text-align:center;
+}
+
 .maintitle {
     font-size: 50px; 
 }
@@ -144,8 +148,6 @@ td {
 }
 
 /* radar chart tooltips */
-.tooltip-radar {
-}
 
 .tooltip-radar-title {
     font-size: 11px;
