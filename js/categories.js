@@ -46,11 +46,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "red");
+        .attr("stroke", "white");
 
     vis.sorlab = vis.svg.append("text")
         .text("Sororities")
-        .attr("stroke", "black")
+        .attr("stroke", "white")
         .attr("x", 20)
         .attr("y", 0);
 
@@ -59,11 +59,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "red");
+        .attr("stroke", "white");
 
     vis.fratlab = vis.svg.append("text")
         .text("Fraternities")
-        .attr("stroke", "black")
+        .attr("stroke", "white")
         .attr("x", 15 + vis.spacing)
         .attr("y", 0);
 
@@ -72,11 +72,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100 + vis.spacing)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "red");
+        .attr("stroke", "white");
 
     vis.ffclab = vis.svg.append("text")
         .text("Female Final Clubs")
-        .attr("stroke", "black")
+        .attr("stroke", "white")
         .attr("x", -20)
         .attr("y", vis.spacing);
 
@@ -85,11 +85,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100 + vis.spacing)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "red");
+        .attr("stroke", "white");
 
     vis.mfclab = vis.svg.append("text")
         .text("Male Final Clubs")
-        .attr("stroke", "black")
+        .attr("stroke", "white")
         .attr("x", vis.spacing)
         .attr("y", vis.spacing);
 
@@ -98,11 +98,11 @@ Categories.prototype.initVis = function(){
         .attr("cy", 100 + vis.spacing/2)
         .attr("r", vis.radius)
         .attr("fill", "none")
-        .attr("stroke", "green");
+        .attr("stroke", "white");
 
     vis.coedlab = vis.svg.append("text")
         .text("Co-Ed (Non-USGSO)")
-        .attr("stroke", "black")
+        .attr("stroke", "white")
         .attr("x", vis.spacing/2 - 20)
         .attr("y", vis.spacing/2);
 
