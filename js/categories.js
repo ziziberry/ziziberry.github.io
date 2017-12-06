@@ -1,8 +1,8 @@
 
 /*
  * Categories - Object constructor function
- * @param _parentElement 	-- the HTML element in which to draw the area chart
- * @param _data						-- the dataset 'household characteristics'
+ * @param _parentElement    -- the HTML element in which to draw the area chart
+ * @param _data                     -- the dataset 'household characteristics'
  */
 
 Categories = function(_parentElement, _initialData, _currentData){
@@ -283,14 +283,50 @@ Categories.prototype.current = function(){
         .attr("y", 30)
 
     vis.svg.append("text")
-        .text("All remaining USGSOs are still affected by the sanctions. Any new members that they initiate will be ineligible for _____. ")
+        .text("All remaining USGSOs are still affected by the sanctions.")
         .attr("x", 500)
         .attr("y", 60);
-
     vis.svg.append("text")
-        .text("Statement about resistence")
+        .text("Any newly initiated members will be ineligible for _____.")
         .attr("x", 500)
         .attr("y", 90);
+
+    vis.svg.append("text")
+        .text("Overall, most USGSOs have decided to make no changes and operate as")
+        .attr("x", 500)
+        .attr("y", 120);
+    vis.svg.append("text")
+        .text("they did prior to the sanctions showing resistance to these policies.")
+        .attr("x", 500)
+        .attr("y", 135);
+
+    vis.svg.append("text")
+        .text("Many groups have drafted/released statements detailing the importance")
+        .attr("x", 500)
+        .attr("y", 165);
+    vis.svg.append("text")
+        .text("and value in single gender organizations, esp from the women's groups.")
+        .attr("x", 500)
+        .attr("y", 180);
+
+
+
+    vis.svg.append("text.id")
+        .attr('x', 0)
+        .attr('y', 30)
+        .attr('class', 'id')
+        .append('svg:tspan')
+        .attr('x', 0)
+        .attr('dy', 5)
+        .text(function(d) { return "hello" })
+        .append('svg:tspan')
+        .attr('x', 0)
+        .attr('dy', 20)
+        .text(function(d) { return "here"; })
+        .append('svg:tspan')
+        .attr('x', 0)
+        .attr('dy', 20)
+        .text(function(d) { return "goodbye"; })
 
     vis.filter();
 };
