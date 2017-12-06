@@ -250,32 +250,16 @@ var RadarChart = {
     axisproperties.splice(5, 1);
       
     console.log(axisproperties);
+
       
-//    // labels for axes
-//    for(var a=0; a<axisproperties.length; a++) {
-//	for(var j=0; j<cfg.levels; j++){
-//	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
-//	  g.selectAll(".levels")
-//	   .data(allAxis) //dummy data
-//	   .enter()
-//	   .append("text")
-//	   .attr("x", function(d, i){return levelFactor*(1-cfg.factor*Math.sin(i*cfg.radians/total));})
-//	   .attr("y", function(d, i){return levelFactor*(1-cfg.factor*Math.cos(i*cfg.radians/total));})
-//	   .attr("class", "legend")
-//	   .style("font-family", "sans-serif")
-//	   .style("font-size", "10px")
-//	   .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
-//	   .attr("fill", "#606060")
-//	   .text(((j+1)*cfg.maxValue/cfg.levels*axisdata[axisproperties[a]]));
-//	}
-//    }
-      
-         // labels for axes
+    // labels for axes
+    // iterate through each axis-associated property  
     for(var a=0; a < axisproperties.length; a++) {
+    // iterate through each level of the axis
 	for(var j=0; j < cfg.levels; j++){
 	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
 	  g.selectAll(".levels")
-	   .data([1]) //dummy data
+	   .data([1]) // dummy data
 	   .enter()
 	   .append("text")
 	   .attr("x", levelFactor*(1-cfg.factor*Math.sin(a*cfg.radians/total)))
@@ -285,6 +269,7 @@ var RadarChart = {
 	   .style("font-size", "10px")
 	   .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
 	   .attr("fill", "#606060")
+       // label axes depending on specific axis property, iterarating through our array of axis proeprties and pulling the corresponding values from axisdata
 	   .text(((j+1)*cfg.maxValue/cfg.levels*axisdata[axisproperties[a]]));
 	}
     }
