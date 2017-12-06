@@ -54,7 +54,7 @@ RadarVis.prototype.wrangleData = function(){
     };
         
     // label data for the axes 
-    vis.axisdata = [];
+    vis.axisdata = {};
     
     // initialize array
     for(var key in vis.data) {

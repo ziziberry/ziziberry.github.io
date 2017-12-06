@@ -1,12 +1,12 @@
 // RADAR CHART
 
 // SOURCE: http://bl.ocks.org/nbremer/6506614
-// base code from https://github.com/alangrafu/radar-chart-d3
+// a lot of modifications have been made to this base code to suit the needs for our visualization 
+// this base code was primarily used for establishing the area regions for this radar chart
 
 
 // d3-tip js library adapted from previous homeworks and labs in class
 
-// modifications have been made to this code to suit the needs for our visualization 
 
 var RadarChart = {
   draw: function(id, d, axisdata, options){
@@ -27,6 +27,8 @@ var RadarChart = {
 	 ExtraWidthY: 100,
 	 color: d3.scaleOrdinal(d3.schemeCategory10)
 	};
+      
+    console.log(d);
 	
 	if('undefined' !== typeof options){
 	  for(var i in options){
@@ -234,29 +236,58 @@ var RadarChart = {
 
 	  series++;
 	});
-	
-      
-    console.log(axisdata); 
       
     var axisMaxValues = (d.map(function(i, j){return i.axis}));
       
-    // labels for axes
-	for(var j=0; j<cfg.levels; j++){
+    // property values for the axes
+    var axisproperties = Object.keys(axisdata); 
+    
+    console.log(allAxis)
+    console.log(axisdata); 
+      
+    // swap array position of axis properties to match existing radar chart
+    axisproperties.splice(2, 0, axisproperties[4]);
+    axisproperties.splice(5, 1);
+      
+    console.log(axisproperties);
+      
+//    // labels for axes
+//    for(var a=0; a<axisproperties.length; a++) {
+//	for(var j=0; j<cfg.levels; j++){
+//	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
+//	  g.selectAll(".levels")
+//	   .data(allAxis) //dummy data
+//	   .enter()
+//	   .append("text")
+//	   .attr("x", function(d, i){return levelFactor*(1-cfg.factor*Math.sin(i*cfg.radians/total));})
+//	   .attr("y", function(d, i){return levelFactor*(1-cfg.factor*Math.cos(i*cfg.radians/total));})
+//	   .attr("class", "legend")
+//	   .style("font-family", "sans-serif")
+//	   .style("font-size", "10px")
+//	   .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
+//	   .attr("fill", "#606060")
+//	   .text(((j+1)*cfg.maxValue/cfg.levels*axisdata[axisproperties[a]]));
+//	}
+//    }
+      
+         // labels for axes
+    for(var a=0; a < axisproperties.length; a++) {
+	for(var j=0; j < cfg.levels; j++){
 	  var levelFactor = cfg.factor*radius*((j+1)/cfg.levels);
 	  g.selectAll(".levels")
-	   .data(allAxis) //dummy data
+	   .data([1]) //dummy data
 	   .enter()
 	   .append("text")
-	   .attr("x", function(d, i){return levelFactor*(1-cfg.factor*Math.sin(i*cfg.radians/total));})
-	   .attr("y", function(d, i){return levelFactor*(1-cfg.factor*Math.cos(i*cfg.radians/total));})
+	   .attr("x", levelFactor*(1-cfg.factor*Math.sin(a*cfg.radians/total)))
+	   .attr("y", levelFactor*(1-cfg.factor*Math.cos(a*cfg.radians/total)))
 	   .attr("class", "legend")
 	   .style("font-family", "sans-serif")
 	   .style("font-size", "10px")
 	   .attr("transform", "translate(" + (cfg.w/2-levelFactor + cfg.ToRight) + ", " + (cfg.h/2-levelFactor) + ")")
 	   .attr("fill", "#606060")
-//	   .text(((j+1)*cfg.maxValue/cfg.levels*axisdata[allAxis][0]/100));
+	   .text(((j+1)*cfg.maxValue/cfg.levels*axisdata[axisproperties[a]]));
 	}
-      
+    }
 	
 //	//Tooltip
 //	tooltip = g.append('text')
