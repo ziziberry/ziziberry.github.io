@@ -1,17 +1,20 @@
-date,title,author,article_link
-06-May-16,USGSO Sanctions Announced,administration,https://www.thecrimson.com/article/2016/5/6/college-sanctions-clubs-greeklife/
-10-May-16,Hear Her Harvard,student,https://www.thecrimson.com/article/2016/5/10/women-oppose-sanctions/
-11-May-16,Lewis Denounces USGSO Sanctions,faculty,
-23-May-16,Faculty Submit Motion Against USGSO Sanctions,faculty,https://www.thecrimson.com/article/2016/5/26/faculty-motion-oppose-sanctions/
-20-Sep-16,Implementation Committee Formed  ,administration,
-01-Nov-16,Undergraduates Appointed to Implementation Committee,administration,https://www.thecrimson.com/article/2016/11/1/social-policy-implementation-committee-membership/
-01-Nov-16,Multiple Faculty Meetings To Discuss Anti-Sanction Motion,faculty,
-07-Dec-16,Anti-Sanction Motion Tabled Until February 2017,administration,https://www.thecrimson.com/article/2016/12/7/fas-meeting-sanctions-limbo/
-26-Jan-17,"USGSO Sanctions Could Be Revised or Replaced""""""SGSO Sanctions Could""",administration,https://www.thecrimson.com/article/2017/1/26/sanctions-may-change-khurana-says/
-30-Jan-17,Lewis Withdraws Motion Against USGSO Sanctions,faculty,
-06-Mar-16,Honor Council To Help Implement USGSO Sanctions,administration,https://www.thecrimson.com/article/2017/3/6/implementation-committee-recommendations/
-08-Mar-17,New Faculty Committee to Reevaluate USGSO Sanctions Announced,administration,https://www.thecrimson.com/article/2017/3/8/sanctions-faculty-committee-members/
-15-May-17,Faculty Committee Promises Recommendations Soon,faculty,
-12-Jul-17,"Faculty Committee Report Suggests USGSOs To Be Phase Out"" by May 2022""""aculty Committee Repor""",faculty,https://www.thecrimson.com/article/2017/7/13/new-sanctions/
-01-Sep-17,USGSO Sanctions In Effect For Class of 2021,administration,
-07-Nov-17,Motion Against USGSO Fails ,faculty,
+important,date,artificial_date,title,author,article_link,description
+1,6-May-16,1-May-16,USGSO Sanctions Announced,administration,https://www.thecrimson.com/article/2016/5/6/college-sanctions-clubs-greeklife/,short description of the event that appears when the timeline bubble is hovered over 
+0,10-May-16,20-May-16,Hear Her Harvard,student,https://www.thecrimson.com/article/2016/5/10/women-oppose-sanctions/,short description of the event that appears when the timeline bubble is hovered over 
+0,11-May-16,10-Jun-16,Lewis Denounces USGSO Sanctions,faculty,,short description of the event that appears when the timeline bubble is hovered over 
+1,23-May-16,30-Jun-16,Faculty Submit Motion Against USGSO Sanctions,faculty,https://www.thecrimson.com/article/2016/5/26/faculty-motion-oppose-sanctions/,short description of the event that appears when the timeline bubble is hovered over 
+1,20-Sep-16,20-Sep-16,Implementation Committee Formed  ,administration,,short description of the event that appears when the timeline bubble is hovered over 
+0,1-Nov-16,1-Nov-16,Undergraduates Appointed to Implementation Committee,administration,https://www.thecrimson.com/article/2016/11/1/social-policy-implementation-committee-membership/,short description of the event that appears when the timeline bubble is hovered over 
+0,1-Nov-16,1-Nov-16,Multiple Faculty Meetings To Discuss Anti-Sanction Motion,faculty,,short description of the event that appears when the timeline bubble is hovered over 
+1,7-Dec-16,7-Dec-16,Anti-Sanction Faculty Motion Tabled Until February 2017,administration,https://www.thecrimson.com/article/2016/12/7/fas-meeting-sanctions-limbo/,short description of the event that appears when the timeline bubble is hovered over 
+0,26-Jan-17,19-Jan-17,USGSO Sanctions Could Be Revised or Replaced,administration,https://www.thecrimson.com/article/2017/1/26/sanctions-may-change-khurana-says/,short description of the event that appears when the timeline bubble is hovered over 
+0,30-Jan-17,30-Jan-17,Lewis Withdraws Motion Against USGSO Sanctions,faculty,http://www.thecrimson.com/article/2017/1/31/lewis-withdraws-sanctions-motion/,short description of the event that appears when the timeline bubble is hovered over 
+1,17-Feb-17,17-Feb-17,Implementation Committee Releases Final Report,administration,http://osl.fas.harvard.edu/files/osl/files/implementationcommitteefinalreport.pdf,short description of the event that appears when the timeline bubble is hovered over 
+0,6-Mar-17,5-Mar-17,Honor Council To Help Implement USGSO Sanctions,administration,https://www.thecrimson.com/article/2017/3/6/implementation-committee-recommendations/,short description of the event that appears when the timeline bubble is hovered over 
+0,8-Mar-17,20-Mar-17,New Faculty Committee to Reevaluate USGSO Sanctions Announced,administration,https://www.thecrimson.com/article/2017/3/8/sanctions-faculty-committee-members/,short description of the event that appears when the timeline bubble is hovered over 
+1,21-Apr-17,21-Apr-17,Lewis Pens Washington Post Op-Ed Denouncing Sanctions,faculty,https://www.washingtonpost.com/opinions/harvards-nondiscrimination-hypocrisy/2017/04/21/519cff78-2540-11e7-b503-9d616bd5a305_story.html?utm_term=.851a36be63a4,short description of the event that appears when the timeline bubble is hovered over 
+0,15-May-17,15-May-17,Faculty Committee Promises Recommendations Soon,faculty,,short description of the event that appears when the timeline bubble is hovered over 
+0,13-Jul-17,13-Jul-17,Faculty Committee Report Suggests USGSOs To Be Entirely Phased Out by May 2022,faculty,https://www.thecrimson.com/article/2017/7/13/new-sanctions/,short description of the event that appears when the timeline bubble is hovered over 
+1,1-Sep-17,1-Sep-17,Original USGSO Sanctions In Effect For Class of 2021,administration,,short description of the event that appears when the timeline bubble is hovered over 
+1,7-Nov-17,7-Nov-17,Anti-Sanction Faculty Motion Fails ,faculty,http://www.thecrimson.com/article/2017/11/8/lewis-motion-defeated/,short description of the event that appears when the timeline bubble is hovered over 
+1,5-Dec-17,5-Dec-17,Harvard Corporation Votes to Keep May 2016 Social Policy,administration,https://www.thecrimson.com/article/2017/12/6/sanctions-to-stay-mainbar/,short description of the event that appears when the timeline bubble is hovered over 

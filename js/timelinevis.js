@@ -20,7 +20,7 @@ TimelineVis.prototype.initVis = function(){
 
     // vis.width = $("#" + vis.parentElement).width() - vis.margin.left - vis.margin.right,
     vis.width = 1000 - vis.margin.left - vis.margin.right;
-    vis.height = 200 - vis.margin.top - vis.margin.bottom;
+    vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
     // SVG drawing area
     vis.svg = d3.select("#" + vis.parentElement).append("svg")
@@ -28,9 +28,28 @@ TimelineVis.prototype.initVis = function(){
         .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
-    
+
+
+    var formatTime = d3.timeFormat("%B %d, %Y");
+    formatTime(new Date); // "June 30, 15"
+
+    var parseTime = d3.timeParse("%d-%b-%y");
+    // console.log(parseTime("6-May-16"));
+
     // initialize tooltip 
-    vis.tooltip = d3.tip().attr('class', 'd3-tip tooltip-title').html(function(d) { return "<span class='tooltip-top'>" + d.date + "<br /> </span>" + "<span class='tooltip-desc'>" + d.title + "</span>"})
+    vis.tooltip = d3.tip().attr('class', 'd3-tip tooltip-title')
+        .html(function(d)
+        {
+            if (d.article_link != "") {
+                return "<span class='tooltip-top'>" + formatTime(parseTime(d.date)) +
+                    ": Click to Read More<br /> </span>" + "<span class='tooltip-desc'>"
+                    + d.description + "</span>"
+            }
+            else
+                return "<span class='tooltip-top'>" + formatTime(parseTime(d.date)) +
+                "<br /> </span>" + "<span class='tooltip-desc'>"
+                + d.description + "</span>"
+        })
     vis.tooltip.offset([-15, 0]);
 
     // invoke tooltip 
@@ -62,13 +81,13 @@ TimelineVis.prototype.updateVis = function(){
     .attr("class", "timeline");
 
     var formatTime = d3.timeFormat("%b-%d-%y");
-    formatTime(new Date); // "June 30, 2015"
+    formatTime(new Date); // "June 30, 15"
 
     var parseTime = d3.timeParse("%d-%b-%y");
     // console.log(parseTime("6-May-16"));
 
     var timeScale = d3.scaleTime()
-        .domain([new Date(2016, 2, 1), new Date(2017, 10, 1)])
+        .domain([new Date(2016, 4, 1), new Date(2018, 2, 1)])
         .range([0, vis.width-10])
     
     vis.circle = vis.svg.selectAll("circle")
@@ -81,15 +100,20 @@ TimelineVis.prototype.updateVis = function(){
         .append("circle")
     // update
         .merge(vis.circle)
-        .attr("r", 10)
-        .attr("fill-opacity", 0.2)
+        .attr("r", function(d, i) {
+            if (d.important == 1)
+                return 12;
+            else
+                return 6;
+        })
+        .attr("fill-opacity", 0.5)
         .attr("cx", function(d, i) {
-            console.log(d.date, parseTime(d.date), i)
-            console.log(timeScale(parseTime(d.date)))
-            return timeScale(parseTime(d.date))-2.5
+            console.log(d.date, parseTime(d.artificial_date), i)
+            console.log(timeScale(parseTime(d.artificial_date)))
+            return timeScale(parseTime(d.artificial_date))-2.5
         })
         .attr("class", "timeline-circle")
-        .attr("cy", 80)
+        .attr("cy", vis.height/2)
         .attr("stroke", "black")
         .attr("fill", function(d){
             if (d.author=="faculty")
@@ -108,108 +132,39 @@ TimelineVis.prototype.updateVis = function(){
     vis.labels.enter()
         .append("text")
         .merge(vis.labels)
-        // .attr("x", function(d, i) {
-        //     console.log(d.date, parseTime(d.date), i)
-        //     console.log(timeScale(parseTime(d.date)))
-        //     return timeScale(parseTime(d.date))-2.5
-        // })
-        // .attr("y", function(d,i) {
-        //     if (i%4==0)
-        //         return 70;
-        //     else if (i%4==1)
-        //         return 62;
-        //     else if (i%4==2)
-        //         return 54;
-        //     else if (i%4==3)
-        //         return 46;
-        // })
         .style("font-size", 10)
         .attr("fill", "#000000")
         .text(function(d) {
-            return formatTime(parseTime(d.date));
+            if (d.important == 1)
+                return d.title;
+            // else
+            //     return formatTime(parseTime(d.date));
         })
         .style("font-size", 10)
-        .style("text-anchor", "end")
+        //.style("text-anchor", "end")
         .attr("transform", function(d, i) {
-            var temp = timeScale(parseTime(d.date));
-            var rotation = -40;
-            console.log(formatTime(parseTime(d.date)), i)
-            if (i==0)
-                return "translate(" + (temp+15) + ", " + 50 + ") rotate(" + rotation + ")";
-            else if (i==1)
-                return "translate(" + (temp-5) + ", " + 100 + ") rotate(" + rotation + ")";
-            else if (i==2)
-                return "translate(" + (temp+35) + ", " + 40 + ") rotate(" + rotation + ")";
-            else if (i==3)
-                return "translate(" + (temp+50) + ", " + 40 + ") rotate(" + rotation + ")";
-            else if (i==9)
-                return "translate(" + (temp+40) + ", " + 40 + ") rotate(" + rotation + ")";
+            var temp = timeScale(parseTime(d.artificial_date));
+            var rotation = -20;
+            return "translate(" + (temp+5) + ", " + (vis.height/2-8) + ") rotate(" + rotation + ")";
+        });
+
+    vis.labels.enter()
+        .append("text")
+        .merge(vis.labels)
+        .style("font-size", 10)
+        .attr("fill", "#000000")
+        .text(function(d) {
+            if (d.important == 1)
+                return formatTime(parseTime(d.date));
             else
-                return "translate(" + (temp+15) + ", " + 50 + ") rotate(" + rotation + ")";
+                return formatTime(parseTime(d.date));
+        })
+        .style("font-size", 10)
+        //.style("text-anchor", "end")
+        .attr("transform", function(d, i) {
+            var temp = timeScale(parseTime(d.artificial_date));
+            var rotation = -40;
+            return "translate(" + (temp-10) + ", " + (vis.height/2+15) + ") rotate(" + rotation + ")";
         })
         .style("text-anchor", "end");
-
-// <<<<<<< HEAD
-//     function handleMouseOver(d,i)
-//     {
-//         d3.select(this).attr({
-//             fill: "orange",
-//             r: 40
-//         });
-//
-//         vis.svg.append("text")
-//             .attr("id", "t" + i)
-//             .attr("x", function() {
-//                     console.log("hi");
-//                     return timeScale(parseTime(d.date)); })
-//             .attr("y", function() { return 105; })
-//             .text(function() {
-//                 // return "hi";
-//                 return d.title;  // Value of the text
-//             });
-//     }
-//
-//     function handleMouseOut(d,i)
-//     {
-//         d3.select(this).attr({
-//             fill: "black",
-//             r: 10
-//         });
-//
-//         d3.select("#t" + i).remove();  // Remove text location
-//     }
-    //     .attr("fill", function(d, i) {
-    //         if (i % 4 == 0) {
-    //             return "lightblue";
-    //         } else {
-    //             return "green";
-    //         }
-    // })
-
-    // old tooltips
-    
-//    function handleMouseOver(d,i)
-//    {
-//        vis.tooltip.show(); 
-//        
-//        vis.svg.append("text")
-//            .attr("id", "t" + i)
-//            .attr("x", function() {
-//                    console.log("hi");
-//                    return timeScale(parseTime(d.date)); })
-//            .attr("y", function() { return 105; })
-//            .text(function() {
-//                // return "hi";
-//                return d.title;  // Value of the text
-//            });
-//    }
-//
-//    function handleMouseOut(d,i)
-//    {
-//        vis.tooltip.hide()
-//        
-//        d3.select("#t" + i).remove();  // Remove text location
-//    }
-
-// >>>>>>> ba4da7b2537f73304b1ce5384e0ac74cfb4bd655
 };
