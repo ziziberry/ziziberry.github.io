@@ -1,8 +1,8 @@
 
 /*
  * Categories - Object constructor function
- * @param _parentElement 	-- the HTML element in which to draw the area chart
- * @param _data						-- the dataset 'household characteristics'
+ * @param _parentElement    -- the HTML element in which to draw the area chart
+ * @param _data                     -- the dataset 'household characteristics'
  */
 
 Categories = function(_parentElement, _initialData, _currentData){
@@ -288,7 +288,9 @@ Categories.prototype.current = function(){
         .attr("y", 60);
 
     vis.svg.append("text")
-        .text("Statement about resistence")
+        .text("Overall, most USGSOs have decided to make no changes and operate as they did prior to the sanctions," +
+            " showing resistance to these policies. Many groups have drafted or released statements detailing the " +
+            "importance and value in single gender organizations, especially from the women's groups.")
         .attr("x", 500)
         .attr("y", 90);
 
