@@ -24,7 +24,7 @@ Categories.prototype.initVis = function(){
     vis.margin = { top: 30, right: 0, bottom: 20, left: 40 };
 
     //vis.w = $(".categories").width();
-    vis.w = 1500;
+    vis.w = 1000;
     vis.width = vis.w - vis.margin.left - vis.margin.right,
         vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
@@ -283,16 +283,33 @@ Categories.prototype.current = function(){
         .attr("y", 30)
 
     vis.svg.append("text")
-        .text("All remaining USGSOs are still affected by the sanctions. <br> Any new members that they initiate will be ineligible for _____. ")
+        .text("All remaining USGSOs are still affected by the sanctions.")
         .attr("x", 500)
         .attr("y", 60);
-
     vis.svg.append("text")
-        .text("Overall, most USGSOs have decided to make no changes and operate as they did prior to the sanctions," +
-            " showing resistance to these policies. Many groups have drafted or released statements detailing the " +
-            "importance and value in single gender organizations, especially from the women's groups.")
+        .text("Any newly initiated members will be ineligible for _____.")
         .attr("x", 500)
         .attr("y", 90);
+
+    vis.svg.append("text")
+        .text("Overall, most USGSOs have decided to make no changes and operate as")
+        .attr("x", 500)
+        .attr("y", 120);
+    vis.svg.append("text")
+        .text("they did prior to the sanctions showing resistance to these policies.")
+        .attr("x", 500)
+        .attr("y", 135);
+
+    vis.svg.append("text")
+        .text("Many groups have drafted/released statements detailing the importance")
+        .attr("x", 500)
+        .attr("y", 165);
+    vis.svg.append("text")
+        .text("and value in single gender organizations, esp from the women's groups.")
+        .attr("x", 500)
+        .attr("y", 180);
+
+
 
     vis.svg.append("text.id")
         .attr('x', 0)
