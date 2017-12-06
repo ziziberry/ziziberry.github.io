@@ -24,7 +24,7 @@ Categories.prototype.initVis = function(){
     vis.margin = { top: 30, right: 0, bottom: 20, left: 40 };
 
     //vis.w = $(".categories").width();
-    vis.w = 1000;
+    vis.w = 1500;
     vis.width = vis.w - vis.margin.left - vis.margin.right,
         vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
@@ -283,7 +283,7 @@ Categories.prototype.current = function(){
         .attr("y", 30)
 
     vis.svg.append("text")
-        .text("All remaining USGSOs are still affected by the sanctions. Any new members that they initiate will be ineligible for _____. ")
+        .text("All remaining USGSOs are still affected by the sanctions. <br> Any new members that they initiate will be ineligible for _____. ")
         .attr("x", 500)
         .attr("y", 60);
 
@@ -293,6 +293,23 @@ Categories.prototype.current = function(){
             "importance and value in single gender organizations, especially from the women's groups.")
         .attr("x", 500)
         .attr("y", 90);
+
+    vis.svg.append("text.id")
+        .attr('x', 0)
+        .attr('y', 30)
+        .attr('class', 'id')
+        .append('svg:tspan')
+        .attr('x', 0)
+        .attr('dy', 5)
+        .text(function(d) { return "hello" })
+        .append('svg:tspan')
+        .attr('x', 0)
+        .attr('dy', 20)
+        .text(function(d) { return "here"; })
+        .append('svg:tspan')
+        .attr('x', 0)
+        .attr('dy', 20)
+        .text(function(d) { return "goodbye"; })
 
     vis.filter();
 };
