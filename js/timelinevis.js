@@ -42,7 +42,7 @@ TimelineVis.prototype.initVis = function(){
         {
             if (d.article_link != "") {
                 return "<span class='tooltip-top'>" + formatTime(parseTime(d.date)) +
-                    ": Click to Read More<br /> </span>" + "<span class='tooltip-desc'>"
+                    ": Click to Read More<br /></span>" + d.title + "<br/><span class='tooltip-desc'>"
                     + d.description + "</span>"
             }
             else
@@ -107,13 +107,13 @@ TimelineVis.prototype.updateVis = function(){
                 return 6;
         })
         .attr("fill-opacity", 0.5)
-        .attr("cx", function(d, i) {
+        .attr("cy", function(d, i) {
             console.log(d.date, parseTime(d.artificial_date), i)
             console.log(timeScale(parseTime(d.artificial_date)))
             return timeScale(parseTime(d.artificial_date))-2.5
         })
         .attr("class", "timeline-circle")
-        .attr("cy", vis.height/2)
+        .attr("cx", vis.width/2)
         .attr("stroke", "black")
         .attr("fill", function(d){
             if (d.author=="faculty")
@@ -164,7 +164,7 @@ TimelineVis.prototype.updateVis = function(){
         .attr("transform", function(d, i) {
             var temp = timeScale(parseTime(d.artificial_date));
             var rotation = -40;
-            return "translate(" + (temp-10) + ", " + (vis.height/2+15) + ") rotate(" + rotation + ")";
+            return "translate(" + (vis.height/2+15) + ", " + (temp-10) + ") rotate(" + rotation + ")";
         })
         .style("text-anchor", "end");
 };
