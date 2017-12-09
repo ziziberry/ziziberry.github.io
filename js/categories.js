@@ -36,8 +36,8 @@ Categories.prototype.initVis = function(){
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
     // 5 squars/rectangles
-    vis.sqwidth = 150;
-    vis.sqheight = 150;
+    vis.sqwidth = 160;
+    vis.sqheight = 160;
     vis.midwidth = vis.w/2 - vis.sqwidth;
     vis.midheight = vis.height/2 - vis.sqheight + 50;
     vis.spacing = 300;
@@ -137,75 +137,131 @@ Categories.prototype.wrangleData = function(){
     // make dictionary of their positions in the circles
     vis.positions = {};
     // initial positions
+    var xspace = 51;
+    var yspace = 48;
     var malec = 0;
-    var fratc = 1;
+    var fratc = 0;
     var fmalec = 0;
     vis.idata.forEach(function (d, i){
         var x = 0;
         var y = 0;
         if(d.sor === 1){
-            x = 35;
-            y = 30 + i*35;
+            if (i > 2){
+                x = vis.midwidth - vis.spacingx/2 + xspace + 5;
+                y = vis.midheight - vis.spacingy/2 + (i-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth - vis.spacingx/2 + 5;
+                y = vis.midheight - vis.spacingy/2 + (i)*yspace + 8;
+            }
         }
         else if(d.frat === 1){
-            x = 35 + vis.spacing;
-            y = fratc*35;
+            if (fratc > 2){
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace*2;
+                y = vis.midheight - vis.spacingy/2 + (fratc-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace;
+                y = vis.midheight - vis.spacingy/2 + (fratc)*yspace + 8;
+            }
             fratc++;
         }
-        if(d.female_fc === 1){
-            if (fmalec >= 3){x = 55}
-            else {x = 15};
-            if (fmalec >= 3){y = 30 + vis.spacing + (fmalec-3)*35}
-            else {y = 30 + vis.spacing + fmalec*35}
+        else if(d.female_fc === 1){
+            if (fmalec > 2){
+                x = vis.midwidth - vis.spacingx/2 + xspace + 5;
+                y = vis.midheight + vis.spacingy/2 + (fmalec-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth - vis.spacingx/2 + 5;
+                y = vis.midheight + vis.spacingy/2 + (fmalec)*yspace + 8;
+            }
             fmalec++;
         }
-        if(d.male_fc === 1){
-            if (malec >= 4){x = 55 + vis.spacing}
-            else {x = 15 + vis.spacing}
-            if (malec >= 4){y = 30 + vis.spacing + (malec-4)*35}
-            else {y = 30 + vis.spacing + malec*35}
+        else{
+            if (malec > 5){
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace*3;
+                y = vis.midheight + vis.spacingy/2 + (malec-6)*yspace + 8;
+            }
+            else if (malec > 2){
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace*2;
+                y = vis.midheight + vis.spacingy/2 + (malec-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace;
+                y = vis.midheight + vis.spacingy/2 + (malec)*yspace + 8;
+            }
             malec++;
-        }
-        if(d.coed_fc === 1){
-            x = (70 + vis.spacing)/2;
-            y = (50 + vis.spacing)/2 + i*35;
         }
         vis.positions[d.id] = [x, y];
     });
     // final positions
     malec = 0;
-    fratc = 1;
+    fratc = 0;
     fmalec = 0;
     coedc = 0;
     vis.cdata.forEach(function (d, i){
         var x = 0;
         var y = 0;
         if(d.sor === 1){
-            x = 35;
-            y = 30 + i*35;
+            if (i > 2){
+                x = vis.midwidth - vis.spacingx/2 + xspace + 5;
+                y = vis.midheight - vis.spacingy/2 + (i-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth - vis.spacingx/2 + 5;
+                y = vis.midheight - vis.spacingy/2 + (i)*yspace + 8;
+            }
         }
         else if(d.frat === 1){
-            x = 35 + vis.spacing;
-            y = fratc*35;
+            if (fratc > 2){
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace*2;
+                y = vis.midheight - vis.spacingy/2 + (fratc-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace;
+                y = vis.midheight - vis.spacingy/2 + (fratc)*yspace + 8;
+            }
             fratc++;
         }
-        if(d.female_fc === 1){
-            if (fmalec >= 3){x = 55}
-            else {x = 15};
-            if (fmalec >= 3){y = 30 + vis.spacing + (fmalec-3)*35}
-            else {y = 30 + vis.spacing + fmalec*35}
+        else if(d.female_fc === 1){
+            if (fmalec > 2){
+                x = vis.midwidth - vis.spacingx/2 + xspace + 5;
+                y = vis.midheight + vis.spacingy/2 + (fmalec-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth - vis.spacingx/2 + 5;
+                y = vis.midheight + vis.spacingy/2 + (fmalec)*yspace + 8;
+            }
             fmalec++;
         }
-        if(d.male_fc === 1){
-            if (malec >= 4){x = 55 + vis.spacing}
-            else {x = 15 + vis.spacing}
-            if (malec >= 4){y = 30 + vis.spacing + (malec-4)*35}
-            else {y = 30 + vis.spacing + malec*35}
+        else if(d.male_fc === 1){
+            if (malec > 5){
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace*3;
+                y = vis.midheight + vis.spacingy/2 + (malec-6)*yspace + 8;
+            }
+            else if (malec > 2){
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace*2;
+                y = vis.midheight + vis.spacingy/2 + (malec-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth + vis.sqwidth + vis.spacingx/2 - xspace;
+                y = vis.midheight + vis.spacingy/2 + (malec)*yspace + 8;
+            }
             malec++;
         }
-        if(d.coed_fc === 1){
-            x = (70 + vis.spacing)/2;
-            y = (50 + vis.spacing)/2 + coedc*35;
+        else {
+            if (coedc > 5){
+                x = vis.midwidth + xspace*2 + 5;
+                y = vis.midheight + (coedc-6)*yspace + 8;
+            }
+            else if (coedc > 2){
+                x = vis.midwidth + xspace + 5;
+                y = vis.midheight + (coedc-3)*yspace + 8;
+            }
+            else{
+                x = vis.midwidth + 5;
+                y = vis.midheight + (coedc)*yspace + 8;
+            }
             coedc++;
         }
         vis.positions[d.id].push(x);
@@ -225,7 +281,7 @@ Categories.prototype.updateVis = function(){
     var vis = this;
 
     vis.listpos = [];
-    for (var i = 0; i < 21; i++) {
+    for (var i = 0; i < 24; i++) {
         vis.listpos.push(vis.positions[i])
     }
 
@@ -252,8 +308,8 @@ Categories.prototype.updateVis = function(){
         .attr('xlink:href', function(d){return d[4];})
         .attr("x", function(d){return d[0]})
         .attr("y", function(d){return d[1]})
-        .attr("height", 30)
-        .attr("width", 30)
+        .attr("height", 45)
+        .attr("width", 45)
 
 
 };
