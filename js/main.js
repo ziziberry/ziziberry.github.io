@@ -87,16 +87,17 @@ function loadVis(error, timelineData, usgso_initialData, usgso_currentData, peer
 
     var description = new Description("description", usgso_initialData);
 };
-
+/*
 function gatherData() {
     $('#start').hide();
     categories.wrangleData();
     categories.updateVis();
 
-}
+}*/
 
 function beforeSanctions() {
     categories.updateVis();
+    categories.initial();
 
 }
 
@@ -106,6 +107,7 @@ function afterSanctions() {
 }
 
 function filterView() {
+    categories.updateVis();
     categories.filter();
 }
 

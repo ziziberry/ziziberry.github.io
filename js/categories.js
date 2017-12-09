@@ -330,6 +330,10 @@ Categories.prototype.updateVis = function(){
     vis.sortpics = vis.svg.selectAll("image.usgso")
         .data(vis.listpos);
 
+};
+
+Categories.prototype.initial = function(){
+    var vis = this;
     vis.sortpics.enter().append("image")
         .merge(vis.sortpics)
         .on('mouseover', vis.tip.show)
@@ -342,7 +346,7 @@ Categories.prototype.updateVis = function(){
         .attr("y", function(d){return d[1]})
         .attr("height", 45)
         .attr("width", 45)
-};
+}
 
 Categories.prototype.current = function(){
     var vis = this;
@@ -395,7 +399,7 @@ Categories.prototype.filter = function(){
     // frats: 4-8
     // ffc: 9-14
     // mfc: 15-23
-
+    console.log("filtering")
     vis.sortpics.attr("opacity", function(d, i){
         switch(category){
             case "all":
