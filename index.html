@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
 
@@ -258,27 +259,49 @@
         <div class="section" id="section3">
             <div class="intro">
                 <h1>Resistance To The Sanctions</h1>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <form>
-                                <label><input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
-                                <label><input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions</label><br>
-                            </form>
+                <div class="row">
+                    <div class="col-md-5 usgso-desc">
+                        <p>Only <b>_/_</b> USGSOs have gone co-ed to avoid penalty</p>
+                        <ul>
+                            <li>0/4 Sororities</li>
+                            <li>_/5 Fraternities</li>
+                            <li>_/_ Female Final Clubs</li>
+                            <li>_/_ Male Final Clubs</li>
+                        </ul>
+                        <p>Overall, most USGSOs have decided to make no changes and operate as
+                        they did prior to the sanctions showing resistance to these policies.</p>
+                        <p><br>To visualize how the USGSOs have responded to the sanctions:</p>
+                        <ul id="howto">
+                            <li><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
+                            <li><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
+                        </ul>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form>
+                                    <label><input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
+                                    <label><input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions</label><br>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <select class="form-control" id="sort-type" onchange="filterView()">
+                                    <option value="all">All</option>
+                                    <option value="sor">Sororities</option>
+                                    <option value="frat">Fraternities</option>
+                                    <option value="ffc">Female Final Clubs</option>
+                                    <option value="mfc">Male Final Clubs</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-md-2">
-                            <select class="form-control" id="sort-type" onchange="filterView()">
-                                <option value="all">All</option>
-                                <option value="sor">Sororities</option>
-                                <option value="frat">Fraternities</option>
-                                <option value="ffc">Female Final Clubs</option>
-                                <option value="mfc">Male Final Clubs</option>
-                            </select>
-                        </div>
+
                     </div>
+                    <div class="col-md-7">
                         <div class="categories"></div>
-                    <div class="but-cont">
-                        <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
                     </div>
+                </div>
+                <!--
+                <div class="but-cont">
+                    <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
+                </div> -->
             </div>
         </div>
         

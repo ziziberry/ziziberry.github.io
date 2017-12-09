@@ -197,3 +197,36 @@ tr {
 .peerinstitutions {
     padding-left: 40px;
 }
+
+/* CATEGORIES */
+.usgso-desc {
+    padding-left: 100px;
+    padding-top: 10px;
+    font-style: normal;
+}
+.usgso-desc p{
+    padding: 1px;
+    font-weight: normal;
+    font-size: 15px;
+}
+.usgso-desc b{
+    padding: 1px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.usgso-desc ul li{
+    padding: 1px;
+    padding-left: 40px;
+    font-weight: normal;
+    font-size: 15px;
+    text-align: left;
+}
+.usgso-desc ul li b{
+    font-size: 15px;
+    text-align: left;
+}
+.usgso-desc #howto li{
+    padding: 1px;
+    padding-left: 0px;
+    text-align: left;
+}
