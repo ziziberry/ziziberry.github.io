@@ -45,13 +45,22 @@ Description.prototype.initVis = function(){
         }
     });
 
+    /* Initialize tooltip */
+    vis.tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+            return d.old_name;
+        });
+
+/*
     vis.svgsor.selectAll("text.sor")
         .data(vis.sor)
         .enter().append("text")
         .attr("class", "sor")
         .attr("x", 35)
         .attr("y", function(d, i){return 20 + i*35})
-        .text(function(d){return d.old_name});
+        .text(function(d){return d.old_name}); */
 
 
     vis.svgsor.selectAll("image.sor")
@@ -59,83 +68,56 @@ Description.prototype.initVis = function(){
         .enter().append("image")
         .attr("class", "sor")
         .attr('xlink:href', function(d){return "img/" + d.img;})
-        .attr("x", 0)
-        .attr("y", function(d, i){return i*35})
-        .attr("height", 30)
-        .attr("width", 30);
-
-    vis.svgfrat.selectAll("text.frat")
-        .data(vis.frat)
-        .enter().append("text")
-        .attr("class", "frat")
-        .attr("x", 35)
-        .attr("y", function(d, i){return 20 + i*35})
-        .text(function(d){return d.old_name});
-
+        .attr("x", function(d, i){return i*45})
+        .attr("y", 0)
+        .attr("height", 45)
+        .attr("width", 45)
+        .on('mouseover', vis.tip.show)
+        .on('mouseout', vis.tip.hide)
+        .call(vis.tip);
 
     vis.svgfrat.selectAll("image.sor")
         .data(vis.frat)
         .enter().append("image")
         .attr("class", "frat")
         .attr('xlink:href', function(d){return "img/" + d.img;})
-        .attr("x", 0)
-        .attr("y", function(d, i){return i*35})
-        .attr("height", 30)
-        .attr("width", 30);
-
-    vis.svgffc.selectAll("text.ffc")
-        .data(vis.ffc)
-        .enter().append("text")
-        .attr("class", "ffc")
-        .attr("x", function(d, i){
-            if (i > 3) {return 150}
-            else {return 35}})
-        .attr("y", function(d, i){
-            if (i > 3) {return 20 + (i-4)*35 }
-            else {return 20 + i*35}})
-        .text(function(d){return d.old_name});
-
+        .attr("x", function(d, i){return i*45})
+        .attr("y", 0)
+        .attr("height", 45)
+        .attr("width", 45)
+        .on('mouseover', vis.tip.show)
+        .on('mouseout', vis.tip.hide);
 
     vis.svgffc.selectAll("image.ffc")
         .data(vis.ffc)
         .enter().append("image")
         .attr("class", "ffc")
         .attr('xlink:href', function(d){return "img/" + d.img;})
-        .attr("x", function(d, i){
-            if (i > 3) {return 115}
-            else {return 0}})
-        .attr("y", function(d, i){
-            if (i > 3) {return (i-4)*35 }
-            else {return i*35}})
-        .attr("height", 30)
-        .attr("width", 30);
-
-    vis.svgmfc.selectAll("text.mfc")
-        .data(vis.mfc)
-        .enter().append("text")
-        .attr("class", "mfc")
-        .attr("x", function(d, i){
-            if (i > 3) {return 150}
-            else {return 35}})
-        .attr("y", function(d, i){
-            if (i > 3) {return 20 + (i-4)*35 }
-            else {return 20 + i*35}})
-        .text(function(d){return d.old_name});
-
+        .attr("x", function(d, i){return i*45})
+        .attr("y", 0)
+        .attr("height", 45)
+        .attr("width", 45)
+        .on('mouseover', vis.tip.show)
+        .on('mouseout', vis.tip.hide);
 
     vis.svgmfc.selectAll("image.mfc")
         .data(vis.mfc)
         .enter().append("image")
         .attr("class", "mfc")
         .attr('xlink:href', function(d){return "img/" + d.img;})
-        .attr("x", function(d, i){
-            if (i > 3) {return 115}
-            else {return 0}})
+        .attr("x", function(d, i) {
+            if (i > 5) {return (i - 4.5) * 45}
+            else{return i*45}
+
+        })
         .attr("y", function(d, i){
-            if (i > 3) {return (i-4)*35 }
-            else {return i*35}})
-        .attr("height", 30)
-        .attr("width", 30);
+            if (i > 5){return 50}
+            else{return 0}
+        })
+        .attr("height", 45)
+        .attr("width", 45)
+        .on('mouseover', vis.tip.show)
+        .on('mouseout', vis.tip.hide);
 
 
 };

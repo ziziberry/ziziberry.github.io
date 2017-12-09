@@ -230,3 +230,6 @@ tr {
     padding-left: 0px;
     text-align: left;
 }
+#section2 .intro #profile{
+    max-height: 100%;
+}
