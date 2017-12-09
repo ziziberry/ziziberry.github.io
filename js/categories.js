@@ -24,7 +24,7 @@ Categories.prototype.initVis = function(){
     vis.margin = { top: 30, right: 0, bottom: 20, left: 40 };
 
     //vis.w = $(".categories").width();
-    vis.w = 1000;
+    vis.w = $(".categories").width();
     vis.width = vis.w - vis.margin.left - vis.margin.right,
         vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
@@ -35,76 +35,92 @@ Categories.prototype.initVis = function(){
         .append("g")
         .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
-    // 5 circles
-    vis.radius = 80;
+    // 5 squars/rectangles
+    vis.sqwidth = 150;
+    vis.sqheight = 150;
+    vis.midwidth = vis.w/2 - vis.sqwidth;
+    vis.midheight = vis.height/2 - vis.sqheight + 50;
     vis.spacing = 300;
+    vis.spacingx = 500;
+    vis.spacingy = 300;
+    var marg = 30;
 
     vis.sorgroup = vis.svg.append("g");
 
-    vis.sor = vis.svg.append("circle")
-        .attr("cx", 50)
-        .attr("cy", 100)
-        .attr("r", vis.radius)
+    vis.sor = vis.svg.append("rect")
+        .attr("x", vis.midwidth - vis.spacingx/2)
+        .attr("y", vis.midheight - vis.spacingy/2)
+        .attr("width", vis.sqwidth)
+        .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "red");
+        .attr("stroke", "black")
+        .attr("stroke-width", "10px");
 
     vis.sorlab = vis.svg.append("text")
         .text("Sororities")
         .attr("stroke", "black")
-        .attr("x", 20)
-        .attr("y", 0);
+        .attr("x", vis.midwidth - vis.spacingx/2)
+        .attr("y", vis.midheight - vis.spacingy/2 - marg);
 
-    vis.frat = vis.svg.append("circle")
-        .attr("cx", 50 + vis.spacing)
-        .attr("cy", 100)
-        .attr("r", vis.radius)
+    vis.frat = vis.svg.append("rect")
+        .attr("x", vis.midwidth + vis.spacingx/2)
+        .attr("y", vis.midheight - vis.spacingy/2)
+        .attr("width", vis.sqwidth)
+        .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "red");
+        .attr("stroke", "black")
+        .attr("stroke-width", "10px");
 
     vis.fratlab = vis.svg.append("text")
         .text("Fraternities")
         .attr("stroke", "black")
-        .attr("x", 15 + vis.spacing)
-        .attr("y", 0);
+        .attr("x", vis.midwidth + vis.spacingx/2)
+        .attr("y", vis.midheight - vis.spacingy/2 - marg);
 
-    vis.ffc = vis.svg.append("circle")
-        .attr("cx", 50)
-        .attr("cy", 100 + vis.spacing)
-        .attr("r", vis.radius)
+    vis.ffc = vis.svg.append("rect")
+        .attr("x", vis.midwidth - vis.spacingx/2)
+        .attr("y", vis.midheight + vis.spacingy/2)
+        .attr("width", vis.sqwidth)
+        .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "red");
+        .attr("stroke", "black")
+        .attr("stroke-width", "10px");
 
     vis.ffclab = vis.svg.append("text")
         .text("Female Final Clubs")
         .attr("stroke", "black")
-        .attr("x", -20)
-        .attr("y", vis.spacing);
+        .attr("x", vis.midwidth - vis.spacingx/2)
+        .attr("y", vis.midheight + vis.spacingy/2 - marg);
 
-    vis.mfc = vis.svg.append("circle")
-        .attr("cx", 50 + vis.spacing)
-        .attr("cy", 100 + vis.spacing)
-        .attr("r", vis.radius)
+    vis.mfc = vis.svg.append("rect")
+        .attr("x", vis.midwidth + vis.spacingx/2)
+        .attr("y", vis.midheight + vis.spacingy/2)
+        .attr("width", vis.sqwidth)
+        .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "red");
+        .attr("stroke", "black")
+        .attr("stroke-width", "10px");
 
     vis.mfclab = vis.svg.append("text")
         .text("Male Final Clubs")
         .attr("stroke", "black")
-        .attr("x", vis.spacing)
-        .attr("y", vis.spacing);
+        .attr("x", vis.midwidth + vis.spacingx/2)
+        .attr("y", vis.midheight + vis.spacingy/2 - marg);
 
-    vis.coed = vis.svg.append("circle")
-        .attr("cx", 50 + vis.spacing/2)
-        .attr("cy", 100 + vis.spacing/2)
-        .attr("r", vis.radius)
+    vis.coed = vis.svg.append("rect")
+        .attr("x", vis.midwidth)
+        .attr("y", vis.midheight)
+        .attr("width", vis.sqwidth)
+        .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "green");
+        .attr("stroke", "black")
+        .attr("stroke-width", "10px");
 
     vis.coedlab = vis.svg.append("text")
         .text("Co-Ed (Non-USGSO)")
         .attr("stroke", "black")
-        .attr("x", vis.spacing/2 - 20)
-        .attr("y", vis.spacing/2);
+        .attr("x", vis.midwidth)
+        .attr("y", vis.midheight - marg);
 
     vis.wrangleData();
 };

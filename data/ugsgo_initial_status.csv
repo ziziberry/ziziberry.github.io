@@ -3,20 +3,23 @@ id,old_name,sor,frat,female_fc,male_fc,coed_fc,source,img
 1,Kappa Kappa Gamma,1,0,0,0,0,https://en.wikipedia.org/wiki/Kappa_Kappa_Gamma,kappa.png
 2,Delta Gamma,1,0,0,0,0,http://uscdeltagamma.com/symbols-and-insignia,dg.png
 3,Alpha Phi,1,0,0,0,0,http://www.lmualphaphi.com/history/,aphi.png
-4,Sigma Chi,0,1,0,0,0,https://www.sigmachi.org/crest,sigchi.png
+4,Sigma Chi Fraternity,0,1,0,0,0,https://www.sigmachi.org/crest,sigchi.png
 5,Kappa Sigma,0,1,0,0,0,https://en.wikipedia.org/wiki/File:Official_Kappa_Sigma_Fraternity_Crest_2.png,kappasig.png
-6,Sigma Alpha Epsilon,0,1,0,0,0,https://en.wikipedia.org/wiki/Sigma_Alpha_Epsilon,sae.png
+6,Sigma Alpha Epsilon Fraternity,0,1,0,0,0,https://en.wikipedia.org/wiki/Sigma_Alpha_Epsilon,sae.png
 7,Alpha Epsilon Pi,0,1,0,0,0,https://en.wikipedia.org/wiki/File:CofA_of_Alpha_Epsilon_Pi.gif,aepi.gif
-8,Bee Club,0,0,1,0,0,http://www.thebeeclub.com/,bee.png
-9,IC Club,0,0,1,0,0,IC Club Member,ic.png
-10,Sabliere Club,0,0,1,0,0,Sabliere Club Member,sab.png
-11,Pleiades Society,0,0,1,0,0,Pleiades Society Member,pleiades.png
-12,La Vie Club,0,0,1,0,0,La Vie Club Member,lavie.png
-13,AD Club,0,0,0,1,0,https://en.wikipedia.org/wiki/A.D._Club,ad.png
-14,Spee Club,0,0,0,1,0,https://www.amazon.com/SPEE-CLUB-HARVARD-harvard/dp/B004VIQT9I,spee.png
-15,Fly Club,0,0,0,1,0,http://signitas.com/harvard-classic-oval/,fly.png
-16,Fox Club,0,0,0,1,0,http://signitas.com/harvard-classic-oval/,fox.png
-17,Owl Club,0,0,0,1,0,http://legion.matinic.us/2008/09/22/finders-keepers/,owl.png
-18,Porcellian Club,0,0,0,1,0,https://www.pinterest.com/pin/385268943098133969/?lp=true,pc.png
-19,Phoenix S.K. Club,0,0,0,1,0,https://www.terapeak.com/worth/rare-1927-harvard-university-phoenix-club-member-medal-pennant-book-directory/182043408751/,psk.png
-20,Delphic Club,0,0,0,1,0,http://signitas.com/harvard-classic-oval/,delphic.png
+8,Delta Kappa Epsilon,0,1,0,0,0,https://en.wikipedia.org/wiki/File:CofA_of_Alpha_Epsilon_Pi.gif,aepi.gif
+9,The Bee Club,0,0,1,0,0,http://www.thebeeclub.com/,bee.png
+10,The IC Club,0,0,1,0,0,IC Club Member,ic.png
+11,The Sabliere Society,0,0,1,0,0,Sabliere Club Member,sab.png
+12,The Pleiades Society,0,0,1,0,0,Pleiades Society Member,pleiades.png
+13,La Vie Club Inc.,0,0,1,0,0,La Vie Club Member,lavie.png
+14,The Seneca,0,0,1,0,0,La Vie Club Member,lavie.png
+15,A.D. Club,0,0,0,1,0,https://en.wikipedia.org/wiki/A.D._Club,ad.png
+16,The Spee Club,0,0,0,1,0,https://www.amazon.com/SPEE-CLUB-HARVARD-harvard/dp/B004VIQT9I,spee.png
+17,The Fly Club,0,0,0,1,0,http://signitas.com/harvard-classic-oval/,fly.png
+18,The Fox Club,0,0,0,1,0,http://signitas.com/harvard-classic-oval/,fox.png
+19,The Owl Club,0,0,0,1,0,http://legion.matinic.us/2008/09/22/finders-keepers/,owl.png
+20,The Porcellian Club,0,0,0,1,0,https://www.pinterest.com/pin/385268943098133969/?lp=true,pc.png
+21,Phoenix S.K. Club,0,0,0,1,0,https://www.terapeak.com/worth/rare-1927-harvard-university-phoenix-club-member-medal-pennant-book-directory/182043408751/,psk.png
+22,Delphic Club,0,0,0,1,0,http://signitas.com/harvard-classic-oval/,delphic.png
+23,The Oak Club,0,0,0,1,0,http://signitas.com/harvard-classic-oval/,delphic.png
