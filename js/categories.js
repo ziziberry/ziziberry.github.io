@@ -274,6 +274,38 @@ Categories.prototype.wrangleData = function(){
         vis.positions[d.id].push(d.old_name);
     });
 
+    vis.listpos = [];
+    for (var i = 0; i < 24; i++) {
+        vis.listpos.push(vis.positions[i])
+    }
+
+    /* Initialize tooltip */
+    vis.tip = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+            return d[5];
+        });
+
+    vis.svg.call(vis.tip);
+
+    vis.sortpics = vis.svg.selectAll("image.usgso")
+        .data(vis.listpos);
+
+    vis.sortpics.enter().append("image")
+        .merge(vis.sortpics)
+        .on('mouseover', vis.tip.show)
+        .on('mouseout', vis.tip.hide)
+        .transition()
+        .duration(1000)
+        .attr("class", "usgso")
+        .attr('xlink:href', function(d){return d[4];})
+        .attr("x", function(d, i){
+            return 30 * i - 25;
+        })
+        .attr("y", vis.height - 50)
+        .attr("height", 30)
+        .attr("width", 30)
     //vis.updateVis();
 };
 
@@ -320,7 +352,9 @@ Categories.prototype.current = function(){
     vis.sortpics.transition()
         .duration(1000)
         .attr("x", function(d){return d[2]})
-        .attr("y", function(d){return d[3]});
+        .attr("y", function(d){return d[3]})
+        .attr("height", 45)
+        .attr("width", 45);
 
     vis.filter();
 };
@@ -358,9 +392,9 @@ Categories.prototype.filter = function(){
     });
 
     // sororities: 0-3
-    // frats: 4-7
-    // ffc: 8-12
-    // mfc: 13-20
+    // frats: 4-8
+    // ffc: 9-14
+    // mfc: 15-23
 
     vis.sortpics.attr("opacity", function(d, i){
         switch(category){
@@ -370,52 +404,16 @@ Categories.prototype.filter = function(){
                 if(i <= 3){return 1;}
                 else{return 0;}
             case "frat":
-                if(i > 3 && i <= 7){return 1;}
+                if(i > 3 && i <= 8){return 1;}
                 else{return 0;}
             case "ffc":
-                if(i > 7 && i <= 12){return 1;}
+                if(i > 8 && i <= 14){return 1;}
                 else{return 0;}
             case "mfc":
-                if(i > 12 && i <= 20){return 1;}
+                if(i > 14 && i <= 23){return 1;}
                 else{return 0;}
         }
     })
-
-    if (category === "all"){
-        vis.gendesc.attr("opacity", 1)
-        vis.sordesc.attr("opacity", 0)
-        vis.fratdesc.attr("opacity", 0)
-        vis.ffcdesc.attr("opacity", 0)
-        vis.mfcdesc.attr("opacity", 0)
-    }
-    else if (category === "sor"){
-        vis.gendesc.attr("opacity", 0)
-        vis.sordesc.attr("opacity", 1)
-        vis.fratdesc.attr("opacity", 0)
-        vis.ffcdesc.attr("opacity", 0)
-        vis.mfcdesc.attr("opacity", 0)
-    }
-    else if (category === "frat"){
-        vis.gendesc.attr("opacity", 0)
-        vis.sordesc.attr("opacity", 0)
-        vis.fratdesc.attr("opacity", 1)
-        vis.ffcdesc.attr("opacity", 0)
-        vis.mfcdesc.attr("opacity", 0)
-    }
-    else if (category === "ffc"){
-        vis.gendesc.attr("opacity", 0)
-        vis.sordesc.attr("opacity", 0)
-        vis.fratdesc.attr("opacity", 0)
-        vis.ffcdesc.attr("opacity", 1)
-        vis.mfcdesc.attr("opacity", 0)
-    }
-    else{
-        vis.gendesc.attr("opacity", 0)
-        vis.sordesc.attr("opacity", 0)
-        vis.fratdesc.attr("opacity", 0)
-        vis.ffcdesc.attr("opacity", 0)
-        vis.mfcdesc.attr("opacity", 1)
-    }
 
 }
 
