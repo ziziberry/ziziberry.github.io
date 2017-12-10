@@ -285,18 +285,6 @@ tr {
   border-left: 26px solid crimson;
 }
 
-.speech p {
-  position: inherit;
-  width: inherit;
-  height: inherit;
-  background: inherit;
-  
-  margin: 0;
-  padding: 0;
-  
-  border: none;
-  resize: none;
-}
 
 /* fade-in animation */
 
