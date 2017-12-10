@@ -195,10 +195,15 @@ form {
 button {
     /*position: absolute;*/
     text-align: center;
-    width: 50px;
-    background-color: #97ffeb;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #171151;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 13px;
+    color: white;
+    border: solid 1px black;
+    opacity: 1;
 }
 
 .fp-section {
@@ -287,7 +292,20 @@ td {
 }
 
 table{
+
     margin: 20px;
+}
+
+#quiz{
+    display: block;
+    margin: auto;
+    width: 80%;
+    border: solid 0.5px;
+    background-color: #f7f7f7;
+}
+
+#quiz tr{
+  height: 100px;
 }
 
 label {
