@@ -7,21 +7,16 @@ body
 
 h1
 {
-<<<<<<< HEAD
     font-family: Lustria, Georgia, serif;
     font-size: 35px;
-=======
-    font-weight: bold;
-    font-size: 30px;
->>>>>>> 6442556568a15aea1ba9c3cd7d770aa68fc07bc5
     text-align: center;
+    font-weight: bold;
     color: #606060;
     margin-bottom: 25px;
 }
 
 h3
 {
-    font-weight: bold;
     font-size: 17px;
     text-align: left;
     color: #606060;
@@ -43,7 +38,6 @@ h5
 
 .right
 {
-    font-weight: bold;
     font-size: 17px;
     text-align: right;
     color: #606060;
