@@ -23,13 +23,17 @@ body
 
 h1
 {
-    font-family: Lustria, Georgia, serif;
+    font-family: Lora, Georgia, serif;
     font-size: 40px;
     text-align: left;
     color: #000000;
     margin-bottom: 25px;
-    padding-left: 60px;
-    width: 850px;
+    padding-left: 100px;
+}
+
+h1.opening {
+    padding-left: 0px; 
+    width: auto;
 }
 
 h3
@@ -39,8 +43,17 @@ h3
     text-align: left;
     color: #474B4F;
     margin-bottom: 25px;
-    margin-left: 50px;
     margin-right: 50px
+}
+
+h4.openingq {
+    font-weight: bold;
+    text-transform: uppercase; 
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    color: #7395A3;
 }
 
 h5
@@ -54,6 +67,44 @@ h5
     margin-right: 200px;
 }
 
+/* what are the sanctions? */
+.openingcontainer {
+    padding-left: 100px;
+}
+
+.openingcontainer p {
+    font-size: 14px;
+}
+
+.openingheader {
+    margin-bottom: 50px; 
+}
+
+.openingheader hr {
+    width: 950px;
+    float: left;
+    margin-top: 0px;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+.subtitle {
+    font-family: Lora, Georgia, serif;
+    font-style: italic;
+    margin-top: -10px; 
+    font-size: 18px;
+}
+
+.q-a {
+    margin-top: 25px;
+}
+
+.q-a p {
+    font-size: 13px;
+}
+
 .right
 {
     font-weight: normal;
@@ -64,13 +115,16 @@ h5
     margin-right: 50px;
 }
 
-.section{
+.section {
     text-align:center;
 }
 
-.maintitle {
+h1.maintitle {
     font-size: 50px; 
+    text-align: center;
 }
+
+
 
 /* text */
 .intro p {
@@ -140,10 +194,15 @@ form {
 button {
     /*position: absolute;*/
     text-align: center;
-    width: 50px;
-    background-color: #97ffeb;
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #171151;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 13px;
+    color: white;
+    border: solid 1px black;
+    opacity: 1;
 }
 
 .fp-section {
@@ -235,6 +294,26 @@ table{
     margin: 20px;
 }
 
+#quiz{
+    display: block;
+    margin: auto;
+    width: 90%;
+    border: solid 0.5px;
+    background-color: #f7f7f7;
+}
+
+#quiz tr{
+  height: 100px;
+}
+#quiz td{
+    text-align: left;
+}
+
+#quiz td h3{
+   text-align: left;
+    font-size: 15px;
+}
+
 label {
     color: black;
 }
@@ -295,12 +374,20 @@ tr {
       text-align: left;
 }
 
+.testpro {
+    padding-left: 80px;
+}
+
+.testcon {
+    padding-top: 30px;
+}
+
 .speechpro {
       position: relative;
       width: 350px;
       padding: 5px 10px;
       border-radius: 3px;
-      background: lightgreen;
+      background: #B1A296;
       margin-bottom: 20px
 }
 
@@ -308,13 +395,13 @@ tr {
       content:"";
       position: absolute;
       right: 100%;
-      top: 15px;
+      top: 10px;
       width: 0;
       height: 0;
 
       border-top: 13px solid transparent;
       border-bottom: 13px solid transparent;
-      border-right: 26px solid lightgreen;
+      border-right: 26px solid #B1A296;
 }
 
 .speechcon {
@@ -322,66 +409,21 @@ tr {
       width: 350px;
       padding: 5px 10px;
       border-radius: 3px;
-      background: crimson;
-      margin-bottom: 20px
+      background: #7395A3;
+      margin-bottom: 20px;
 }
 
 .speechcon:before {
       content:"";
       position: absolute;
       left: 100%;
-      top: 15px;
+      top: 10px;
       width: 0;
       height: 0;
   
   border-top: 13px solid transparent;
   border-bottom: 13px solid transparent;
-  border-left: 26px solid crimson;
-}
-
-
-/* fade-in animation */
-
-/* adapted from https://codepen.io/arnorymir/pen/yaNVgq */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fadein {
-  opacity:0;  
-  -webkit-animation:fadeIn ease-in 1; 
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards; 
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
-    
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-
-}
-
-.fadein.fade-1 {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.fadein.fade-2 {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay:1.6s;
-  animation-delay: 1.6s;
-}
-
-.fadein.fade-3 {
-  -webkit-animation-delay: 2.6s;
-  -moz-animation-delay: 2.6s;
-  animation-delay: 2.6s;
+  border-left: 26px solid #7395A3;
 }
 
 .link {
