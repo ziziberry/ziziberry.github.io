@@ -80,7 +80,7 @@ function loadVis(error, timelineData, usgso_initialData, usgso_currentData, peer
     var radarvis = new RadarVis("radarvis", peerinstitutions, peerinstitutions_norm)
 
     // timeline of important dates and decisions
-    var timelinevis = new TimelineVis("timelinevis", timelineData);
+    //var timelinevis = new TimelineVis("timelinevis", timelineData);
 
     var treevis = new TreeVis("treevis");
 
