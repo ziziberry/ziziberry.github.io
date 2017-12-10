@@ -368,24 +368,24 @@ tr {
 /* speech bubbles adapted from https://codepen.io/jamesbarnett/pen/GmFjB */
 
 .testimonials p { 
-      margin: 20px; 
+      margin: 15px 20px; 
       color: #333; 
       font-size: 14px;
       text-align: left;
 }
 
 .testpro {
-    padding-left: 80px;
 }
 
 .testcon {
     padding-top: 30px;
+    padding-left: 50px;
 }
 
 .speechpro {
       position: relative;
-      width: 350px;
-      padding: 5px 10px;
+      width: 400px;
+      padding: 3px 8px;
       border-radius: 3px;
       background: #B1A296;
       margin-bottom: 20px
@@ -395,7 +395,7 @@ tr {
       content:"";
       position: absolute;
       right: 100%;
-      top: 10px;
+      top: 20px;
       width: 0;
       height: 0;
 
@@ -406,8 +406,8 @@ tr {
 
 .speechcon {
       position: relative;
-      width: 350px;
-      padding: 5px 10px;
+      width: 400px;
+      padding: 3px 8px;
       border-radius: 3px;
       background: #7395A3;
       margin-bottom: 20px;
@@ -417,13 +417,49 @@ tr {
       content:"";
       position: absolute;
       left: 100%;
-      top: 10px;
+      top: 20px;
       width: 0;
       height: 0;
   
   border-top: 13px solid transparent;
   border-bottom: 13px solid transparent;
   border-left: 26px solid #7395A3;
+}
+
+.testimonials p {
+    font-style: italic;
+}
+
+.testimonials .speechsource {
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+    width: 280px;
+    font-size: 10px;
+    margin-left: 60px;
+    margin-top: -10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+a.speechsource:link {
+    color: #606060;
+}
+
+/* visited link */
+a.speechsource:visited {
+    color: #606060;
+}
+
+/* mouse over link */
+a.speechsource:hover {
+    color: #171151;
+    text-decoration: none;
+}
+
+/* selected link */
+a.speechsource:active {
+    color: #606060;
 }
 
 .link {
