@@ -325,16 +325,14 @@
                         <p><br>To visualize how the USGSOs have responded to the sanctions:</p>
                         <ul id="howto">
                             <li><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
-                            <li><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
-                        </ul>
-                        <div class="row">
-                            <div class="col-md-6">
+                            <li>
                                 <form>
                                     <label><input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
                                     <label><input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions</label><br>
                                 </form>
-                            </div>
-                            <div class="col-md-6">
+                            </li>
+                            <li><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
+                            <li>
                                 <select class="form-control" id="sort-type" onchange="filterView()">
                                     <option value="all">All</option>
                                     <option value="sor">Sororities</option>
@@ -342,8 +340,8 @@
                                     <option value="ffc">Female Final Clubs</option>
                                     <option value="mfc">Male Final Clubs</option>
                                 </select>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
 
                     </div>
                     <div class="col-md-7">
