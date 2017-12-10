@@ -25,7 +25,7 @@
     /* adapted from https://www.w3schools.com/howto/howto_css_image_text.asp */
     .centered, .but-cont{
         position: absolute;
-        top: 50%;
+        top: 90%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -83,8 +83,13 @@
                 showActiveTooltip: false,
                 slidesNavigation: false,
                 slidesNavPosition: 'bottom',
-                
-				sectionsColor: ['#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc'],
+                /* color scheme:
+                #5D5C61
+                #379683
+                #7395A3
+                #557A95
+                #B1A296*/
+				sectionsColor: ['#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#c4cad1'],
 				anchors: ['1stPage', '2ndPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', '9thpage', '10thpage'],
 				menu: '#menu',
 				scrollingSpeed: 500,
@@ -128,33 +133,13 @@
 </head>
 
 <body>
-
-    <!--<ul id="menu">-->
-        <!--<li data-menuanchor="firstPage"><a href="#firstPage">Home</a></li>-->
-        <!--<li data-menuanchor="secondPage"><a href="#secondPage">Social Spaces at Harvard</a></li>-->
-        <!--<li data-menuanchor="3rdPage"><a href="#3rdPage">Timeline of Events</a></li>-->
-        <!--<li data-menuanchor="4thpage"><a href="#4thpage">USGSO Response</a></li>-->
-        <!--<li data-menuanchor="5thpage"><a href="#5thpage">Harvard vs. Peer Institutions</a></li>-->
-
-        <!--<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>-->
-        <!--<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>-->
-        <!--<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>-->
-        <!--<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>-->
-        <!--<li data-menuanchor="5thpage"><a href="#5thpage">Fifth slide</a></li>-->
-        <!--<li data-menuanchor="6thpage"><a href="#6thpage">Sixth slide</a></li>-->
-        <!--<li data-menuanchor="7thpage"><a href="#7thpage">Seventh slide</a></li>-->
-    <!--</ul>-->
-
-
     <div id="fullpage">
 
         <div class="section" id="section0">
             <div class="imgcontainer">
-              <img src="img/hearherharvard.jpg" alt="usgsopic">
+              <img src="img/hearherharvard.png" alt="usgsopic">
               <div class="centered"><h1 class="maintitle">A History Of Social Sanctions at Harvard</h1></div>
             </div>
-            <!--img src="img/hearherharvard.png" alt="fullPage" />
-            <h1>A History Of Social Sanctions at Harvard (Change Title)</h1>
             <!--http://www.thecrimson.com/article/2017/2/8/where-sanctions-stand-explainer/-->
         </div>
 
@@ -174,38 +159,6 @@
                     organization, whose primary purpose is social, including but not limited to final clubs,
                     fraternities and sororities, that has a membership that is comprised entirely of Harvard
                     students and/or Harvard alumni."</h5>
-                <!--<div class="center">-->
-                    <!--<table width="100%">-->
-                        <!--<tr id="names">-->
-                            <!--<td width="50%">Dean Khurana's Social Sanctions</td>-->
-                            <!--<td width="50%">Definition of USGSOs</td>-->
-                        <!--</tr>-->
-                        <!--<tr valign="top">-->
-                            <!--<td>-->
-                                <!--<ul style="list-style-type:disc" class="desc">-->
-                                    <!--<li>The Dean of Harvard College, Rakesh Khurana, released a series of-->
-                                        <!--recommendations for addressing discriminatory membership policies-->
-                                        <!--of undergraduate unrecognized single-gender social organizations (USGSOs)</li>-->
-                                    <!--<li>Affects students matriculating in the Fall of 2017, i.e. the Class of 2021</li>-->
-                                    <!--<li>Students who become members of an USGSO will not be eligible to hold leadership in-->
-                                    <!--recognized student organizations or athletic teams</li>-->
-                                    <!--<li>Will not be eligible to receive the Dean's endorsement letters for fellowships requiring them</li>-->
-                                <!--</ul>-->
-                            <!--</td>-->
-                            <!--<td>-->
-                                <!--<ul style="list-style-type:disc" class="desc">-->
-                                    <!--<li>According to the Final Report of the Implementation Committee for the Policy on Membership in Single Gender-->
-                                        <!--Social Organizations in February 2017, "an Unrecognized Single Gender Social Organization is any selective-membership, singlegender-->
-                                        <!--organization, whose primary purpose is social, including but not limited to final-->
-                                        <!--clubs, fraternities and sororities, that has a membership that is comprised entirely of Harvard-->
-                                        <!--students and/or Harvard alumni. "</li>-->
-                                    <!--<li>Separate from Sponsored Student Organizations and Independent Student Organizations</li>-->
-                                    <!--<li>Members would be ineligible to hold leadership positions in Independent Student Organizations</li>-->
-                                <!--</ul>-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                    <!--</table>-->
-                <!--</div>-->
             </div>
         </div>
 
@@ -215,45 +168,70 @@
               <table>
                 <tr><th>Is this a USGSO?</th></tr>
                 <tr>
-                    <td>DESCRIPTION 1</td>
+                    <td>Asian American Brotherhood: </td>
                     <td>
                         <button id="yes1" onclick="disableNo1()">YES</button>
                         <button id="no1" onclick="disableYes1()">NO</button>
                     </td>
+                    <td>
+                        <h3 id="correct1" style="display: none;">Correct! Asian American Brotherhood is NOT a USGSO.</h3>
+                        <h3 id="incorrect1" style="display: none;">Incorrect! Asian American Brotherhood is NOT a USGSO.</h3>
+                    </td>
                 </tr>
                 <tr>
-                    <td>DESCRIPTION 2</td>
+                    <td>Radcliffe Choral Society: </td>
                     <td>
                         <button id="yes2" onclick="disableNo2()">YES</button>
                         <button id="no2" onclick="disableYes2()">NO</button>
                     </td>
+                    <td>
+                        <h3 id="correct2" style="display: none;">Correct! Radcliffe Choral Society is NOT a USGSO.</h3>
+                        <h3 id="incorrect2" style="display: none;">Incorrect! Radcliffe Choral Society is NOT a USGSO.</h3>
+                    </td>
                 </tr>
                 <tr>
-                    <td>DESCRIPTION 3</td>
+                    <td>Crimson Dance Team: </td>
                     <td>
                         <button id="yes3" onclick="disableNo3()">YES</button>
                         <button id="no3" onclick="disableYes3()">NO</button>
                     </td>
+                    <td>
+                        <h3 id="correct3" style="display: none;">Correct! Crimson Dance Team is NOT a USGSO.</h3>
+                        <h3 id="incorrect3" style="display: none;">Incorrect! Crimson Dance Team is NOT a USGSO.</h3>
+                    </td>
                 </tr>
                 <tr>
-                    <td>DESCRIPTION 4</td>
+                    <td>Hasty Pudding Theatricals: </td>
                     <td>
                         <button id="yes4" onclick="disableNo4()">YES</button>
                         <button id="no4" onclick="disableYes4()">NO</button>
                     </td>
+                    <td>
+                        <h3 id="correct4" style="display: none;">Correct! Hasty Pudding Theatricals is NOT a USGSO.</h3>
+                        <h3 id="incorrect4" style="display: none;">Incorrect! Hasty Pudding Theatricals is NOT a USGSO.</h3>
+                    </td>
                 </tr>
                 <tr>
-                    <td>DESCRIPTION 5</td>
+                    <td>Organization of Asian American Sisters in
+                        Service (OAASIS): </td>
                     <td>
                         <button id="yes5" onclick="disableNo5()">YES</button>
                         <button id="no5" onclick="disableYes5()">NO</button>
                     </td>
+                    <td>
+                        <h3 id="correct5" style="display: none;">Correct! OAASIS is NOT a USGSO.</h3>
+                        <h3 id="incorrect5" style="display: none;">Incorrect! OAASIS is NOT a USGSO.</h3>
+                    </td>
                 </tr>
                 <tr>
-                    <td>DESCRIPTION 6</td>
+                    <td>The Fly Club: </td>
                     <td>
                         <button id="yes6" onclick="disableNo6()">YES</button>
                         <button id="no6" onclick="disableYes6()">NO</button>
+                    </td>
+                    <td>
+                        <h3 id="correct6" style="display: none;">Correct! The Fly Club is a USGSO.</h3>
+                        <h3 id="incorrect6" style="display: none;">Incorrect! The Fly Club is a USGSO.</h3>
                     </td>
                 </tr>
               </table>
@@ -327,8 +305,6 @@
         
         <div class="section" id="section5">
             <div class="intro">
-                  <!--<h1>Since May 2016, a lot has happened...</h1>-->
-                  <!--<div id="timelinevis"></div>-->
                 <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1mJlo7s6UFl2BdPL2eX-ETy7l753nKpFhcidFKkErypw&font=Lustria-Lato&lang=en&initial_zoom=2&height=650' width='80%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>            </div>
         </div>
         
@@ -351,16 +327,14 @@
                         <p><br>To visualize how the USGSOs have responded to the sanctions:</p>
                         <ul id="howto">
                             <li><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
-                            <li><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
-                        </ul>
-                        <div class="row">
-                            <div class="col-md-6">
+                            <li>
                                 <form>
-                                    <label><input type="radio" name="sanction" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
-                                    <label><input type="radio" name="sanction" value="after" onclick="afterSanctions()">After Sanctions</label><br>
+                                    <label><input type="radio" name="sanctions" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
+                                    <label><input type="radio" name="sanctions" value="after" onclick="afterSanctions()">After Sanctions</label><br>
                                 </form>
-                            </div>
-                            <div class="col-md-6">
+                            </li>
+                            <li><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
+                            <li>
                                 <select class="form-control" id="sort-type" onchange="filterView()">
                                     <option value="all">All</option>
                                     <option value="sor">Sororities</option>
@@ -368,18 +342,14 @@
                                     <option value="ffc">Female Final Clubs</option>
                                     <option value="mfc">Male Final Clubs</option>
                                 </select>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
 
                     </div>
                     <div class="col-md-7">
                         <div class="categories"></div>
                     </div>
                 </div>
-                <!--
-                <div class="but-cont">
-                    <button type="button" id="start" onclick="gatherData()">Click Me to Begin!</button>
-                </div> -->
             </div>
         </div>
         
@@ -388,15 +358,15 @@
             <div class="row testimonials">
                 <div class="col-md-2"></div>
                  <div class="col-md-5">
-                     <div class="speechpro fadein fadeone">
+                     <div class="speechpro fadein fade-1">
                         <p>I love sanctions  </p>
                     </div>
                      
-                     <div class="speechpro fadein fadetwo">
+                     <div class="speechpro fadein fade-2">
                         <p>Another blurb on sanctions</p>
                     </div>
                      
-                      <div class="speechpro fadein fadethree">
+                      <div class="speechpro fadein fade-3">
                         <p>The Committee on the Unrecognized Single-Gender Social Organizations defended the sanctions as part of Harvard College’s commitment to non-discrimination, inclusion, and a healthy social climate</p>
                     </div>
                      
@@ -426,13 +396,6 @@
                 </div>
             </div>
         </div>
-<!--
-        <div class="section" id="section6">
-                <div class="intro">
-                    <h1>Discussion of Data and shit like that</h1>
-                </div>
-        </div>
--->
     </div>
 
 
