@@ -81,6 +81,10 @@ h5
     color: #303030;
 }
 
+input[type="radio"]
+{
+    margin-right: 5px;
+}
 .usgso-emphasis {
     letter-spacing: 5px; 
     font-weight: 700; 
