@@ -23,13 +23,19 @@ body
 
 h1
 {
+    font-family: Lora, Georgia, serif;
     font-family: Lustria, Georgia, serif;
     font-size: 40px;
     text-align: left;
+    width: 850px;
     color: #000000;
     margin-bottom: 25px;
-    padding-left: 60px;
-    width: 850px;
+    padding-left: 100px;
+}
+
+h1.opening {
+    padding-left: 0px; 
+    width: auto;
 }
 
 h3
@@ -39,8 +45,16 @@ h3
     text-align: left;
     color: #474B4F;
     margin-bottom: 25px;
-    margin-left: 50px;
     margin-right: 50px
+}
+
+h4.openingq {
+    font-weight: bold;
+    text-transform: uppercase; 
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
 }
 
 h5
@@ -54,6 +68,44 @@ h5
     margin-right: 200px;
 }
 
+/* what are the sanctions? */
+.openingcontainer {
+    padding-left: 60px;
+}
+
+.openingcontainer p {
+    font-size: 14px;
+}
+
+.openingheader {
+    margin-bottom: 50px; 
+}
+
+.openingheader hr {
+    width: 950px;
+    float: left;
+    margin-top: 0px;
+}
+
+.clearfloat {
+    clear: both;
+}
+
+.subtitle {
+    font-family: Lora, Georgia, serif;
+    font-style: italic;
+    margin-top: -10px; 
+    font-size: 18px;
+}
+
+.q-a {
+    margin-top: 25px;
+}
+
+.q-a p {
+    font-size: 13px;
+}
+
 .right
 {
     font-weight: normal;
@@ -64,13 +116,15 @@ h5
     margin-right: 50px;
 }
 
-.section{
+.section {
     text-align:center;
 }
 
 .maintitle {
     font-size: 50px; 
 }
+
+
 
 /* text */
 .intro p {
@@ -400,6 +454,54 @@ tr {
   -webkit-animation-delay: 2.6s;
   -moz-animation-delay: 2.6s;
   animation-delay: 2.6s;
+}
+
+.fadein.fade-a {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadein.fade-b {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.fadein.fade-c {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.fadein.fade-d {
+  -webkit-animation-delay: 4.5s;
+  -moz-animation-delay: 4.5s;
+  animation-delay: 4.5s;
+}
+
+.fadein.fade-4 {
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.fadein.fade-5 {
+  -webkit-animation-delay: 6s;
+  -moz-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.fadein.fade-6 {
+  -webkit-animation-delay: 7s;
+  -moz-animation-delay: 7s;
+  animation-delay: 7s;
+}
+
+.fadein.fade-7 {
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  animation-delay: 8s;
 }
 
 .link {
