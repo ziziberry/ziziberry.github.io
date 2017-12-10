@@ -104,6 +104,7 @@
     <script src="js/radarvis.js"></script>
     <script src="js/timelinevis.js"></script>
     <script src="js/description.js"></script>
+    <script src="js/usgsoquiz.js"></script>
     <script src="js/queue.v1.min.js"></script>
     <script src="js/d3-tip.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -183,7 +184,58 @@
 
         <div class="section" id="section2">
             <div class="intro">
-                  <h1>Categories of USGSOs</h1>
+              <h1>The administration's definition of a USGSO is not as clear as you may think...</h1>
+              <table>
+                <tr><th>Is this a USGSO?</th></tr>
+                <tr>
+                    <td>DESCRIPTION 1</td>
+                    <td>
+                        <button id="yes1" onclick="disableNo1()">YES</button>
+                        <button id="no1" onclick="disableYes1()">NO</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION 2</td>
+                    <td>
+                        <button id="yes2" onclick="disableNo2()">YES</button>
+                        <button id="no2" onclick="disableYes2()">NO</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION 3</td>
+                    <td>
+                        <button id="yes3" onclick="disableNo3()">YES</button>
+                        <button id="no3" onclick="disableYes3()">NO</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION 4</td>
+                    <td>
+                        <button id="yes4" onclick="disableNo4()">YES</button>
+                        <button id="no4" onclick="disableYes4()">NO</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION 5</td>
+                    <td>
+                        <button id="yes5" onclick="disableNo5()">YES</button>
+                        <button id="no5" onclick="disableYes5()">NO</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>DESCRIPTION 6</td>
+                    <td>
+                        <button id="yes6" onclick="disableNo6()">YES</button>
+                        <button id="no6" onclick="disableYes6()">NO</button>
+                    </td>
+                </tr>
+              </table>
+            </div>
+        </div>
+
+        <div class="section" id="section3">
+            <div class="intro">
+                  <h1>These are the organizations that the administration is targeting</h1>
                   <h2>Reflects status of organizations before announcement of sanctions in May 2016</h2>
                   <div class="center">
                       <table width="100%">
@@ -236,19 +288,15 @@
             </div>
         </div>
 
-        <div class="section" id="section3">
+
+        <div class="section" id="section5">
             <div class="intro">
-                  <h1>VIS: IS THIS A USGSO</h1>
+                  <h1>Since May 2016, a lot has happened...</h1>
+                  <!--<div id="timelinevis"></div>-->
+                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1mJlo7s6UFl2BdPL2eX-ETy7l753nKpFhcidFKkErypw&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
             </div>
         </div>
 
-        <div class="section" id="section4">
-            <div class="intro">
-                  <h1>Since May 2016, a lot has happened...</h1>
-                  <div id="timelinevis"></div>
-            </div>
-        </div>
-        
         <div class="section" id="section2">
             <div class="intro">
             </div>

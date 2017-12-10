@@ -86,11 +86,7 @@ form {
 button {
     /*position: absolute;*/
     text-align: center;
-    padding: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
-    top: 50%;
-    right: 50%;
+    width: 50px;
     background-color: #97ffeb;
     font-weight: bold;
     font-size: 20px;
