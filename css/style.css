@@ -1,17 +1,22 @@
 body
 {
     font-family: Lato, Tahoma, Geneva, sans-serif;
-    color: #303030;
+    background-color: white;
+    color: black;
 }
 
 h1
 {
+<<<<<<< HEAD
     font-family: Lustria, Georgia, serif;
     font-size: 35px;
-    text-align: center;
-    color: #565656;
-    margin-bottom: 25px;
+=======
     font-weight: bold;
+    font-size: 30px;
+>>>>>>> 6442556568a15aea1ba9c3cd7d770aa68fc07bc5
+    text-align: center;
+    color: #606060;
+    margin-bottom: 25px;
 }
 
 h3
@@ -22,6 +27,7 @@ h3
     color: #606060;
     margin-bottom: 25px;
     margin-left: 50px;
+    margin-right: 50px
 }
 
 h5
