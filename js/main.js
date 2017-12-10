@@ -73,7 +73,7 @@ function loadVis(error, timelineData, usgso_initialData, usgso_currentData, peer
     console.log(usgso_currentData);
     console.log(peerinstitutions);
     console.log(peerinstitutions_norm);
-    
+
     // initialize visualizations
 
     // radar chart of peer instituions
@@ -81,6 +81,8 @@ function loadVis(error, timelineData, usgso_initialData, usgso_currentData, peer
 
     // timeline of important dates and decisions
     var timelinevis = new TimelineVis("timelinevis", timelineData);
+
+    var treevis = new TreeVis("treevis");
 
     // categorical depiction of USGSOs
     categories = new Categories("categories", usgso_initialData, usgso_currentData);
