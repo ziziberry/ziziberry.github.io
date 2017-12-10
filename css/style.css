@@ -343,22 +343,22 @@ tr {
 
 }
 
-.fadein.fade-08 {
+.fadein.fade-1 {
   -webkit-animation-delay: 0.8s;
   -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
-.fadein.fade-12 {
-  -webkit-animation-delay: 1.2s;
-  -moz-animation-delay:1.2s;
-  animation-delay: 1.2s;
+.fadein.fade-2 {
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay:1.6s;
+  animation-delay: 1.6s;
 }
 
-.fadein.fade-16 {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay: 1.6s;
-  animation-delay: 1.6s;
+.fadein.fade-3 {
+  -webkit-animation-delay: 2.6s;
+  -moz-animation-delay: 2.6s;
+  animation-delay: 2.6s;
 }
 
 .link {
