@@ -69,7 +69,8 @@ h5
 
 /* what are the sanctions? */
 .openingcontainer {
-    padding-left: 100px;
+    padding-right: 5%;
+    padding-left: 8%;
 }
 
 .openingcontainer p {
@@ -90,7 +91,7 @@ h5
     clear: both;
 }
 
-.subtitle {
+.subtitle, h3 {
     font-family: Lora, Georgia, serif;
     font-style: italic;
     margin-top: -10px; 
@@ -298,7 +299,7 @@ table{
 #quiz{
     display: block;
     margin: auto;
-    width: 90%;
+    width: 100%;
     border: solid 0.5px;
     background-color: #f7f7f7;
 }
@@ -306,14 +307,28 @@ table{
 #quiz tr{
   height: 100px;
 }
-#quiz td{
+
+#correct1, #incorrect1, #correct2, #incorrect2,
+#correct3, #incorrect3, #correct6, #incorrect6 {
+    color: #557A95;
+    font-style: normal;
+    font-size: 15px;
+    vertical-align: middle;
+    margin: auto;
+}
+
+#quiz tr, #quiz td{
+    vertical-align: middle;
     text-align: left;
 }
 
-#quiz td h3{
-   text-align: left;
+#correct1 b, #incorrect1 b, #correct2 b, #incorrect2 b,
+#correct3 b, #incorrect3 b, #correct6 b, #incorrect6 b {
+    color: #557A95;
+    font-style: italic;
     font-size: 15px;
 }
+
 
 label {
     color: black;
