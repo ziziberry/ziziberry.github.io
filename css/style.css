@@ -24,21 +24,12 @@ body
 h1
 {
     font-family: Lustria, Georgia, serif;
-<<<<<<< HEAD
     font-size: 40px;
     text-align: left;
     color: #000000;
     margin-bottom: 25px;
     padding-left: 60px;
     width: 850px;
-=======
-    font-size: 35px;
-    text-align: center;
-    color: #303C6C;
-    font-weight: bold;
-    margin-bottom: 25px;
-    font-family: Lustria;
->>>>>>> 2acb73faa9ea5a278b8bf0e8f76405592e177349
 }
 
 h3
