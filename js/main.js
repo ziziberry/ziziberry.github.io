@@ -68,11 +68,11 @@ function loadVis(error, timelineData, usgso_initialData, usgso_currentData, peer
         peerinstitutions_norm[d.school] = d;
     })
 
-    console.log(timelineData);
-    console.log(usgso_initialData);
-    console.log(usgso_currentData);
-    console.log(peerinstitutions);
-    console.log(peerinstitutions_norm);
+    // console.log(timelineData);
+    // console.log(usgso_initialData);
+    // console.log(usgso_currentData);
+    // console.log(peerinstitutions);
+    // console.log(peerinstitutions_norm);
 
     // initialize visualizations
 

@@ -1,0 +1,40 @@
+{
+  "name": "Harvard Corporation",
+  "parent": "null",
+  "children": [
+    {
+      "name": "University President, currently Drew Faust",
+      "parent": "Harvard Corporation",
+      "children": [
+        {
+          "name": "Administration",
+          "parent": "University President, currently Drew Faust"
+        },
+        {
+          "name": "Dean of the College",
+          "parent": "University President, currently Drew Faust",
+          "children": [
+            {
+              "name": "Undergraduate Student Body",
+              "parent": "Dean of the College"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Faculty",
+      "parent": "Harvard Corporation",
+      "children": [
+        {
+          "name": "Faculty Committee",
+          "parent": "Faculty"
+        },
+        {
+          "name": "Implementation Committee",
+          "parent": "Faculty"
+        }
+      ]
+    }
+  ]
+}
