@@ -103,7 +103,6 @@ var RadarChart = {
 		.attr("class", "line")
 		.style("stroke", "grey")
 		.style("stroke-width", "1px");
-
  
     label_school = [];
 	d.forEach(function(y, x){
