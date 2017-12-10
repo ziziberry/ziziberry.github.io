@@ -336,11 +336,10 @@ tr {
   -webkit-animation-delay: 1.6s;
   -moz-animation-delay: 1.6s;
   animation-delay: 1.6s;
-=======
+}
+
 .link {
     fill: none;
     stroke: #555;
     stroke-opacity: 0.4;
     stroke-width: 1.5px;
->>>>>>> c4eb8a2a451408625eb471f559cc2650e247859f
-}
