@@ -1,18 +1,20 @@
 {
   "name": "Harvard Corporation",
   "parent": "null",
+  "description": "Harvard University's highest governing body.<br>One of Harvard's boards in the two-board system.<br>Known formally as the President and Fellows of Harvard College.",
   "children": [
     {
-      "name": "University President, currently Drew Faust",
+      "name": "University President",
       "parent": "Harvard Corporation",
+      "description": "Currently Drew Faust, Harvard’s 28th president.",
       "children": [
         {
           "name": "Administration",
-          "parent": "University President, currently Drew Faust"
+          "parent": "University President"
         },
         {
           "name": "Dean of the College",
-          "parent": "University President, currently Drew Faust",
+          "parent": "University President",
           "children": [
             {
               "name": "Undergraduate Student Body",
