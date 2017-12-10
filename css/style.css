@@ -1,26 +1,52 @@
 body
 {
     font-family: Lato, Tahoma, Geneva, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: #7395A3;
+    color: #5D5C61;
+}
+
+.imgcontainer{
+    width: 100%;
+    height:100vh;
+}
+
+.imgcontainer img{
+    width: 100%;
+    height: 100%;
+}
+
+.maintitle{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 5px;
 }
 
 h1
 {
     font-family: Lustria, Georgia, serif;
+<<<<<<< HEAD
     font-size: 40px;
     text-align: left;
     color: #000000;
     margin-bottom: 25px;
     padding-left: 60px;
     width: 850px;
+=======
+    font-size: 35px;
+    text-align: center;
+    color: #303C6C;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-family: Lustria;
+>>>>>>> 2acb73faa9ea5a278b8bf0e8f76405592e177349
 }
 
 h3
 {
+    font-weight: normal;
     font-size: 17px;
     text-align: left;
-    color: #606060;
+    color: #474B4F;
     margin-bottom: 25px;
     margin-left: 50px;
     margin-right: 50px
@@ -28,10 +54,10 @@ h3
 
 h5
 {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 17px;
     text-align: center;
-    color: #606060;
+    color: #474B4F;
     margin-bottom: 25px;
     margin-left: 200px;
     margin-right: 200px;
@@ -39,9 +65,10 @@ h5
 
 .right
 {
+    font-weight: normal;
     font-size: 17px;
     text-align: right;
-    color: #606060;
+    color: #474B4F;
     margin-bottom: 25px;
     margin-right: 50px;
 }
