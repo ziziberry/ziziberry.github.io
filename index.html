@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Lora:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -72,7 +73,13 @@
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="js/examples.js"></script>
 	<script type="text/javascript">
+        
+        
 		$(document).ready(function() {
+                 
+            var $fade1 = $("#section1 .animated");
+            
+            // initialize fullpage
 			$('#fullpage').fullpage({
                 
                 // navigation
@@ -98,8 +105,25 @@
                 afterResponsive: function(isResponsive){
 
                 },
-			});
-		});
+                
+                onLeave: function(index, nextIndex, direction) {
+                
+                // fade animation adapted from https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235
+                  // section 1: animation
+                  if( index == 1 && nextIndex == 2 ) { 
+                    $fade1.addClass('animated fadeIn'); 
+                    $fade1.eq(0).css('animation-delay', '.8s');
+                    $fade1.eq(1).css('animation-delay', '1.6s');
+                    $fade1.eq(2).css('animation-delay', '2.8s');
+                    $fade1.eq(3).css('animation-delay', '4.5s');
+                    $fade1.eq(4).css('animation-delay', '5s');
+                    $fade1.eq(5).css('animation-delay', '6s');
+                    $fade1.eq(6).css('animation-delay', '7s');
+                    $fade1.eq(7).css('animation-delay', '8s');
+                  }
+                }
+            });
+         });
 	</script>
 
     <!-- load other javacript libraries -->
@@ -138,7 +162,7 @@
         <div class="section" id="section0">
             <div class="imgcontainer">
               <img src="img/hearherharvard.png" alt="usgsopic">
-              <div class="centered"><h1 class="maintitle">A History Of Social Sanctions at Harvard</h1></div>
+              <div class="centered"><h1 class="maintitle">A History Of Social Sanctions <br > at Harvard</h1></div>
             </div>
             <!--http://www.thecrimson.com/article/2017/2/8/where-sanctions-stand-explainer/-->
         </div>
@@ -147,40 +171,39 @@
             <div class="openingcontainer container">
                 <div class="openingheader">
                 <h1 class="opening">
-                    <span class="fadein fade-a">On May 6, 2016,</span>
+                    <span class="animated">On May 6, 2016,</span>
                     <br />
-                    <span class="fadein fade-b">in the midst of finals period at Harvard College...</span>
+                    <span class="animated">in the midst of finals period at Harvard College...</span>
                 </h1>
-                <h3 class="fadein fade-c subtitle">Dean of Harvard College, Rakesh Khurana, released recommendations for discriminatory membership policies of <br /> undergraduate
+                <h3 class="animated subtitle">Dean of Harvard College, Rakesh Khurana, released recommendations for discriminatory membership policies of <br /> undergraduate
                     Unrecognized Single-Gender Social Organizations (USGSOs).</h3>
                     
-                <hr class="fadein fade-d"/>
+                <hr class="animated"/>
                 </div>
                 
                 <div class="intro">
-                <div class="q-a fadein fade-4">
-                <h4 class="openingq">WHAT</h4>
-                <p>The sanctions recommended that Members of USGSOs would not be eligible to hold leadership positions in athletic teams and recognized student organizations, <br /> or to receive the Dean's endorsement letters for fellowships.
-                <br />The sanctions are an effort from the Harvard administration to regulate off-campus undergraduate social life. 
-                    </p>
-                </div>
-                
-                <div class="q-a fadein fade-5">
-                <h4 class="openingq">WHO</h4>
-                <p>This policy is to apply to students entering Harvard College matriculating in the fall of 2017 (Class of 2028). <br /> All currently enrolled undergraduates are exempt from the effects of this policy for the duration of their time at Harvard.</p>
-                </div>
-                
-                <div class="q-a fadein fade-6">
-                <h4 class="openingq">WHEN</h4>
-                <p>The original Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations was released February 2017. <br /> An expansion of the original proposal released in July 2017 has called for an outright ban on social groups and phased out from the campus completely by the year 2022.</p>
-                </div>
-                
-                <div class="q-a fadein fade-7">
+                <div class="q-a animated">
                 <h4 class="openingq">USGSO</h4>
                 <p>An Unrecognized Single Gender Social Organization (USGSO) is any selective-membership, single-gender
                     organization, whose primary purpose is social, including but not limited to final clubs,
                     fraternities and sororities, that has a membership that is comprised entirely of Harvard
                     students and/or Harvard alumni.</p>
+                </div>
+                    
+                <div class="q-a animated">
+                <h4 class="openingq">WHAT</h4>
+                <p>The sanctions recommended that members of USGSOs would not be eligible to hold leadership positions in athletic teams and recognized student organizations, <br /> or to receive the Dean's endorsement letters for fellowships. The sanctions are an effort from the Harvard administration to regulate off-campus undergraduate social life. 
+                    </p>
+                </div>
+                
+                <div class="q-a animated">
+                <h4 class="openingq">WHO</h4>
+                <p>This policy is to apply to students entering Harvard College matriculating in the fall of 2017 (Class of 2028). <br /> All currently enrolled undergraduates are exempt from the effects of this policy for the duration of their time at Harvard.</p>
+                </div>
+                
+                <div class="q-a animated">
+                <h4 class="openingq">WHEN</h4>
+                <p>The original Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations was released February 2017. <br /> An expansion of the original proposal released in July 2017 has called for an outright ban on social groups and phased out from the campus completely by 2022.</p>
                 </div>
 
             </div>
