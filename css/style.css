@@ -70,7 +70,7 @@ h5
 
 /* what are the sanctions? */
 .openingcontainer {
-    padding-left: 60px;
+    padding-left: 90px;
 }
 
 .openingcontainer p {
@@ -120,8 +120,9 @@ h5
     text-align:center;
 }
 
-.maintitle {
+h1.maintitle {
     font-size: 50px; 
+    text-align: center;
 }
 
 
@@ -416,99 +417,6 @@ tr {
   border-top: 13px solid transparent;
   border-bottom: 13px solid transparent;
   border-left: 26px solid crimson;
-}
-
-
-/* fade-in animation */
-
-/*  */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fadein {
-  opacity:0;  
-  -webkit-animation:fadeIn ease-in 1; 
-  -moz-animation:fadeIn ease-in 1;
-  animation:fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode:forwards; 
-  -moz-animation-fill-mode:forwards;
-  animation-fill-mode:forwards;
-
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  animation-duration: 1s;
-    
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-
-}
-
-.fadein.fade-1 {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.fadein.fade-2 {
-  -webkit-animation-delay: 1.6s;
-  -moz-animation-delay:1.6s;
-  animation-delay: 1.6s;
-}
-
-.fadein.fade-3 {
-  -webkit-animation-delay: 2.6s;
-  -moz-animation-delay: 2.6s;
-  animation-delay: 2.6s;
-}
-
-.fadein.fade-a {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-.fadein.fade-b {
-  -webkit-animation-delay: 2s;
-  -moz-animation-delay: 2s;
-  animation-delay: 2s;
-}
-
-.fadein.fade-c {
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  animation-delay: 3s;
-}
-
-.fadein.fade-d {
-  -webkit-animation-delay: 4.5s;
-  -moz-animation-delay: 4.5s;
-  animation-delay: 4.5s;
-}
-
-.fadein.fade-4 {
-  -webkit-animation-delay: 5s;
-  -moz-animation-delay: 5s;
-  animation-delay: 5s;
-}
-
-.fadein.fade-5 {
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  animation-delay: 6s;
-}
-
-.fadein.fade-6 {
-  -webkit-animation-delay: 7s;
-  -moz-animation-delay: 7s;
-  animation-delay: 7s;
-}
-
-.fadein.fade-7 {
-  -webkit-animation-delay: 8s;
-  -moz-animation-delay: 8s;
-  animation-delay: 8s;
 }
 
 .link {
