@@ -68,7 +68,7 @@ TreeVis.prototype.initVis = function() {
 
         node.append("text")
             .attr("dy", 3)
-            .attr("x", function(d) { return d.children ? -10 : 1; })
+            .attr("x", function(d) { return d.children ? -1 : 10; })
             .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
             .text(function(d) {
                 return d.data.name;
