@@ -55,6 +55,7 @@ h4.openingq {
     font-size: 16px;
     margin-bottom: 2px;
     letter-spacing: 1px;
+    color:#557A95;
 }
 
 h5
@@ -96,6 +97,7 @@ h5
     font-style: italic;
     margin-top: -10px; 
     font-size: 18px;
+    color: #7395AE
 }
 
 .q-a {
