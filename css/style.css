@@ -291,20 +291,27 @@ td {
 }
 
 table{
-
     margin: 20px;
 }
 
 #quiz{
     display: block;
     margin: auto;
-    width: 80%;
+    width: 90%;
     border: solid 0.5px;
     background-color: #f7f7f7;
 }
 
 #quiz tr{
   height: 100px;
+}
+#quiz td{
+    text-align: left;
+}
+
+#quiz td h3{
+   text-align: left;
+    font-size: 15px;
 }
 
 label {
