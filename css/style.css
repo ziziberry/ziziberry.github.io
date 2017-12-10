@@ -24,10 +24,8 @@ body
 h1
 {
     font-family: Lora, Georgia, serif;
-    font-family: Lustria, Georgia, serif;
     font-size: 40px;
     text-align: left;
-    width: 850px;
     color: #000000;
     margin-bottom: 25px;
     padding-left: 100px;
@@ -71,7 +69,7 @@ h5
 
 /* what are the sanctions? */
 .openingcontainer {
-    padding-left: 90px;
+    padding-left: 100px;
 }
 
 .openingcontainer p {
@@ -377,12 +375,20 @@ tr {
       text-align: left;
 }
 
+.testpro {
+    padding-left: 80px;
+}
+
+.testcon {
+    padding-top: 30px;
+}
+
 .speechpro {
       position: relative;
       width: 350px;
       padding: 5px 10px;
       border-radius: 3px;
-      background: lightgreen;
+      background: #B1A296;
       margin-bottom: 20px
 }
 
@@ -390,13 +396,13 @@ tr {
       content:"";
       position: absolute;
       right: 100%;
-      top: 15px;
+      top: 10px;
       width: 0;
       height: 0;
 
       border-top: 13px solid transparent;
       border-bottom: 13px solid transparent;
-      border-right: 26px solid lightgreen;
+      border-right: 26px solid #B1A296;
 }
 
 .speechcon {
@@ -404,21 +410,21 @@ tr {
       width: 350px;
       padding: 5px 10px;
       border-radius: 3px;
-      background: crimson;
-      margin-bottom: 20px
+      background: #7395A3;
+      margin-bottom: 20px;
 }
 
 .speechcon:before {
       content:"";
       position: absolute;
       left: 100%;
-      top: 15px;
+      top: 10px;
       width: 0;
       height: 0;
   
   border-top: 13px solid transparent;
   border-bottom: 13px solid transparent;
-  border-left: 26px solid crimson;
+  border-left: 26px solid #7395A3;
 }
 
 .link {
