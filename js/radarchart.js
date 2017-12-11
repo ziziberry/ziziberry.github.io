@@ -21,14 +21,14 @@ var RadarChart = {
 	 radians: 2 * Math.PI,
 	 opacityArea: 0.5,
 	 ToRight: 5,
-	 TranslateX: 80,
+	 TranslateX: 50,
 	 TranslateY: 30,
 	 ExtraWidthX: 100,
 	 ExtraWidthY: 100,
 	 color: d3.scaleOrdinal(d3.schemeCategory10)
 	};
       
-    console.log(d);
+    console.log(d3.scaleOrdinal(d3.schemeCategory10));
 	
 	if('undefined' !== typeof options){
 	  for(var i in options){
@@ -144,16 +144,16 @@ var RadarChart = {
 										 .transition(200)
 										 .style("fill-opacity", .7);
                                         g.append("rect")
-                                         .attr('x', 150)
- 						                 .attr('y', 190)
+                                         .attr('x', 160)
+ 						                 .attr('y', 215)
                                          .attr('width', 120)
                                          .attr('height', 30)
                                          .attr("class", "radar-label")
                                          .attr("fill", "#737373")
                                          .attr("fill-opacity", "0.6");
                                         g.append("text")
-                                         .attr('x', 170)
- 						                 .attr('y', 210)
+                                         .attr('x', 180)
+ 						                 .attr('y', 235)
                                          .attr("class", "radar-label radar-label-school")
                                          .text(d3.select(this).attr("class"));
 									  })
@@ -267,10 +267,11 @@ var RadarChart = {
 		.text(function(d){return d})
 		.style("font-family", "sans-serif")
 		.style("font-size", "11px")
+        .style("font-weight", "bold")
 		.attr("text-anchor", "middle")
         .attr("fill", "#303030")
 		.attr("dy", "1.5em")
-		.attr("transform", function(d, i){return "translate(0, -15)"})
+		.attr("transform", function(d, i){return "translate(-5, -14)"})
 		.attr("x", function(d, i){return cfg.w/2*(1-cfg.factorLegend*Math.sin(i*cfg.radians/total))-60*Math.sin(i*cfg.radians/total);})
 		.attr("y", function(d, i){return cfg.h/2*(1-Math.cos(i*cfg.radians/total))-20*Math.cos(i*cfg.radians/total);});
 	
