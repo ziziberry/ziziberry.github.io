@@ -21,7 +21,7 @@ var RadarChart = {
 	 radians: 2 * Math.PI,
 	 opacityArea: 0.5,
 	 ToRight: 5,
-	 TranslateX: 50,
+	 TranslateX: 120,
 	 TranslateY: 30,
 	 ExtraWidthX: 100,
 	 ExtraWidthY: 100,
@@ -168,7 +168,7 @@ var RadarChart = {
 					 })
                     .on('click', function() {
                                     school = d3.select(this).attr("class");
-                                    d3.select("#peertable").html("<div class='peerpanel panel panel-default'><div class='panel-heading' style='background-color:" + cfg.color(["Williams", "Bowdoin", "Amherst", "Harvard"].indexOf(school)) + "'>" +  originaldata[school].school + "</div><table class='table table-hover'><tbody><tr><th scope='row'>Student Body Population</th><td>" + originaldata[school].student_body + " students </td></tr><tr><th scope='row'>Median Family Income</th><td>$" + originaldata[school].median_family_income + "</td></tr><tr><th scope='row'>Percent of Students in Athletics</th><td>" + originaldata[school].athletics + "%</td></tr><tr><th scope='row'>Percent of Students in School Housing</th><td>" + originaldata[school].student_housing + "%</td></tr><tr><th scope='row'>Acceptance Rate</th><td>" + originaldata[school].acceptance_rate + "%</td></tr><tr><th scope='row'>Yearly Tuition Cost</th><td>$" + originaldata[school].tuition + "</td></tr></tbody></table></div>")
+                                    d3.select("#peertable").html("<div class='peerpanel panel panel-default'><div class='panel-heading' style='color: #ffffff; background-color:" + cfg.color(["Williams", "Bowdoin", "Amherst", "Harvard"].indexOf(school)) + "'>" +  originaldata[school].school + "</div><table class='table table-hover'><tbody><tr><th scope='row'>Student Body Population</th><td>" + originaldata[school].student_body + " students </td></tr><tr><th scope='row'>Median Family Income</th><td>$" + originaldata[school].median_family_income + "</td></tr><tr><th scope='row'>Percent of Students in Athletics</th><td>" + originaldata[school].athletics + "%</td></tr><tr><th scope='row'>Percent of Students in School Housing</th><td>" + originaldata[school].student_housing + "%</td></tr><tr><th scope='row'>Acceptance Rate</th><td>" + originaldata[school].acceptance_rate + "%</td></tr><tr><th scope='row'>Yearly Tuition Cost</th><td>$" + originaldata[school].tuition + "</td></tr></tbody></table></div>")
                 })
 	  series++;
 	});

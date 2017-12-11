@@ -250,7 +250,7 @@ button {
     margin-left: 80px;
 }
 #section7 .prosanction{
-    margin-right: 280px;
+    text-align: left;
 }
 
 /* tooltips */
@@ -579,8 +579,21 @@ li { margin: -3px; }
     text-align: center; 
 }
 
-.panel-heading {
+.radardescription {
+    text-align: left; 
+}
+
+.panel-default >.panel-heading
+{
     color: #ffffff;
+    font-size: 16px;
+}
+
+.panel-heading {
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.radar-instruction {
+    margin-top: 40px; 
 }
