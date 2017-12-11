@@ -58,7 +58,7 @@
         
 		$(document).ready(function() {
                  
-            var $fade1 = $("#section1 .animated");
+            var $fade1 = $("#section1 .animated"), $fade7 = $("#section7 .animated");
             
             // initialize fullpage
 			$('#fullpage').fullpage({
@@ -103,9 +103,19 @@
                     $fade1.eq(6).css('animation-delay', '7s');
                     $fade1.eq(7).css('animation-delay', '8s');
                   }
+                   
+                 else if( index == 7 && nextIndex == 8 ) { 
+                    $fade7.addClass('animated fadeIn'); 
+                    $fade7.eq(0).css('animation-delay', '.5s');
+                    $fade7.eq(1).css('animation-delay', '1.5s');
+                    $fade7.eq(2).css('animation-delay', '2.5s');
+                    $fade7.eq(3).css('animation-delay', '1s');
+                    $fade7.eq(4).css('animation-delay', '2s');
+                    $fade7.eq(5).css('animation-delay', '3s');
+                  }
                 }
+                });
             });
-         });
 	</script>
 
     <!-- load other javacript libraries -->
@@ -348,9 +358,9 @@
         
         <div class="section" id="section5">
             <div class="intro">
-                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1mJlo7s6UFl2BdPL2eX-ETy7l753nKpFhcidFKkErypw&font=Lustria-Lato&lang=en&initial_zoom=2&height=650' width='80%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>            </div>
+                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1mJlo7s6UFl2BdPL2eX-ETy7l753nKpFhcidFKkErypw&font=Lustria-Lato&lang=en&initial_zoom=0&height=650' width='80%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+            </div>
         </div>
-        
 
         
         <div class="section" id="section6">
@@ -413,26 +423,25 @@
                      
                       <div class="speechpro animated">
                         <p>"The discriminatory membership policies of these organizations have led to the perpetuation of spaces that are rife with power imbalances. In their recruitment practices and through their extensive resources and access to networks of power, these organizations propagate exclusionary values that undermine those of the larger Harvard College community."</p>
-                        <a href="https://college.harvard.edu/sites/default/files/deankhurana_letter.pdf" class="speechsource">—Rakesh Khurana, Dean of College <br />Letter to Faust on May 6, 2016</a>
+                        <a href="https://college.harvard.edu/sites/default/files/deankhurana_letter.pdf" class="speechsource">—Rakesh Khurana, Dean of College<br />Letter to Faust on May 6, 2016</a>
                     </div>
                      
                 </div>
                 <div class="col-md-5 testcon">
                     <div class="speechcon animated">
-                        <p>I hate sanctions  </p>
+                        <p>“By removing… spaces for women, Harvard is making our campus less safe for women. The College may have discussed this extensively with the male organizations, but they have only included female organizations as an afterthought.”</p>
+                         <a href="http://www.thecrimson.com/article/2016/5/10/women-oppose-sanctions/" class="speechsource">—Rebecca J. Ramos ’17, Undergraduate<br />#HearHerHarvard Protest, May 10, 2016</a>
+                    </div>
+                    
+                    <div class="speechcon animated">
+                        <p>“We want the college to return to the drawing board and create policy that acknowledges the necessity of women’s spaces on campus.”</p>
+                        <a href="http://www.thecrimson.com/article/2016/5/10/greek-groups-oppose-sanctions/" class="speechsource">—Crimson Women’s Coalition<br />Statement, May 9, 2016</a>
                     </div>
                     
                     <div class="speechcon animated">
                         <p>I hate sanctions  </p>
                     </div>
                     
-                    <div class="speechcon animated">
-                        <p>I hate sanctions  </p>
-                    </div>
-                    
-                    <div class="speechcon animated">
-                        <p>I hate sanctions  </p>
-                    </div>
                 </div>
             </div>
         </div>
