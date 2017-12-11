@@ -5,6 +5,13 @@ body
     color: #5D5C61;
 }
 
+.centered{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .imgcontainer{
     width: 100%;
     height:100vh;
@@ -70,7 +77,11 @@ h5
 /* what are the sanctions? */
 .openingcontainer {
     padding-right: 5%;
-    padding-left: 8%;
+    padding-left: 5%;
+}
+.openingcontainer1 {
+    padding-right: 5%;
+    padding-left: 10%;
 }
 
 .openingcontainer p {
@@ -82,7 +93,7 @@ h5
 }
 
 .openingheader hr {
-    width: 950px;
+    width: 100%;
     float: left;
     margin-top: 0px;
 }
@@ -292,20 +303,23 @@ td {
     font-family: Barlow, Tahoma, Geneva, sans-serif;
 }
 
-table{
-    margin: 20px;
-}
+/* USGSO QUIZ */
 
 #quiz{
     display: block;
     margin: auto;
     width: 100%;
+    padding: 25px;
     border: solid 0.5px;
     background-color: #f7f7f7;
 }
 
 #quiz tr{
-  height: 100px;
+  padding: 100px;
+}
+
+#quiz .hints {
+    padding: 10px;
 }
 
 #correct1, #incorrect1, #correct2, #incorrect2,
@@ -315,6 +329,7 @@ table{
     font-size: 15px;
     vertical-align: middle;
     margin: auto;
+    font-family: Lato, Tahoma, Geneva, sans-serif;
 }
 
 #quiz tr, #quiz td{
@@ -329,18 +344,32 @@ table{
     font-size: 15px;
 }
 
-
-label {
-    color: black;
-}
-
-tr {
-    border: 1px;
-}
-
 /* RADAR CHART */
 .peerinstitutions {
     padding-left: 40px;
+}
+
+/* USGSO categories */
+#cate {
+    width: 100%;
+    margin: auto
+}
+.desc{
+    text-align: left;
+    padding: 10px;
+    padding-left: 25px;
+}
+.desc li{
+    padding: 2px;
+}
+#sor, #frat{
+    padding-bottom: 70px;
+}
+
+.names, .names2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #557A95
 }
 
 /* CATEGORIES */
@@ -490,7 +519,7 @@ div.tooltip {
     text-align: left;
     /*width: 60px;*/
     /*height: 28px;*/
-    padding: 5px;
+    padding: 8px;
     font: 14px sans-serif;
     background: lightsteelblue;
     border: 0px;
@@ -498,4 +527,4 @@ div.tooltip {
     pointer-events: none;
 }
 
-li { margin: -5px; }
+li { margin: -3px; }
