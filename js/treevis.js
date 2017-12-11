@@ -71,7 +71,7 @@ TreeVis.prototype.initVis = function() {
             img: "https://puu.sh/yDs7P/2dc8322e84.png",
             label: "Drew Gilpin Faust",
             label2: "Harvard's 28th President",
-            description: "<li>Harvard's current University President and first female president.<br/><li>Announced in June 2017 that she would be stepping down from the presidency in June 2018."
+            description: "<li>Harvard's current University President.<br/><li>Harvard's first female president.<br/><li>Stepping down from presidency in June 2018.",
             // The first president since 1672 without an undergraduate or graduate degree from Harvard.<br/>/**/
         },
 
