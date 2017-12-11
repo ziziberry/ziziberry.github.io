@@ -296,6 +296,16 @@ button {
 
 /* radar chart tooltips */
 
+.underline{
+    text-decoration: underline;
+}
+
+.caveat{
+    font-style: normal;
+    color: #557A95;
+    font-family: Lato, Tahoma, Geneva, sans-serif;
+}
+
 .tooltip-radar-title {
     font-size: 11px;
     text-transform: uppercase;
