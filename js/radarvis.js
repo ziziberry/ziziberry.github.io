@@ -19,8 +19,8 @@ RadarVis.prototype.initVis = function(){
 
     vis.margin = { top: 20, right: 20, bottom: 20, left: 20 };
 
-    vis.width = 450 - vis.margin.left - vis.margin.right,
-        vis.height = 450 - vis.margin.top - vis.margin.bottom;
+    vis.width = 475 - vis.margin.left - vis.margin.right,
+        vis.height = 500 - vis.margin.top - vis.margin.bottom;
     
     // visual settings
     vis.configs = {
@@ -100,7 +100,7 @@ RadarVis.prototype.updateVis = function(){
     .attr("class", "radarlegend")
 	.attr("height", 100)
 	.attr("width", 200)
-	.attr('transform', 'translate(150,20)');
+	.attr('transform', 'translate(80,20)');
     
     // create rects of corresponding color
 	vis.radarlegend.selectAll("rect")
