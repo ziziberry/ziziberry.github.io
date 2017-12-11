@@ -43,7 +43,7 @@ Categories.prototype.initVis = function(){
     vis.spacing = 300;
     vis.spacingx = 425;
     vis.spacingy = 300;
-    var marg = 30;
+    var marg = 15;
 
     vis.sorgroup = vis.svg.append("g");
 
@@ -311,11 +311,11 @@ Categories.prototype.wrangleData = function(){
         .attr("class", "usgso")
         .attr('xlink:href', function(d){return d[4];})
         .attr("x", function(d, i){
-            return 25.5 * i - 46
+            return 30 * i - 40
         })
         .attr("y", vis.height - 40)
-        .attr("height", 28)
-        .attr("width", 28)
+        .attr("height", 30)
+        .attr("width", 30)
 
 };
 
