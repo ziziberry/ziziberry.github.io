@@ -81,8 +81,8 @@ TreeVis.prototype.initVis = function() {
             label: "Harry Lewis",
             label2: "Former Dean of the College",
             img: "https://www.seas.harvard.edu/sites/default/files/styles/medium/public/images/news/Lewis_Headshot_sq.jpg?itok=ats1aeEf",
-            description: "<li>Strong and outspoken opponent amongst faculty against the sanctions.<br/><li>Publicly denounced the sanctions upon their introduction in May 2016.<br/>" +
-            "<li>Criticized policies in private letter to Khurana. <br/><li>Former Dean of Harvard College from 1995-2003.<br/><li>Gordon McKay Professor of Computer Science since 1981."
+            description: "<li>Strong and outspoken faculty opponent against sanctions.<br/><li>Publicly denounced sanctions upon introduction in May 2016.<br/>" +
+            "<li>Criticized policies in private letter to Khurana.<br/><li>Former Dean of Harvard College from 1995-2003.<br/><li>Gordon McKay Professor of Computer Science since 1981."
         },
         {
             posx: vis.width*2/4-shiftLeft,
@@ -127,7 +127,7 @@ TreeVis.prototype.initVis = function() {
             posx: vis.width/2-shiftLeft,
             posy: vis.height*3/5,
             label: "Undergraduate Student Body",
-            description: "<li>Around 6,600 undergraduates annually.<br/><li>Acceptance rate of around 5.2%.<br/><li>Primary recipients of the consequences of social policy.<br/>",
+            description: "<li>Around 6,600 undergraduates annually.<br/><li>Acceptance rate of around 5.2%.<br/><li>Primarily recipients consequences of social policy.<br/>",
             img: "https://puu.sh/yEaKp/ceb306748c.png"
         },
 
