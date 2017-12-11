@@ -9,6 +9,7 @@
 	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
 	<meta name="Resource-type" content="Document" />
 
+    <!-- style sheets -->
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -16,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Lora:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- javascript -->
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="js/examples.js"></script>
     <script src="js/jquery.min.js"></script>
@@ -24,7 +26,9 @@
     <script type="text/javascript" src="js/examples.js"></script>
 
 	<script type="text/javascript">
+        
 		$(document).ready(function() {
+            // instantiate variables for fade animation
 		    var $fade1 = $("#section1 .animated");
 		    var $fade2 = $("#section2 .animated");
             var $fade3 = $("#section3 .animated");
@@ -32,6 +36,7 @@
             var $fade6 = $("#section6 .animated");
 		    var $fade7 = $("#section7 .animated");
 
+            // initialize fullpage.js
 			$('#fullpage').fullpage({
 				anchors: ['1stpage', '2ndpage', '3rdpage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', '9thpage', '10thpage'],
 				sectionsColor: ['#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc'],
