@@ -3,26 +3,21 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Horizontal navigation dots - fullPage.js</title>
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
+	<title>A History of Social Sanctions at Harvard</title>
+	<meta name="author" content="Kelly Luo, Tessa Muss, Zizi Zhang" />
+	<meta name="description" content="CS171 Final Project: A History of Social Sanctions at Harvard" />
 	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
 	<meta name="Resource-type" content="Document" />
 
-
+    <!-- style sheets -->
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i|Lora:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="/vendors/scrolloverflow.js"></script>
-
+    <!-- javascript -->
 	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="js/examples.js"></script>
     <script src="js/jquery.min.js"></script>
@@ -31,7 +26,9 @@
     <script type="text/javascript" src="js/examples.js"></script>
 
 	<script type="text/javascript">
+        
 		$(document).ready(function() {
+            // instantiate variables for fade animation
 		    var $fade1 = $("#section1 .animated");
 		    var $fade2 = $("#section2 .animated");
             var $fade3 = $("#section3 .animated");
@@ -39,8 +36,9 @@
             var $fade6 = $("#section6 .animated");
 		    var $fade7 = $("#section7 .animated");
 
+            // initialize fullpage.js
 			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', '9thpage', '10thpage'],
+				anchors: ['1stpage', '2ndpage', '3rdpage', '4thpage', '5thpage', '6thpage', '7thpage', '8thpage', '9thpage', '10thpage'],
 				sectionsColor: ['#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc', '#fcfcfc'],
 				navigation: true,
 				navigationPosition: 'right',
@@ -67,13 +65,14 @@
 
                  else if( index == 7 && nextIndex == 8 ) {
                     $fade7.addClass('animated fadeIn');
-                    $fade7.eq(0).css('animation-delay', '.5s');
-                    $fade7.eq(1).css('animation-delay', '1.5s');
-                    $fade7.eq(2).css('animation-delay', '2.5s');
-                    $fade7.eq(3).css('animation-delay', '1s');
-                    $fade7.eq(4).css('animation-delay', '2s');
-                    $fade7.eq(5).css('animation-delay', '3s');
+                    $fade7.eq(0).css('animation-delay', '0.5s');
+                    $fade7.eq(1).css('animation-delay', '4.5s');
+                    $fade7.eq(2).css('animation-delay', '8.5s');
+                    $fade7.eq(3).css('animation-delay', '2.5s');
+                    $fade7.eq(4).css('animation-delay', '6.5s');
+                    $fade7.eq(5).css('animation-delay', '10.5s');
                   }
+                    
                   else if( index == 3 && nextIndex == 4 ) {
                       $fade3.addClass('animated fadeIn');
                       $fade3.eq(0).css('animation-delay', '.8s');
@@ -215,7 +214,8 @@
             <div class="openingcontainer container">
                 <div class="intro">
                   <h1 class="opening animated">Can you tell which of these are USGSOs?</h1>
-                  <h3 class="animated">The administration's definition of a USGSO is not well defined, creating ambiguity in which clubs are classified as USGSOs</h3>
+                  <h3 class="animated">The administration's definition of a USGSO is not well defined in its policy, creating ambiguity as to which clubs and student organizations with single-gender membership are classified as USGSOs.</h3>
+                 <div class="well well-lg">
                   <table id="quiz" class="animated">
                     <tr>
                         <td class="hints" width="50%">
@@ -267,7 +267,7 @@
                     <tr>
                         <td class="hints">
                         Its values are "scholarship, service, leadership, personal excellence,
-                        and friendship/sisterhood." "[This organization] exists to nurture each
+                        and friendship/sisterhood." This organization "exists to nurture each
                         member throughout her college and alumna experience and to offer a
                         lifelong opportunity for social, intellectual, and moral growth..."
 
@@ -282,6 +282,7 @@
                         </td>
                     </tr>
                   </table>
+                  </div>
                 </div>
             </div>
         </div>
@@ -425,33 +426,35 @@ S                </div>
                  <div class="col-md-4 testpro">
                      <div class="speechpro animated">
                         <p>"Harvard College’s commitment to non-discrimination, inclusion, and a healthy social climate has guided and animated the work of the Implementation Committee."</p>
-                        <a href="https://usgsocommittee.fas.harvard.edu/files/usgso-committee/files/usgso_committee_report_2017_final_draft.pdf" class="speechsource">—Report of the Committee on the USGSOs<br />July 5, 2017</a>
+                        <a href="https://usgsocommittee.fas.harvard.edu/files/usgso-committee/files/usgso_committee_report_2017_final_draft.pdf" class="speechsource">—Report of the Committee on the USGSOs<br />Official Policy Report | July 5, 2017</a>
                     </div>
 
                      <div class="speechpro animated">
                         <p>"The final clubs in particular are a product of another era, a time when Harvard’s student body was all male, culturally homogeneous, and overwhelmingly white and affluent. Our student body today is significantly different."</p>
-                        <a href="https://www.thecrimson.com/article/2017/12/6/sanctions-to-stay-mainbar/" class="speechsource">—Drew Faust, President <br />Formal Statement on December 5, 2017</a>
+                        <a href="https://www.thecrimson.com/article/2017/12/6/sanctions-to-stay-mainbar/" class="speechsource">—Drew Faust, Harvard President <br />Formal Statement | December 5, 2017</a>
                     </div>
 
                       <div class="speechpro animated">
                         <p>"The discriminatory membership policies of these organizations have led to the perpetuation of spaces that are rife with power imbalances. In their recruitment practices and through their extensive resources and access to networks of power, these organizations propagate exclusionary values that undermine those of the larger Harvard College community."</p>
-                        <a href="https://college.harvard.edu/sites/default/files/deankhurana_letter.pdf" class="speechsource">—Rakesh Khurana, Dean of College<br />Letter to Faust on May 6, 2016</a>
+                        <a href="https://college.harvard.edu/sites/default/files/deankhurana_letter.pdf" class="speechsource">—Rakesh Khurana, Dean of College<br />Letter to Faust | May 6, 2016</a>
                     </div>
 
                 </div>
-                <div class="col-md-5 testcon">
+                
+                    <div class="col-md-5 testcon">
                     <div class="speechcon animated">
-                        <p>“By removing… spaces for women, Harvard is making our campus less safe for women. The College may have discussed this extensively with the male organizations, but they have only included female organizations as an afterthought.”</p>
-                         <a href="http://www.thecrimson.com/article/2016/5/10/women-oppose-sanctions/" class="speechsource">—Rebecca J. Ramos ’17, Undergraduate<br />#HearHerHarvard Protest, May 10, 2016</a>
+                        <p>"Don’t students have the right to associate with whomever they want off campus? [...] Using “nondiscrimination” as a cudgel against students’ private associations is odiously patronizing. No similar policy applies to Harvard faculty or staff."</p> 
+                        <a href="https://www.washingtonpost.com/opinions/harvards-nondiscrimination-hypocrisy/2017/04/21/519cff78-2540-11e7-b503-9d616bd5a305_story.html?utm_term=.d696ca8a3a59" class="speechsource">—Harry Lewis, Former Dean of College<br />The Washington Post Op-Ed | April 21, 2017</a>
+                    </div>
+                        
+                    <div class="speechcon animated">
+                        <p>"By removing… spaces for women, Harvard is making our campus less safe for women. The College may have discussed this extensively with the male organizations, but they have only included female organizations as an afterthought."</p>
+                         <a href="http://www.thecrimson.com/article/2016/5/10/women-oppose-sanctions/" class="speechsource">—Rebecca J. Ramos ’17, Undergraduate<br />#HearHerHarvard Protest | May 10, 2016</a>
                     </div>
 
                     <div class="speechcon animated">
-                        <p>“We want the college to return to the drawing board and create policy that acknowledges the necessity of women’s spaces on campus.”</p>
-                        <a href="http://www.thecrimson.com/article/2016/5/10/greek-groups-oppose-sanctions/" class="speechsource">—Crimson Women’s Coalition<br />Statement, May 9, 2016</a>
-                    </div>
-
-                    <div class="speechcon animated">
-                        <p>I hate sanctions  </p>
+                        <p>"I think the freedom of association is a profoundly important value and I think the idea that we would condition fellowship letters or the opportunity to be elected by one’s peers as captain of a football team on agreement with certain values is inconsistent with the central values of an academic institution."</p>
+                        <a href="http://www.thecrimson.com/article/2016/5/26/summers-denounces-sanctions/" class="speechsource">—Larry Summers, Former Harvard President<br />Interview | May 26, 2016</a>
                     </div>
 
                 </div>

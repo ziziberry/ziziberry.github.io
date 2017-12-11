@@ -93,7 +93,7 @@ h5
 }
 
 .openingheader hr {
-    width: 100%;
+    width: 90%;
     float: left;
     margin-top: 0px;
 }
@@ -332,16 +332,28 @@ td {
     margin: auto;
     width: 100%;
     padding: 25px;
+/*
     border: solid 0.5px;
     background-color: #f7f7f7;
+*/
+}
+
+.well {
+    padding: 10px;
 }
 
 #quiz tr{
-  padding: 100px;
+    padding: 100px;
 }
 
 #quiz .hints {
     padding: 10px;
+}
+
+#quiz button {
+    text-align: center;
+    margin: auto;
+    display: block;
 }
 
 #correct1, #incorrect1, #correct2, #incorrect2,
@@ -391,7 +403,8 @@ td {
 .names, .names2{
     font-weight: bold;
     font-size: 20px;
-    color: #557A95
+    color: #557A95;
+    text-transform: uppercase;
 }
 
 /* CATEGORIES */
@@ -445,16 +458,15 @@ td {
 }
 
 .testcon {
-    padding-top: 30px;
     padding-left: 50px;
 }
 
 .speechpro {
       position: relative;
-      width: 400px;
+      width: 415px;
       padding: 3px 8px;
       border-radius: 3px;
-      background: #B1A296;
+      background: #557A95;
       margin-bottom: 20px
 }
 
@@ -468,12 +480,12 @@ td {
 
       border-top: 13px solid transparent;
       border-bottom: 13px solid transparent;
-      border-right: 26px solid #B1A296;
+      border-right: 26px solid #557A95;
 }
 
 .speechcon {
       position: relative;
-      width: 400px;
+      width: 415px;
       padding: 3px 8px;
       border-radius: 3px;
       background: #7395A3;
@@ -488,13 +500,14 @@ td {
       width: 0;
       height: 0;
   
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-  border-left: 26px solid #7395A3;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-left: 26px solid #7395A3;
 }
 
 .testimonials p {
     font-style: italic;
+    color: #ffffff;
 }
 
 .testimonials .speechsource {
@@ -510,23 +523,23 @@ td {
 }
 
 a.speechsource:link {
-    color: #606060;
+    color: #171151;
 }
 
 /* visited link */
 a.speechsource:visited {
-    color: #606060;
+    color: #171151;
 }
 
 /* mouse over link */
 a.speechsource:hover {
-    color: #171151;
+    color: #ffffff;
     text-decoration: none;
 }
 
 /* selected link */
 a.speechsource:active {
-    color: #606060;
+    color: #171151;
 }
 
 .link {
