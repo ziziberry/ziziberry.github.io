@@ -244,17 +244,14 @@ button {
     border: solid 1px white;
     opacity: 1;
 }
-/*
-.fp-section {
-    background-color: #999eb0;
-}
 
-#fp-section1, #fp-section2, #section3, #section4 {
-    background-color: #999eb0;
+/* DIVERSE PERSPECTIVES */
+#section7 .antisanction{
+    margin-left: 100px;
 }
-td {
-    padding: 0;
-}*/
+#section7 .prosanction{
+    margin-right: 300px;
+}
 
 /* tooltips */
 /* adapted from d3 tooltip used in previous labs and homeworks*/
