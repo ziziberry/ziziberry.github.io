@@ -12,7 +12,7 @@ RadarVis = function(_parentElement, _data, _dataNormalized){
     this.filteredData = this.data;
 
     this.initVis();
-}
+};
 
 RadarVis.prototype.initVis = function(){
     var vis = this;
@@ -80,7 +80,7 @@ RadarVis.prototype.wrangleData = function(){
     
     this.updateVis();
 
-}
+};
 
 RadarVis.prototype.updateVis = function(){
     var vis = this;
@@ -94,7 +94,7 @@ RadarVis.prototype.updateVis = function(){
 	.selectAll('svg')
 	.append('svg')
 	.attr("width", vis.width + 500)
-	.attr("height", vis.height)
+	.attr("height", vis.height);
     
     vis.radarlegend = vis.svg.append("g")
     .attr("class", "radarlegend")

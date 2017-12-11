@@ -316,6 +316,7 @@ Categories.prototype.wrangleData = function(){
         .attr("y", vis.height - 40)
         .attr("height", 30)
         .attr("width", 30)
+        .style('cursor', 'pointer')
 
 };
 

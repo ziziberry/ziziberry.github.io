@@ -45,16 +45,6 @@ Description.prototype.initVis = function(){
         .attr("width", vis.width)
         .attr("height", vis.height);
 
-    /*
-
-    // * TO-DO *
-    vis.svgsor = d3.select("#sor").append("svg");
-    vis.svgfrat = d3.select("#frat").append("svg");
-    vis.svgffc = d3.select("#ffc").append("svg");
-    vis.svgmfc = d3.select("#mfc").append("svg");*/
-
-
-
     vis.sor = [];
     vis.frat = [];
     vis.ffc = [];
@@ -94,9 +84,10 @@ Description.prototype.initVis = function(){
         .attr("width", 45)
         .on('mouseover', vis.tip.show)
         .on('mouseout', vis.tip.hide)
+        .style('cursor', 'pointer')
         .call(vis.tip);
 
-    vis.svgfrat.selectAll("image.sor")
+    vis.svgfrat.selectAll("image.frat")
         .data(vis.frat)
         .enter().append("image")
         .attr("class", "frat")
@@ -106,7 +97,8 @@ Description.prototype.initVis = function(){
         .attr("height", 45)
         .attr("width", 45)
         .on('mouseover', vis.tip.show)
-        .on('mouseout', vis.tip.hide);
+        .on('mouseout', vis.tip.hide)
+        .style('cursor', 'pointer');
 
     vis.svgffc.selectAll("image.ffc")
         .data(vis.ffc)
@@ -118,7 +110,8 @@ Description.prototype.initVis = function(){
         .attr("height", 45)
         .attr("width", 45)
         .on('mouseover', vis.tip.show)
-        .on('mouseout', vis.tip.hide);
+        .on('mouseout', vis.tip.hide)
+        .style('cursor', 'pointer');
 
     vis.svgmfc.selectAll("image.mfc")
         .data(vis.mfc)
@@ -130,7 +123,8 @@ Description.prototype.initVis = function(){
         .attr("height", 45)
         .attr("width", 45)
         .on('mouseover', vis.tip.show)
-        .on('mouseout', vis.tip.hide);
+        .on('mouseout', vis.tip.hide)
+        .style('cursor', 'pointer');
 
 
 };
