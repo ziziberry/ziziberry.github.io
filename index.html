@@ -112,13 +112,8 @@
                       $fade6.eq(1).css('animation-delay', '1.6s');
                       $fade6.eq(2).css('animation-delay', '2.4s');
                       $fade6.eq(3).css('animation-delay', '3.2s');
-                      $fade6.eq(8).css('animation-delay', '3.2s');
-                      $fade6.eq(4).css('animation-delay', '3.2s');
                       $fade6.eq(5).css('animation-delay', '3.2s');
-                      $fade6.eq(6).css('animation-delay', '3.2s');
-                      $fade6.eq(7).css('animation-delay', '3.2s');
-
-
+                      $fade6.eq(4).css('animation-delay', '3.2s');
                     }
                 }
 			});
@@ -201,7 +196,7 @@
                     </div>
 
                     <div class="q-a animated">
-                        <h4 class="openingq">WHEN</h4>
+                        <h4 class="openingq when">WHEN</h4>
                         <p>The original proposed sanctions were released May 2016.<br/>
                             In February 2017, the Final Report of the <b>Implementation Committee for the Policy on Membership in Single Gender Social Organizations</b> was released,
                             which called for an extended timeframe for female groups to adjust and a new category of recognized social groups on-campus.<br/>
@@ -393,23 +388,26 @@
                             <p class="animated bigger"><br>Most USGSOs have decided to make no changes and operate as
                             they did prior to the sanctions, showing resistance to these policies.</p>
                             <p class="animated bigger"><br>To visualize how the USGSOs have responded to the sanctions:</p>
-                            <ul id="howto">
-                                <li class="animated instr instr1"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
+                            <ul id="howto" class="animated">
+                                <li class="instr instr1"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
                                 <li>
-                                    <form class="animated">
+                                    <form>
                                         <label><input type="radio" name="sanctions" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
                                         <label><input type="radio" name="sanctions" value="after" onclick="afterSanctions()">After Sanctions</label><br>
                                     </form>
                                 </li>
-                                <li class="animated instr"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
+                                <li class="instr"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
                                 <li>
-                                    <select class="form-control animated dropdown" id="sort-type" onchange="filterView()">
+                                    <select class="form-control dropdown" id="sort-type" onchange="filterView()">
                                         <option value="all">All</option>
                                         <option value="sor">Sororities</option>
                                         <option value="frat">Fraternities</option>
                                         <option value="ffc">Female Final Clubs</option>
                                         <option value="mfc">Male Final Clubs</option>
                                     </select>
+                                </li>
+                                <li>
+                                    <p class="instr"><b>Hover over icons:</b> identify the organization</p>
                                 </li>
                             </ul>
                         </div>
