@@ -111,18 +111,8 @@
                       $fade6.eq(1).css('animation-delay', '1.6s');
                       $fade6.eq(2).css('animation-delay', '2.4s');
                       $fade6.eq(3).css('animation-delay', '3.2s');
-                      $fade6.eq(4).css('animation-delay', '4s');
-                      $fade6.eq(5).css('animation-delay', '4.8s');
-
-                      $fade6.eq(6).css('animation-delay', '5.6s');
-                      $fade6.eq(7).css('animation-delay', '6.4s');
-                      $fade6.eq(12).css('animation-delay', '6.4s');
-                      $fade6.eq(8).css('animation-delay', '7.2s');
-                      $fade6.eq(9).css('animation-delay', '7.2s');
-                      $fade6.eq(10).css('animation-delay', '8s');
-                      $fade6.eq(11).css('animation-delay', '8s');
-
-
+                      $fade6.eq(5).css('animation-delay', '3.2s');
+                      $fade6.eq(4).css('animation-delay', '3.2s');
                     }
                 }
 			});
@@ -200,12 +190,19 @@
 
                     <div class="q-a animated">
                         <h4 class="openingq">WHO</h4>
-                        <p>This policy is to apply to students entering Harvard College matriculating in the fall of 2017 (Class of 2021). <br /> All currently enrolled undergraduates are exempt from the effects of this policy for the duration of their time at Harvard.</p>
+                        <p>This policy is to apply to students entering Harvard College matriculating in the fall of 2017 (Class of 2021).<br/>
+                            All currently enrolled undergraduates are exempt from the effects of this policy for the duration of their time at Harvard.</p>
                     </div>
 
                     <div class="q-a animated">
                         <h4 class="openingq">WHEN</h4>
-                        <p>The original Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations was released February 2017. <br /> An expansion of the original proposal released in July 2017 has called for an outright ban on social groups and phased out from the campus completely by 2022.</p>
+                        <p>The original proposed sanctions were released May 2016.<br/>
+                            In February 2017, the Final Report of the <b>Implementation Committee for the Policy on Membership in Single Gender Social Organizations</b> was released,
+                            which called for an extended timeframe for female groups to adjust and a new category of recognized social groups on-campus.<br/>
+                            In July 2017, the <b>Faculty Committee</b>, led by Dean Khurana, released a report calling
+                            for an outright ban on social groups to be phased out from the campus completely by 2022. This report cited no-tolerance social policies of "peer institutions",
+                            including Williams, Amherst, Bowdoin, and Middlebury.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -215,18 +212,17 @@
             <div class="openingcontainer container">
                 <div class="intro">
                   <h1 class="opening animated">Can you tell which of these are USGSOs?</h1>
-                  <h3 class="animated">The administration's definition of a USGSO is not well defined in its policy, creating ambiguity as to which clubs and student organizations with single-gender membership are classified as USGSOs.</h3>
-                 <div class="well well-lg">
-                  <table id="quiz" class="animated">
+                  <h3 class="animated">The administration's definition of a USGSO is not well-defined in its policy, creating ambiguity as to which clubs and student organizations with single-gender membership are classified as USGSOs.</h3>
+                 <div class="well well-lg animated">
+                  <table id="quiz">
                     <tr>
                         <td class="hints" width="50%">
-                            Its values are service, activism, and brotherhood. "[This organization] seeks to promote intercultural
-                            understanding and social activism at Harvard and beyond. At its core...
-                            [this organization] is committed to exploring the oft-neglected issue
+                            Membership: ~30 brothers. <br>Its values are service, activism, and brotherhood. "[This organization] seeks to promote intercultural
+                            understanding and social activism at Harvard and beyond...At its core, [this organization] is committed to exploring the oft-neglected issue
                             of Asian American masculinity".
 
                         </td>
-                        <td width="21%">
+                        <td width="20%">
                             <button id="yes1" onclick="disableNo1()">USGSO</button>
                             <button id="no1" onclick="disableYes1()">NOT USGSO</button>
                         </td>
@@ -236,7 +232,9 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="hints">This organization is a treble choral ensemble. "[This organization]
+                        <td class="hints">
+                        Membership: ~45 women <br>
+                        This organization is a treble choral ensemble. "[This organization]
                         aims to foster the appreciation and enjoyment of women's choral music...
                         striving to honor its history and further its legacy."</td>
                         <td>
@@ -250,6 +248,7 @@
                     </tr>
                     <tr>
                         <td class="hints">
+                        Membership: ~100 sisters. <br>
                         "Since its creation, [this organization] has strived to strengthen
                         the bonds of black sisterhood through community discussion, social
                         events and public service." They strive to be "catalysts in bringing
@@ -267,19 +266,19 @@
                     </tr>
                     <tr>
                         <td class="hints">
-                        Its values are "scholarship, service, leadership, personal excellence,
-                        and friendship/sisterhood." This organization "exists to nurture each
+                        Membership: ~150 sisters.<br>
+                        Its values are scholarship, service, leadership, personal excellence,
+                        and friendship/sisterhood. This organization "exists to nurture each
                         member throughout her college and alumna experience and to offer a
                         lifelong opportunity for social, intellectual, and moral growth..."
-
                         </td>
                         <td>
                             <button id="yes6" onclick="disableNo6()">USGSO</button>
                             <button id="no6" onclick="disableYes6()">NOT USGSO</button>
                         </td>
                         <td class="hints">
-                            <h3 id="correct6" style="display: none;"><b>Correct!</b> <br>This organization is Kappa Alpha Theta, which is a USGSO.</h3>
-                            <h3 id="incorrect6" style="display: none;"><b>Incorrect!</b> <br>This organization is Kappa Alpha Theta, which is a USGSO.</h3>
+                            <h3 id="correct6" style="display: none;"><b>Correct!</b> <br>This organization is Kappa Alpha Theta - Zeta Xi Chapter, which is a USGSO.</h3>
+                            <h3 id="incorrect6" style="display: none;"><b>Incorrect!</b> <br>This organization is Kappa Alpha Theta - Zeta Xi Chapter, which is a USGSO.</h3>
                         </td>
                     </tr>
                   </table>
@@ -367,7 +366,11 @@
 
         <div class="section" id="section5">
             <div class="intro">
-                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1mJlo7s6UFl2BdPL2eX-ETy7l753nKpFhcidFKkErypw&font=Lustria-Lato&lang=en&initial_zoom=0&height=650' width='80%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+                <div class="openingcontainer1 container">
+                    <h1 class="opening animated">Key Events in the Sanctions</h1>
+                    <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1mJlo7s6UFl2BdPL2eX-ETy7l753nKpFhcidFKkErypw&font=Lustria-Lato&lang=en&initial_zoom=0&height=600'
+                            width='80%' height='600' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+                </div>
             </div>
         </div>
 
@@ -375,32 +378,32 @@
         <div class="section" id="section6">
             <div class="intro">
                 <div class="openingcontainer container">
-                    <h1 class="animated opening">Fortunately?, USGSOs have shown resistance...</h1>
+                    <h1 class="opening">Fortunately, USGSOs have shown resistance...</h1>
                 </div>
                 <div class="openingcontainer1">
                     <div class="row">
-                        <div class="col-md-6 usgso-desc">
+                        <div class="col-md-5 usgso-desc">
                             <p class="animated bigger">Only <b>8/24</b> USGSOs have gone co-ed to avoid penalty</p>
-                            <ul>
-                                <li class="animated">0/4 Sororities</li>
-                                <li class="animated">2/5 Fraternities</li>
-                                <li class="animated">3/6 Female Final Clubs</li>
-                                <li class="animated">3/9 Male Final Clubs</li>
+                            <ul class="animated">
+                                <li>0/4 Sororities</li>
+                                <li>2/5 Fraternities</li>
+                                <li>3/6 Female Final Clubs</li>
+                                <li>3/9 Male Final Clubs</li>
                             </ul>
                             <p class="animated bigger"><br>Most USGSOs have decided to make no changes and operate as
                             they did prior to the sanctions, showing resistance to these policies.</p>
                             <p class="animated bigger"><br>To visualize how the USGSOs have responded to the sanctions:</p>
-                            <ul id="howto">
-                                <li class="animated instr instr1"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
+                            <ul id="howto" class="animated">
+                                <li class="instr instr1"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
                                 <li>
-                                    <form class="animated">
+                                    <form>
                                         <label><input type="radio" name="sanctions" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
                                         <label><input type="radio" name="sanctions" value="after" onclick="afterSanctions()">After Sanctions</label><br>
                                     </form>
                                 </li>
-                                <li class="animated instr"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
+                                <li class="instr"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
                                 <li>
-                                    <select class="form-control animated dropdown" id="sort-type" onchange="filterView()">
+                                    <select class="form-control dropdown" id="sort-type" onchange="filterView()">
                                         <option value="all">All</option>
                                         <option value="sor">Sororities</option>
                                         <option value="frat">Fraternities</option>
@@ -408,23 +411,29 @@
                                         <option value="mfc">Male Final Clubs</option>
                                     </select>
                                 </li>
+                                <li>
+                                    <p class="instr"><b>Hover over icons:</b> identify the organization</p>
+                                </li>
                             </ul>
                         </div>
-                        <div class="col-md-6 animated">
+                        <div class="col-md-7 animated">
                             <div class="categories"></div>
                         </div>
                     </div>
-S                </div>
+                </div>
             </div>
         </div>
 
         <div class="section" id="section7">
             <div class="openingcontainer container">
                 <h1 class="opening">Diverse Perspectives</h1>
+                <h3 class="animated">Controversy over the sanctions has been openly expressed. Here are perspectives from key university leadership and students:</h3>
             </div>
             <div class="row testimonials">
                 <div class="col-md-2"></div>
+
                  <div class="col-md-4 testpro">
+                     <h4 class="animated">Pro-Sanction Voices</h4>
                      <div class="speechpro animated">
                         <p>"Harvard College’s commitment to non-discrimination, inclusion, and a healthy social climate has guided and animated the work of the Implementation Committee."</p>
                         <a href="https://usgsocommittee.fas.harvard.edu/files/usgso-committee/files/usgso_committee_report_2017_final_draft.pdf" class="speechsource">—Report of the Committee on the USGSOs<br />Official Policy Report | July 5, 2017</a>
@@ -442,7 +451,8 @@ S                </div>
 
                 </div>
                 
-                    <div class="col-md-5 testcon">
+                <div class="col-md-5 testcon">
+                    <h4 class="animated">Anti-Sanction Voices</h4>
                     <div class="speechcon animated">
                         <p>"Don’t students have the right to associate with whomever they want off campus? [...] Using “nondiscrimination” as a cudgel against students’ private associations is odiously patronizing. No similar policy applies to Harvard faculty or staff."</p> 
                         <a href="https://www.washingtonpost.com/opinions/harvards-nondiscrimination-hypocrisy/2017/04/21/519cff78-2540-11e7-b503-9d616bd5a305_story.html?utm_term=.d696ca8a3a59" class="speechsource">—Harry Lewis, Former Dean of College<br />The Washington Post Op-Ed | April 21, 2017</a>
@@ -457,7 +467,6 @@ S                </div>
                         <p>"I think the freedom of association is a profoundly important value and I think the idea that we would condition fellowship letters or the opportunity to be elected by one’s peers as captain of a football team on agreement with certain values is inconsistent with the central values of an academic institution."</p>
                         <a href="http://www.thecrimson.com/article/2016/5/26/summers-denounces-sanctions/" class="speechsource">—Larry Summers, Former Harvard President<br />Interview | May 26, 2016</a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -467,6 +476,7 @@ S                </div>
             <div class="intro">
 <!--
                 <div class="openingcontainer container">
+<<<<<<< HEAD
                 </div>
 -->
                 <div class="row">
@@ -483,6 +493,17 @@ S                </div>
                     <div id="radarvis"></div>
                 </div>
                 <div class="col-md-1"></div>
+=======
+
+                <div class="row">
+                    <div class="col-md-6 peerinstitutions">
+                        <div id="radarvis"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h1>Harvard does NOT look like its Peer Institutions</h1>
+                        <p>According to the Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations released on February 17, 2017, "As part of its work, the Committee sought examples from peer institutions who have dealt with similar issues. For example, liberal arts colleges including <b>Amherst, Bowdoin, Williams and Middlebury, have generally decided to ban fraternity and sorority life</b>...Overall, these institutions have consistently viewed social life organized by gender as incompatible with creating an inclusive campus. Those institutions that have had the most success addressing the influence of single gender social organizations and fraternity systems did so by taking bold steps to implement policies that eliminated the presence of such organizations combined with significant investment in alternatives including re-organizing their residential systems to promote and institutionalize inclusive social communities. Those that took half measures or changed course did not realize the same level of positive change in the undergraduate experience."</p>
+                    </div>
+>>>>>>> fef1e392f0d4a4c82875fec7900a4b2b7f9634d6
                 </div>
             </div>
         </div>
