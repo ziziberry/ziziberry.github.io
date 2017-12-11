@@ -56,7 +56,11 @@ var RadarChart = {
     // initialize tooltip 
 	var tooltip; 
             
+<<<<<<< HEAD
     tooltip = d3.tip().attr('class', 'd3-tip').html(function(d) { return  "<span class='tooltip-radar-title'>" + d.school + "</span> <br /> <span class='tooltip-radar-subtitle'>" + d.axis + "</span> <br />" + "<span class='tooltip-radar-desc'>" + d.label + "</span>" }); 
+=======
+    tooltip = d3.tip().attr('class', 'd3-tip').html(function(d) { return  "<span class='tooltip-radar-title'>" + d.school + "</span> <br /> <span class='tooltip-radar-subtitle'>" + d.axis + "</span> <br />" + "<span class='tooltip-radar-desc'>" + d.label + "</span>" });
+>>>>>>> 7b57ffa3e0f2a85d08c566ae6374b7adafd29caf
     tooltip.offset([-15, 0]);
 
     // invoke tooltip 
