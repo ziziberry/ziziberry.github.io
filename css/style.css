@@ -86,7 +86,7 @@ h5
 }
 
 .openingheader hr {
-    width: 950px;
+    width: 100%;
     float: left;
     margin-top: 0px;
 }
@@ -296,20 +296,23 @@ td {
     font-family: Barlow, Tahoma, Geneva, sans-serif;
 }
 
-table{
-    margin: 20px;
-}
+/* USGSO QUIZ */
 
 #quiz{
     display: block;
     margin: auto;
     width: 100%;
+    padding: 25px;
     border: solid 0.5px;
     background-color: #f7f7f7;
 }
 
 #quiz tr{
-  height: 100px;
+  padding: 100px;
+}
+
+#quiz .hints {
+    padding: 10px;
 }
 
 #correct1, #incorrect1, #correct2, #incorrect2,
@@ -319,6 +322,7 @@ table{
     font-size: 15px;
     vertical-align: middle;
     margin: auto;
+    font-family: Lato, Tahoma, Geneva, sans-serif;
 }
 
 #quiz tr, #quiz td{
@@ -351,9 +355,10 @@ table{
 .desc li{
     padding: 2px;
 }
-.icons{
-    margin-bottom: 200px;
+#sor, #frat{
+    padding-bottom: 70px;
 }
+
 .names, .names2{
     font-weight: bold;
     font-size: 20px;
