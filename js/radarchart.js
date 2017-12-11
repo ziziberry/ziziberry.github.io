@@ -56,7 +56,7 @@ var RadarChart = {
     // initialize tooltip 
 	var tooltip; 
             
-    tooltip = d3.tip().attr('class', 'd3-tip').html(function(d) { return  "<span class='tooltip-radar-title'>" + d.school + "</span> <br /> <span class='tooltip-radar-subtitle'>" + d.axis + "</span> <br />" + "<span class='tooltip-radar-desc'>" + d.label + "</span>" });
+    tooltip = d3.tip().attr('class', 'd3-tip').html(function(d) { return  "<span class='tooltip-radar-title'>" + d.school + "</span> <br /> <span class='tooltip-radar-subtitle'>" + d.axis + "</span> <br />" + "<span class='tooltip-radar-desc'>" + d.label + "</span>" }); 
     tooltip.offset([-15, 0]);
 
     // invoke tooltip 
@@ -168,9 +168,8 @@ var RadarChart = {
 					 })
                     .on('click', function() {
                                     school = d3.select(this).attr("class");
-                                    d3.select("#peertable").html("<div class='peerpanel panel panel-default'><div class='panel-heading'>" + originaldata[school].school + "</div><table class='table table-hover'><tbody><tr><th scope='row'>Student Body Population</th><td>" + originaldata[school].student_body + " students </td></tr><tr><th scope='row'>Median Family Income</th><td>$" + originaldata[school].median_family_income + "</td></tr><tr><th scope='row'>Percent of Students in Athletics</th><td>" + originaldata[school].athletics + "%</td></tr><tr><th scope='row'>Percent of Students in School Housing</th><td>" + originaldata[school].student_housing + "%</td></tr><tr><th scope='row'>Acceptance Rate</th><td>" + originaldata[school].acceptance_rate + "%</td></tr><tr><th scope='row'>Yearly Tuition Cost</th><td>$" + originaldata[school].tuition + "</td></tr></tbody></table></div>")
+                                    d3.select("#peertable").html("<div class='peerpanel panel panel-default'><div class='panel-heading' style='background-color:" + cfg.color(["Williams", "Bowdoin", "Amherst", "Harvard"].indexOf(school)) + "'>" +  originaldata[school].school + "</div><table class='table table-hover'><tbody><tr><th scope='row'>Student Body Population</th><td>" + originaldata[school].student_body + " students </td></tr><tr><th scope='row'>Median Family Income</th><td>$" + originaldata[school].median_family_income + "</td></tr><tr><th scope='row'>Percent of Students in Athletics</th><td>" + originaldata[school].athletics + "%</td></tr><tr><th scope='row'>Percent of Students in School Housing</th><td>" + originaldata[school].student_housing + "%</td></tr><tr><th scope='row'>Acceptance Rate</th><td>" + originaldata[school].acceptance_rate + "%</td></tr><tr><th scope='row'>Yearly Tuition Cost</th><td>$" + originaldata[school].tuition + "</td></tr></tbody></table></div>")
                 })
-//      var peertableinfo = "<div class='peertable-container'><div class='panel-heading'>" + d.school + "</div><table class='table table-hover'><tbody><tr><th scope='row'>Student Body Population</th><td>" + d.studentbody + "</td></tr><tr><th scope='row'>Median Family Income</th><td>" + d.family_income + "</td></tr><tr><th scope='row'>Percent of Students in Athletics</th><td>" + d.athletics + "</td></tr><tr><th scope='row'>Percent of Students in School Housing</th><td>" + d.school_housing + "</td></tr><tr><th scope='row'>Acceptance Rate</th><td>" d.acceptance_rate + "</td></tr><tr><th scope='row'>Yearly Tuition Cost</th><td>" + d.tution + "</td></tr></tbody></table>";
 	  series++;
 	});
 	series=0;
@@ -198,37 +197,6 @@ var RadarChart = {
 		.style("fill", cfg.color(series)).style("fill-opacity", .9)
         .on('mouseover', tooltip.show)
         .on('mouseout', tooltip.hide)
-//		.on('mouseover', function (d){
-//					newX =  parseFloat(d3.select(this).attr('cx')) - 10;
-//					newY =  parseFloat(d3.select(this).attr('cy')) - 5;
-//					
-//					tooltip
-//						.attr('x', newX)
-//						.attr('y', newY)
-//						.text((d.label))
-//						.transition(200)
-//                        .attr('class', 'd3-tip')
-//						.style('opacity', 1);
-//						
-//					z = "polygon."+d3.select(this).attr("class");
-//					g.selectAll("polygon")
-//						.transition(200)
-//						.style("fill-opacity", 0.1); 
-//					g.selectAll(z)
-//						.transition(200)
-//						.style("fill-opacity", .7);
-//				  })
-//		.on('mouseout', function(){
-//					tooltip
-//						.transition(200)
-//						.style('opacity', 0);
-//					g.selectAll("polygon")
-//						.transition(200)
-//						.style("fill-opacity", cfg.opacityArea);
-//				  })
-////		.append("svg:title")
-//		.text(function(j){return Math.max(j.value, 0)});
-
 	  series++;
 	});
       
