@@ -478,9 +478,9 @@ td {
       width: 0;
       height: 0;
   
-  border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-  border-left: 26px solid #7395A3;
+      border-top: 13px solid transparent;
+      border-bottom: 13px solid transparent;
+      border-left: 26px solid #7395A3;
 }
 
 .testimonials p {
