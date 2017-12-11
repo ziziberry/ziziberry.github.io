@@ -128,7 +128,7 @@ TreeVis.prototype.initVis = function() {
             posy: vis.height*3/5,
             label: "Undergraduate Student Body",
             description: "<li>Around 6,600 undergraduates annually.<br/><li>Acceptance rate of around 5.2%.<br/><li>Primary recipients of the consequences of social policy.<br/>",
-            img: "https://puu.sh/yDsYZ/40e140c5cb.png"
+            img: "https://puu.sh/yEaKp/ceb306748c.png"
         },
 
 
