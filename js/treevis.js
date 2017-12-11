@@ -19,7 +19,11 @@ TreeVis.prototype.initVis = function() {
     vis.margin = {top: 20, right: 20, bottom: 20, left: 20}
     // vis.w = $(".treevis").width();
     vis.width = 1500 - vis.margin.right - vis.margin.left;
-    vis.height = 500 - vis.margin.top - vis.margin.bottom;
+
+    // console.log(this.parentElement.clientHeight);
+    // vis.h = document.getElementById('treevis').clientHeight;
+    // vis.height = vis.h - vis.margin.top - vis.margin.bottom;
+    vis.height = 450 - vis.margin.top - vis.margin.bottom;
 
     // Define the div for the tooltip
     var div = d3.select("#" + vis.parentElement).append("div")
@@ -51,7 +55,7 @@ TreeVis.prototype.initVis = function() {
         "avatar_size": 125
     }
 
-    var shiftLeft = 150;
+    var shiftLeft = 175;
 
     data = [
         {
@@ -73,7 +77,7 @@ TreeVis.prototype.initVis = function() {
 
         {
             posx: vis.width/4-shiftLeft-50,
-            posy: vis.height/4,
+            posy: vis.height/5,
             label: "Harry Lewis",
             label2: "Former Dean of the College",
             img: "https://www.seas.harvard.edu/sites/default/files/styles/medium/public/images/news/Lewis_Headshot_sq.jpg?itok=ats1aeEf",
@@ -82,7 +86,7 @@ TreeVis.prototype.initVis = function() {
         },
         {
             posx: vis.width*2/4-shiftLeft,
-            posy: vis.height/4,
+            posy: vis.height/5,
             label: "Faculty of Arts and Sciences",
             description: "<li>The largest of seven faculties across Harvard.<br/>" +
             "<li>Composed of Harvard College, GSAS, SEAS, and Extension School.<br/><li>Only division responsible for both undergraduate and graduate education.",
@@ -90,7 +94,7 @@ TreeVis.prototype.initVis = function() {
         },
         {
             posx: vis.width*3/4-shiftLeft+50,
-            posy: vis.height/4,
+            posy: vis.height/5,
             label: "Rakesh Khurana",
             label2: "Current Dean of the College",
             description: "<li>Primary proponent and original author of the social sanctions.<br/>" +
@@ -100,7 +104,7 @@ TreeVis.prototype.initVis = function() {
 
         {
             posx: vis.width/3-shiftLeft,
-            posy: vis.height/2,
+            posy: vis.height*2/5,
             label: "Implementation Committee",
             label2: "Formed November 2016",
             description: "<li>Unrecognized Single-Gender Social Organizations Policy Implementation Committee.<br/>" +
@@ -111,7 +115,7 @@ TreeVis.prototype.initVis = function() {
         },
         {
             posx: vis.width*2/3-shiftLeft,
-            posy: vis.height/2,
+            posy: vis.height*2/5,
             label: "Faculty Committee",
             label2: "Formed January 2017",
             description: "<li>Entirely new committee, also comprised of faculty, students, and staff.<br/>" +
@@ -121,7 +125,7 @@ TreeVis.prototype.initVis = function() {
 
         {
             posx: vis.width/2-shiftLeft,
-            posy: vis.height*3/4,
+            posy: vis.height*3/5,
             label: "Undergraduate Student Body",
             description: "<li>Around 6,600 undergraduates annually.<br/><li>Acceptance rate of around 5.2%.<br/><li>Primary recipients of the consequences of social policy.<br/>",
             img: "https://puu.sh/yDsYZ/40e140c5cb.png"
