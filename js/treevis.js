@@ -18,7 +18,7 @@ TreeVis.prototype.initVis = function() {
 // ************** Generate the tree diagram	 *****************
     vis.margin = {top: 20, right: 20, bottom: 20, left: 20}
     // vis.w = $(".treevis").width();
-    vis.width = 1500 - vis.margin.right - vis.margin.left;
+    vis.width = 1600 - vis.margin.right - vis.margin.left;
 
     // console.log(this.parentElement.clientHeight);
     // vis.h = document.getElementById('treevis').clientHeight;
