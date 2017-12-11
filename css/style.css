@@ -70,7 +70,11 @@ h5
 /* what are the sanctions? */
 .openingcontainer {
     padding-right: 5%;
-    padding-left: 8%;
+    padding-left: 5%;
+}
+.openingcontainer1 {
+    padding-right: 5%;
+    padding-left: 10%;
 }
 
 .openingcontainer p {
@@ -329,18 +333,31 @@ table{
     font-size: 15px;
 }
 
-
-label {
-    color: black;
-}
-
-tr {
-    border: 1px;
-}
-
 /* RADAR CHART */
 .peerinstitutions {
     padding-left: 40px;
+}
+
+/* USGSO categories */
+#cate {
+    width: 100%;
+    margin: auto
+}
+.desc{
+    text-align: left;
+    padding: 10px;
+    padding-left: 25px;
+}
+.desc li{
+    padding: 2px;
+}
+.icons{
+    margin-bottom: 200px;
+}
+.names, .names2{
+    font-weight: bold;
+    font-size: 20px;
+    color: #557A95
 }
 
 /* CATEGORIES */

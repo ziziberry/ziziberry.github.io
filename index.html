@@ -24,7 +24,7 @@
     }
 
     /* adapted from https://www.w3schools.com/howto/howto_css_image_text.asp */
-    .centered, .but-cont{
+    .centered{
         position: absolute;
         top: 90%;
         left: 50%;
@@ -45,25 +45,6 @@
         position: relative;
         text-align: center;
         color: white;
-    }
-    .center {
-        margin: 4%;
-        width: 90%;
-    }
-    td {
-        padding: 7px;
-    }
-    .desc{
-        text-align: left;
-    }
-    ul{
-        padding: 2px;
-    }
-    li{
-        padding: 5px;
-    }
-    #names{
-        font-weight: bold;
     }
 
     </style>
@@ -169,7 +150,7 @@
         </div>
 
         <div class="section" id="section1">
-            <div class="openingcontainer container">
+            <div class="openingcontainer1 container">
                 <div class="openingheader">
                 <h1 class="opening">
                     <span class="animated">On May 6, 2016,</span>
@@ -291,17 +272,14 @@
         <div class="section" id="section3">
             <div class="intro">
                 <div class="openingcontainer container">
-                  <h1 class="opening">Organizations that the administration has classified as USGSOs</h1>
+                  <h1 class="opening">Organizations classified as USGSOs by policy</h1>
                   <h3>Reflects status of organizations before announcement of sanctions in May 2016</h3>
-                  <div class="center">
-                      <table width="100%">
-                        <tr id="names">
-                            <td width="25%">Sororities</td>
-                            <td width="25%">Fraternities</td>
-                            <td width="25%">Female Final Clubs</td>
-                            <td width="25%">Male Final Clubs</td>
-                        </tr>
-                        <tr valign="top">
+                  <table id="cate">
+                    <tr class="names">
+                        <td>Sororities</td>
+                        <td>Fraternities</td>
+                    </tr>
+                    <tr class="desc">
                             <td>
                                 <ul style="list-style-type:disc" class="desc">
                                     <li>Greek letter organization</li>
@@ -318,44 +296,55 @@
                                     <li>Level: International/National organization with college chapters</li>
                                 </ul>
                             </td>
-                            <td>
-                                <ul style="list-style-type:disc" class="desc">
-                                    <li>Membership: Female-identifying individuals initiated as undergraduates</li>
-                                    <li>Purpose: Social</li>
-                                    <li>Level: Harvard College specific</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul style="list-style-type:disc" class="desc">
-                                    <li>Membership: Male-identifying individuals initiated as undergraduates</li>
-                                     <li>Purpose: Social</li>
-                                     <li>Level: Harvard College specific</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr valign="top">
-                            <td id="sor"></td>
-                            <td id="frat"></td>
-                            <td id="ffc"></td>
-                            <td id="mfc"></td>
-                        </tr>
-                      </table>
-                  </div>
-                </div>
+                    </tr>
+                    <tr class="icons" valign="top">
+                        <td id="sor"></td>
+                        <td id="frat"></td>
+                    </tr>
+                    <tr class="names2">
+                        <td>Female Final Clubs</td>
+                        <td>Male Final Clubs</td>
+                    </tr>
+                    <tr class="desc">
+                        <td>
+                            <ul style="list-style-type:disc" class="desc">
+                                <li>Membership: Female-identifying individuals initiated as undergraduates</li>
+                                <li>Purpose: Social</li>
+                                <li>Level: Harvard College specific</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul style="list-style-type:disc" class="desc">
+                                <li>Membership: Male-identifying individuals initiated as undergraduates</li>
+                                 <li>Purpose: Social</li>
+                                 <li>Level: Harvard College specific</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr class="icons" valign="top">
+                        <td id="ffc"></td>
+                        <td id="mfc"></td>
+                    </tr>
+
+                  </table>
+              </div>
             </div>
         </div>
 
 
         <div class="section" id="section4">
+
             <div class="intro">
-                <h1>Key Characters in the Sanctions</h1>
-                <h3>Since May 2016, a multitude of key entities have been involved in the progression of the sanctions,
-                    both opposing and supporting. Hover over the images to learn about the main parties: </h3>
-                <!--<h3>Drew Gilpin Faust</h3>-->
-                <!--<img src="https://cdn-media.leanin.org/wp-content/uploads/2013/03/DrewFaust_290.jpg">-->
-                <div id="treevis"></div>
+                <div class="openingcontainer container">
+                    <h1 class="opening">Key Characters in the Sanctions</h1>
+                    <h3>Since May 2016, a multitude of key entities have been involved in the progression of the sanctions,
+                        both opposing and supporting. Hover over the images to learn about the main parties: </h3>
+                    <!--<h3>Drew Gilpin Faust</h3>-->
+                </div>
+                    <!--<img src="https://cdn-media.leanin.org/wp-content/uploads/2013/03/DrewFaust_290.jpg">-->
+                    <div id="treevis"></div>
             </div>
-        </div>
+\        </div>
         
         <div class="section" id="section5">
             <div class="intro">
