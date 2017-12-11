@@ -123,8 +123,10 @@ var RadarChart = {
 					 .enter()
 					 .append("polygon")
 					 .attr("class", "radar-chart-serie"+series)
+                     .attr("class", "hover-cursor")
                      .attr("class", label_school[series])
 					 .style("stroke-width", "2px")
+                     .style("cursor", "pointer")
 					 .style("stroke", cfg.color(series))
 					 .attr("points",function(d) {
 						 var str="";
@@ -162,7 +164,10 @@ var RadarChart = {
 										 .transition(200)
 										 .style("fill-opacity", cfg.opacityArea);
                                         g.selectAll(".radar-label").remove();
-					 });
+					 })
+                    .on('click', function() {
+                                    d3.select("#peertable").appendHTML("hello")
+                    })
         
 	  series++;
 	});
@@ -174,6 +179,7 @@ var RadarChart = {
 		.data(y).enter()
 		.append("svg:circle")
 		.attr("class", "radar-chart-serie"+series)
+        .attr("class", "hover-cursor")
 		.attr('r', cfg.radius)
 		.attr("alt", function(j){return Math.max(j.value, 0)})
 		.attr("cx", function(j, i){

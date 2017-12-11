@@ -567,3 +567,7 @@ div.tooltip {
 }
 
 li { margin: -3px; }
+
+.hover-cursor {
+    cursor: pointer;
+}
