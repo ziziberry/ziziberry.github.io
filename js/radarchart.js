@@ -9,7 +9,7 @@
 
 
 var RadarChart = {
-  draw: function(id, d, axisdata, options){
+  draw: function(id, d, axisdata, originaldata, options){
   var cfg = {
 	 radius: 5,
 	 w: 600,
@@ -28,6 +28,7 @@ var RadarChart = {
 	 color: d3.scaleOrdinal(d3.schemeCategory10)
 	};
       
+    console.log(axisdata)
     console.log(d3.scaleOrdinal(d3.schemeCategory10));
 	
 	if('undefined' !== typeof options){
@@ -166,9 +167,10 @@ var RadarChart = {
                                         g.selectAll(".radar-label").remove();
 					 })
                     .on('click', function() {
-                                    d3.select("#peertable").appendHTML("hello")
-                    })
-        
+                                    school = d3.select(this).attr("class");
+                                    d3.select("#peertable").html("<div class='peerpanel panel panel-default'><div class='panel-heading'>" + originaldata[school].school + "</div><table class='table table-hover'><tbody><tr><th scope='row'>Student Body Population</th><td>" + originaldata[school].student_body + " students </td></tr><tr><th scope='row'>Median Family Income</th><td>$" + originaldata[school].median_family_income + "</td></tr><tr><th scope='row'>Percent of Students in Athletics</th><td>" + originaldata[school].athletics + "%</td></tr><tr><th scope='row'>Percent of Students in School Housing</th><td>" + originaldata[school].student_housing + "%</td></tr><tr><th scope='row'>Acceptance Rate</th><td>" + originaldata[school].acceptance_rate + "%</td></tr><tr><th scope='row'>Yearly Tuition Cost</th><td>$" + originaldata[school].tuition + "</td></tr></tbody></table></div>")
+                })
+//      var peertableinfo = "<div class='peertable-container'><div class='panel-heading'>" + d.school + "</div><table class='table table-hover'><tbody><tr><th scope='row'>Student Body Population</th><td>" + d.studentbody + "</td></tr><tr><th scope='row'>Median Family Income</th><td>" + d.family_income + "</td></tr><tr><th scope='row'>Percent of Students in Athletics</th><td>" + d.athletics + "</td></tr><tr><th scope='row'>Percent of Students in School Housing</th><td>" + d.school_housing + "</td></tr><tr><th scope='row'>Acceptance Rate</th><td>" d.acceptance_rate + "</td></tr><tr><th scope='row'>Yearly Tuition Cost</th><td>" + d.tution + "</td></tr></tbody></table>";
 	  series++;
 	});
 	series=0;
@@ -179,7 +181,7 @@ var RadarChart = {
 		.data(y).enter()
 		.append("svg:circle")
 		.attr("class", "radar-chart-serie"+series)
-        .attr("class", "hover-cursor")
+        .style("cursor", "pointer")
 		.attr('r', cfg.radius)
 		.attr("alt", function(j){return Math.max(j.value, 0)})
 		.attr("cx", function(j, i){

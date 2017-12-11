@@ -86,7 +86,7 @@ RadarVis.prototype.updateVis = function(){
     var vis = this;
     
     // draw radar chart
-    RadarChart.draw("#" + vis.parentElement, vis.displaydata, vis.axisdata, vis.configs);
+    RadarChart.draw("#" + vis.parentElement, vis.displaydata, vis.axisdata, vis.data,  vis.configs);
 
     // create legend
     // draw legend svg

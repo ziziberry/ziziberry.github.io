@@ -568,3 +568,12 @@ li { margin: -3px; }
 .hover-cursor {
     cursor: pointer;
 }
+
+#peertable {
+    text-align: center; 
+}
+
+.panel-heading {
+    text-transform: uppercase;
+    font-weight: bold;
+}
