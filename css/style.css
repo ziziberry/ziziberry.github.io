@@ -160,10 +160,32 @@ input[type="radio"]
 }
 
 .usgso-desc {
-    font-weight: 700; 
+    font-size: 15px;
     font-style: italic; 
 }
 
+.usgso-desc .bigger{
+    font-style: normal;
+    font-size: 16px;
+}
+.usgso-desc .bigger b{
+    font-style: normal;
+    font-size: 25px;
+    color: #557A95
+}
+
+.instr1{
+    margin-top: 10px
+}
+
+.dropdown{
+    font-weight: bold;
+    margin: 10px;
+}
+
+.usgso-desc .instr b{
+    color: black;
+}
 .white
 {
     font-weight: bold;

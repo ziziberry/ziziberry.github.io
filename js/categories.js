@@ -41,7 +41,7 @@ Categories.prototype.initVis = function(){
     vis.midwidth = vis.w/2 - vis.sqwidth;
     vis.midheight = vis.height/2 - vis.sqheight + 50;
     vis.spacing = 300;
-    vis.spacingx = 500;
+    vis.spacingx = 425;
     vis.spacingy = 300;
     var marg = 30;
 
@@ -54,7 +54,7 @@ Categories.prototype.initVis = function(){
         .attr("height", vis.sqheight)
         .attr("fill", "none")
         .attr("stroke", "black")
-        .attr("stroke-width", "10px");
+        .attr("stroke-width", "5px");
 
     vis.sorlab = vis.svg.append("text")
         .text("Sororities")
@@ -71,7 +71,7 @@ Categories.prototype.initVis = function(){
         .attr("height", vis.sqheight)
         .attr("fill", "none")
         .attr("stroke", "black")
-        .attr("stroke-width", "10px");
+        .attr("stroke-width", "5px");
 
     vis.fratlab = vis.svg.append("text")
         .text("Fraternities")
@@ -88,7 +88,7 @@ Categories.prototype.initVis = function(){
         .attr("height", vis.sqheight)
         .attr("fill", "none")
         .attr("stroke", "black")
-        .attr("stroke-width", "10px");
+        .attr("stroke-width", "5px");
 
     vis.ffclab = vis.svg.append("text")
         .text("Female Final Clubs")
@@ -105,7 +105,7 @@ Categories.prototype.initVis = function(){
         .attr("height", vis.sqheight)
         .attr("fill", "none")
         .attr("stroke", "black")
-        .attr("stroke-width", "10px");
+        .attr("stroke-width", "5px");
 
     vis.mfclab = vis.svg.append("text")
         .text("Male Final Clubs")
@@ -122,7 +122,7 @@ Categories.prototype.initVis = function(){
         .attr("height", vis.sqheight)
         .attr("fill", "none")
         .attr("stroke", "black")
-        .attr("stroke-width", "10px");
+        .attr("stroke-width", "5px");
 
     vis.coedlab = vis.svg.append("text")
         .text("Co-Ed (Non-USGSO)")
@@ -311,12 +311,12 @@ Categories.prototype.wrangleData = function(){
         .attr("class", "usgso")
         .attr('xlink:href', function(d){return d[4];})
         .attr("x", function(d, i){
-            return 30 * i - 40;
+            return 25.5 * i - 46
         })
-        .attr("y", vis.height - 50)
-        .attr("height", 30)
-        .attr("width", 30)
-    //vis.updateVis();
+        .attr("y", vis.height - 40)
+        .attr("height", 28)
+        .attr("width", 28)
+
 };
 
 Categories.prototype.updateVis = function(){
