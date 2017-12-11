@@ -19,11 +19,41 @@ Description = function(_parentElement, _initialData){
 Description.prototype.initVis = function(){
     var vis = this;
 
+    vis.width = $("#sor").width();
+    vis.height = 50;
+    vis.width = $("#frat").width();
+    vis.height = 50;
+    vis.width = $("#ffc").width();
+    vis.height = 50;
+    vis.width = $("#mfc").width();
+    vis.height = 50;
+
+    // SVG drawing area
+    vis.svgsor = d3.select("#sor").append("svg")
+        .attr("width", vis.width)
+        .attr("height", vis.height);
+
+    vis.svgfrat = d3.select("#frat").append("svg")
+        .attr("width", vis.width)
+        .attr("height", vis.height);
+
+    vis.svgffc = d3.select("#ffc").append("svg")
+        .attr("width", vis.width)
+        .attr("height", vis.height);
+
+    vis.svgmfc = d3.select("#mfc").append("svg")
+        .attr("width", vis.width)
+        .attr("height", vis.height);
+
+    /*
+
     // * TO-DO *
     vis.svgsor = d3.select("#sor").append("svg");
     vis.svgfrat = d3.select("#frat").append("svg");
     vis.svgffc = d3.select("#ffc").append("svg");
-    vis.svgmfc = d3.select("#mfc").append("svg");
+    vis.svgmfc = d3.select("#mfc").append("svg");*/
+
+
 
     vis.sor = [];
     vis.frat = [];
@@ -52,16 +82,6 @@ Description.prototype.initVis = function(){
         .html(function(d) {
             return d.old_name;
         });
-
-/*
-    vis.svgsor.selectAll("text.sor")
-        .data(vis.sor)
-        .enter().append("text")
-        .attr("class", "sor")
-        .attr("x", 35)
-        .attr("y", function(d, i){return 20 + i*35})
-        .text(function(d){return d.old_name}); */
-
 
     vis.svgsor.selectAll("image.sor")
         .data(vis.sor)
@@ -105,15 +125,8 @@ Description.prototype.initVis = function(){
         .enter().append("image")
         .attr("class", "mfc")
         .attr('xlink:href', function(d){return "img/" + d.img;})
-        .attr("x", function(d, i) {
-            if (i > 5) {return (i - 4.5) * 45}
-            else{return i*45}
-
-        })
-        .attr("y", function(d, i){
-            if (i > 5){return 50}
-            else{return 0}
-        })
+        .attr("x", function(d, i) { return i*45 })
+        .attr("y", 0)
         .attr("height", 45)
         .attr("width", 45)
         .on('mouseover', vis.tip.show)
