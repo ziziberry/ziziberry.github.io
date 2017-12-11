@@ -75,8 +75,8 @@
                     
                   else if( index == 3 && nextIndex == 4 ) {
                       $fade3.addClass('animated fadeIn');
-                      $fade3.eq(0).css('animation-delay', '.8s');
-                      $fade3.eq(1).css('animation-delay', '1.6s');
+                      //$fade3.eq(0).css('animation-delay', '.8s');
+                      $fade3.eq(1).css('animation-delay', '0.8s');
 
                       $fade3.eq(2).css('animation-delay', '2.5s');
                       $fade3.eq(4).css('animation-delay', '2.5s');
@@ -96,9 +96,9 @@
                     }
                   else if( index == 2 && nextIndex == 3 ) {
                     $fade2.addClass('animated fadeIn');
-                    $fade2.eq(0).css('animation-delay', '.8s');
-                    $fade2.eq(1).css('animation-delay', '1.6s');
-                    $fade2.eq(2).css('animation-delay', '2.8s');
+                    //$fade2.eq(0).css('animation-delay', '.8s');
+                    $fade2.eq(1).css('animation-delay', '0.8s');
+                    $fade2.eq(2).css('animation-delay', '1.6s');
                   }
                   else if( index == 4 && nextIndex == 5 ) {
                       $fade4.addClass('animated fadeIn');
@@ -117,10 +117,12 @@
 
                       $fade6.eq(6).css('animation-delay', '5.6s');
                       $fade6.eq(7).css('animation-delay', '6.4s');
+                      $fade6.eq(12).css('animation-delay', '6.4s');
                       $fade6.eq(8).css('animation-delay', '7.2s');
                       $fade6.eq(9).css('animation-delay', '7.2s');
                       $fade6.eq(10).css('animation-delay', '8s');
                       $fade6.eq(11).css('animation-delay', '8s');
+
 
                     }
                 }
@@ -353,13 +355,13 @@
         <div class="section" id="section4">
 
             <div class="intro">
-                <div class="openingcontainer container">
+                <div class="openingcontainer1 container">
                     <h1 class="opening animated">Key Characters in the Sanctions</h1>
                     <h3 class="animated">Since May 2016, a multitude of key entities have been involved in the progression of the sanctions,
                     both opposing and supporting. Hover over the images to learn about the main parties: </h3>
+                </div>
                 <!--<h3>Drew Gilpin Faust</h3>-->
                 <!--<img src="https://cdn-media.leanin.org/wp-content/uploads/2013/03/DrewFaust_290.jpg">-->
-                </div>
                 <div id="treevis" class="animated"></div>
             </div>
         </div>
@@ -378,28 +380,28 @@
                 </div>
                 <div class="openingcontainer1">
                     <div class="row">
-                        <div class="col-md-5 usgso-desc">
-                            <p class="animated">Only <b>8/24</b> USGSOs have gone co-ed to avoid penalty</p>
+                        <div class="col-md-6 usgso-desc">
+                            <p class="animated bigger">Only <b>8/24</b> USGSOs have gone co-ed to avoid penalty</p>
                             <ul>
                                 <li class="animated">0/4 Sororities</li>
                                 <li class="animated">2/5 Fraternities</li>
                                 <li class="animated">3/6 Female Final Clubs</li>
                                 <li class="animated">3/9 Male Final Clubs</li>
                             </ul>
-                            <p class="animated"><br>Most USGSOs have decided to make no changes and operate as
+                            <p class="animated bigger"><br>Most USGSOs have decided to make no changes and operate as
                             they did prior to the sanctions, showing resistance to these policies.</p>
-                            <p class="animated"><br>To visualize how the USGSOs have responded to the sanctions:</p>
+                            <p class="animated bigger"><br>To visualize how the USGSOs have responded to the sanctions:</p>
                             <ul id="howto">
-                                <li class="animated"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
+                                <li class="animated instr instr1"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
                                 <li>
                                     <form class="animated">
                                         <label><input type="radio" name="sanctions" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
                                         <label><input type="radio" name="sanctions" value="after" onclick="afterSanctions()">After Sanctions</label><br>
                                     </form>
                                 </li>
-                                <li class="animated"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
+                                <li class="animated instr"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
                                 <li>
-                                    <select class="form-control animated" id="sort-type" onchange="filterView()">
+                                    <select class="form-control animated dropdown" id="sort-type" onchange="filterView()">
                                         <option value="all">All</option>
                                         <option value="sor">Sororities</option>
                                         <option value="frat">Fraternities</option>
@@ -409,11 +411,11 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-7 animated">
+                        <div class="col-md-6 animated">
                             <div class="categories"></div>
                         </div>
                     </div>
-                </div>
+S                </div>
             </div>
         </div>
 
