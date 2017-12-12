@@ -12,6 +12,10 @@
 
 
 &nbsp;
+#### Troubleshooting
+While completing the project, we occasionally experienced an error with the d3-tip library we used for tooltips that affected rendering of certain visualizations; the console error read "TypeError: Cannot read property 'tagName' of null and is likely due to inconsistencies in the d3-tip library code with the updated d3 v4. We believe we have resolved the issue as we no longer encounter the same error. **However, we recommend that you check console first to verify you do not encounter the same error; if it does, please _**reload the page**_ and everything will work as it should.**
+
+&nbsp; 
 ## Visualizations
 #### **USGSO Quiz**
 Presented with descriptions of various student organizations at Harvard, determine whether the club is a "USGSO" or "Not USGSO" by clicking the associated buttons. This quiz visualization highlights ambiguities in the administration's definition of a USGSO as to which clubs and student organizations with single-gender membership are classified as USGSOs. 
