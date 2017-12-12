@@ -156,16 +156,16 @@ var RadarChart = {
 										 .transition(200)
 										 .style("fill-opacity", .7);
                                         g.append("rect")
-                                         .attr('x', 160)
- 						                 .attr('y', 215)
+                                         .attr('x', 145)
+ 						                 .attr('y', 190)
                                          .attr('width', 120)
                                          .attr('height', 30)
                                          .attr("class", "radar-label")
                                          .attr("fill", "#737373")
                                          .attr("fill-opacity", "0.6");
                                         g.append("text")
-                                         .attr('x', 180)
- 						                 .attr('y', 235)
+                                         .attr('x', 165)
+ 						                 .attr('y', 210)
                                          .attr("class", "radar-label radar-label-school")
                                          .text(d3.select(this).attr("class"));
 									  })
