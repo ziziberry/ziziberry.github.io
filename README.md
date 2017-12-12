@@ -1,13 +1,13 @@
-[Dean Khurana's Crusade Against Undergraduate Social Groups](https://www.ziziberry.github.io)
+[Dean Khurana's Crusade Against Harvard Undergraduate Social Groups](https://www.ziziberry.github.io)
 ======
-#####  ZiZi Zhang, Tessa Muss, Kelly Luo
-#####  CS171 Final Project (Fall 2017)  
+####  ZiZi Zhang, Tessa Muss, Kelly Luo
+####  CS171 Final Project (Fall 2017)  
 &nbsp;
 # Project Links
-##### [Live Website](https://www.ziziberry.github.io)
-##### [Process Book](https://docs.google.com/document/d/1DGIaF2ng46NAVub3uPMyiwnfLDLeKbN5lVuhvWiyTPg/edit?usp=sharing)
-##### [Screencast Video](youtube.com)
-##### [Github Repository](https://github.com/ziziberry/ziziberry.github.io)
+#### [Live Website](https://www.ziziberry.github.io)
+#### [Process Book](https://docs.google.com/document/d/1DGIaF2ng46NAVub3uPMyiwnfLDLeKbN5lVuhvWiyTPg/edit?usp=sharing)
+#### [Screencast Video](youtube.com)
+#### [Github Repository](https://github.com/ziziberry/ziziberry.github.io)
 
 which parts are your code, which parts are libraries, and so on. The README must contain URLs to your project websites and screencast videos. The README must also explain any non-obvious features of your interface.
 &nbsp;
