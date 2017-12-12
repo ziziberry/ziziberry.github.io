@@ -34,7 +34,7 @@ RadarVis.prototype.initVis = function(){
     // color scale
     vis.colorscale = d3.scaleOrdinal(d3.schemeCategory10);
     
-    this.wrangleData();
+    vis.wrangleData();
 };
 
 RadarVis.prototype.wrangleData = function(){
@@ -78,7 +78,7 @@ RadarVis.prototype.wrangleData = function(){
     
     console.log(vis.axisdata)
     
-    this.updateVis();
+    vis.updateVis();
 
 };
 

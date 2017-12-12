@@ -3,7 +3,11 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<<<<<<< HEAD
 	<title>Dean Khurana's Crusade Against Undergraduate Social Groups</title>
+=======
+	<title>Dean Khurana's Crusade Against Harvard Undergraduate Social Groups</title>
+>>>>>>> 97440afcec5929e5a31c1e4c383558a067467ea5
 	<meta name="author" content="Kelly Luo, Tessa Muss, Zizi Zhang" />
 	<meta name="description" content="CS171 Final Project: A History of Social Sanctions at Harvard" />
 	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
@@ -33,6 +37,8 @@
             var $fade3 = $("#section3 .animated");
             var $fade8 = $("#section8 .animated");
 		    var $fade7 = $("#section7 .animated");
+		    var $fade9 = $("#section9 .animated");
+		    var $fade6 = $("#section6 .animated")
 
             // initialize fullpage.js
 			$('#fullpage').fullpage({
@@ -110,6 +116,19 @@
                       $fade8.eq(5).css('animation-delay', '3.2s');
                       $fade8.eq(4).css('animation-delay', '3.2s');
                     }
+                   else if( index == 9 && nextIndex == 10 ) {
+                     $fade9.addClass('animated fadeIn');
+                     $fade9.eq(0).css('animation-delay', '.8s');
+                     $fade9.eq(1).css('animation-delay', '1.6s');
+                     $fade9.eq(2).css('animation-delay', '2.4s');
+                   }
+                   else if( index == 6 && nextIndex == 7 ) {
+                    $fade6.addClass('animated fadeIn');
+                    $fade6.eq(0).css('animation-delay', '.8s');
+                    $fade6.eq(1).css('animation-delay', '1.6s');
+                    $fade6.eq(2).css('animation-delay', '1.6s');
+                    $fade6.eq(3).css('animation-delay', '1.6s');
+                  }
                 }
 			});
 		});
@@ -148,7 +167,7 @@
         <div class="section" id="section0">
             <div class="imgcontainer">
               <img src="img/hearherharvard.png" alt="usgsopic">
-              <div class="centered"><h1 class="maintitle">Dean Khurana's Crusade Against Undergraduate Social Groups</h1></div>
+              <div class="centered"><h1 class="maintitle">Dean Khurana's Crusade Against Harvard Undergraduate Social Groups</h1></div>
             </div>
             <!--http://www.thecrimson.com/article/2017/2/8/where-sanctions-stand-explainer/-->
         </div>
@@ -353,7 +372,8 @@
                 <div class="openingcontainer1 container">
                     <h1 class="opening animated">Key Characters in the Sanctions</h1>
                     <h3 class="animated">Since May 2016, a multitude of key entities have been involved in the progression of the sanctions,
-                    both opposing and supporting.<br><br>Hover over the images to learn about the main parties: </h3>
+                    both opposing and supporting.</h3>
+                    <p class="bigger">Hover over the images to learn about the main parties:</p>
                 </div>
                 <!--<h3>Drew Gilpin Faust</h3>-->
                 <!--<img src="https://cdn-media.leanin.org/wp-content/uploads/2013/03/DrewFaust_290.jpg">-->
@@ -374,25 +394,23 @@
         <div class="section" id="section6">
             <div class="openingcontainer container">
                 <div class="row">
-                    <h1 class="opening animated">Should we follow in the footsteps of our 'peer institutions'?</h1>
-                    <h3 class="animated">Both the <b><a href="https://usgsocommittee.fas.harvard.edu/files/usgso-committee/files/usgso_committee_report_2017_final_draft.pdf" target="_blank">
-                        Faculty Committee's report</a></b> and the <b><a href="http://osl.fas.harvard.edu/files/osl/files/implementationcommitteefinalreport.pdf" target="_blank">
+                    <h1 class="opening">Should we follow in the footsteps of our 'peer institutions'?</h1>
+                    <h3 class="animated">Both the <b><a href="https://usgsocommittee.fas.harvard.edu/files/usgso-committee/files/usgso_committee_report_2017_final_draft.pdf" target="_blank" class="underline">
+                        Faculty Committee's report</a></b> and the <b><a href="http://osl.fas.harvard.edu/files/osl/files/implementationcommitteefinalreport.pdf" target="_blank" class="underline">
                         Implementation Committee's report</a></b> cite "Amherst, Bowdoin, and Williams" as "peer institutions who have
-                        dealt with similar issues...[and] decided to ban fraternity and sorority life". <br></h3>
+                        dealt with similar issues...[and] decided to ban fraternity and sorority life". <br><br></h3>
 
-                    <h3 class="animated">The only caveat is that Harvard looks nothing like its Peer Institutions.</h3>
+                    <h3 class="animated caveat">The only caveat is that Harvard looks nothing like its Peer Institutions.</h3>
 
-                    <div class="col-md-5 radardescription">
-                        <p>Amherst, Williams, and Bowdoin are nearly identical to one another in many dimensions of their school profile. In comparison, Harvard is noticeably different from these schools, especially since Harvard's undergraduate student body is nearly three times the size of its peers.
-                        <br />The assertion that Harvard’s policy can be modeled on the policies of these peer institutions ignores fundamental differences in school size and composition.</p>
-                        <p class="radar-instruction"><i>Explore the radar chart and click to learn about these schools in more detail.</i>
-                        </p>
-                        <div id='peertable'></div>
-                    </div>
-                    <div class="col-md-5 peerinstitutions">
+                    <div class="col-md-5 radardescription animated">
                         <div id="radarvis"></div>
                     </div>
                     <div class="col-md-1"></div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-5 peerinstitutions">
+                        <div id='peertable' class="animated"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -462,14 +480,7 @@
                             they did prior to the sanctions, showing resistance to these policies.</p>
                             <p class="animated bigger"><br>To visualize how the USGSOs have responded to the sanctions:</p>
                             <ul id="howto" class="animated">
-                                <li class="instr instr1"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
-                                <li>
-                                    <form>
-                                        <label><input type="radio" name="sanctions" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
-                                        <label><input type="radio" name="sanctions" value="after" onclick="afterSanctions()">After Sanctions</label><br>
-                                    </form>
-                                </li>
-                                <li class="instr"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
+                                <li class="instr1"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
                                 <li>
                                     <select class="form-control dropdown" id="sort-type" onchange="filterView()">
                                         <option value="all">All</option>
@@ -479,6 +490,14 @@
                                         <option value="mfc">Male Final Clubs</option>
                                     </select>
                                 </li>
+                                <li class="instr instr"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
+                                <li>
+                                    <form>
+                                        <label><input type="radio" name="sanctions" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
+                                        <label><input type="radio" name="sanctions" value="after" onclick="afterSanctions()">After Sanctions</label><br>
+                                    </form>
+                                </li>
+
                                 <li>
                                     <p class="instr"><b>Hover over icons:</b> identify the organization</p>
                                 </li>
@@ -497,12 +516,16 @@
             <div class="openingcontainer container">
                 <div class="row">
                     <h1 class="opening">Where are we now?</h1>
-                    <h3 class="animated">The past few years have been fraught with tension regarding the current status of Harvard's unrecognized social groups.<br><br>
+                    <p class="animated bigger">The past few years have been fraught with tension regarding the current status of Harvard's unrecognized social groups.</p>
+                    <br>
+                    <p class="animated bigger">
                         While many administrators and faculty alike realize the negative impact of Harvard's final clubs and their associated exclusivity,
-                        many others realize the importance of freedom of association and value of women's spaces. <br><br>
+                        many others realize the importance of freedom of association and value of women's spaces.</p>
+                    <br>
+                    <p class="animated bigger">
                         However, no clear-cut, correct solution has been established,
-                        and the <b><a href="http://www.thecrimson.com/article/2017/12/8/sanctions-enforcement-next-semester/" target="_blank">implementation of the existing policy</a></b> is still to be decided.
-                    </h3>
+                        and the <b><a class='underline' href="http://www.thecrimson.com/article/2017/12/8/sanctions-enforcement-next-semester/" target="_blank">implementation of the existing policy</a></b> is still to be decided.
+                    </p>
                 </div>
             </div>
         </div>
