@@ -12,6 +12,27 @@
 
 
 &nbsp;
+## Visualizations
+#### **USGSO Quiz**
+Presented with descriptions of various student organizations at Harvard, determine whether the club is a "USGSO" or "Not USGSO" by clicking the associated buttons. This quiz visualization highlights ambiguities in the administration's definition of a USGSO as to which clubs and student organizations with single-gender membership are classified as USGSOs. 
+
+#### **Key Characters in the Sanctions**
+Hover over the images to reveal a tooltip with more information about key parties involved in the progression of the undergraduate social sanctions. 
+
+#### **Key Events in the Sanctions**
+Interactive timeline overview of the development of the social sanctions since their inception in May 2016. Each event is linked to relevant news coverage in The Harvard Crimson. 
+
+#### **Harvard vs. Peer Institutions Radar Chart**
+The interactive radar chart overlays a school profile of Harvard College versus those of Peer Institutions identified by sanctions policy reports. Hover over individual nodes for specific statistics regarding a certain dimension and click on a layer to learn more information about the particular school.
+
+#### **Diverse Perspectives**
+Visualization of pro-sanction voices vs anti-sanction voices. 
+
+#### **USGSO Perspective**
+Select a group from dropdown to visualize a specific subset of clubs (all, sororities, fraternities, male final clubs, female final clubs). Select a button to visualize status of clubs before or after the sanctions announcement. Hover over icons to identify the organization and contextualize their current status in regards to the sanctions. 
+
+
+&nbsp;
 ## Project Code
 
 #### Javascript
