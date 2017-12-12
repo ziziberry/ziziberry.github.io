@@ -4,7 +4,7 @@
 ###  CS171 Final Project (Fall 2017)  
 &nbsp;
 # Project Links
-### [Live Website](http://www.ziziberry.github.io)
+### [Live Website](https://ziziberry.github.io/)
 ### [Process Book](https://docs.google.com/document/d/1DGIaF2ng46NAVub3uPMyiwnfLDLeKbN5lVuhvWiyTPg/edit?usp=sharing)
 ### [Screencast Video](youtube.com)
 ### [Github Repository](https://github.com/ziziberry/ziziberry.github.io)
