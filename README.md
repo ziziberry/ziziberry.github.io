@@ -7,7 +7,7 @@
 ## Project Links
 ### [Live Website](https://ziziberry.github.io/)
 ### [Process Book](https://docs.google.com/document/d/1DGIaF2ng46NAVub3uPMyiwnfLDLeKbN5lVuhvWiyTPg/edit?usp=sharing)
-### [Screencast Video](youtube.com)
+### [Screencast Video](https://youtu.be/hde3ZOHuqrE)
 ### [Github Repository](https://github.com/ziziberry/ziziberry.github.io)
 
 
@@ -26,7 +26,7 @@ Interactive timeline overview of the development of the social sanctions since t
 The interactive radar chart overlays a school profile of Harvard College versus those of Peer Institutions identified by sanctions policy reports. Hover over individual nodes for specific statistics regarding a certain dimension and click on a layer to learn more information about the particular school.
 
 #### **Diverse Perspectives**
-Visualization of pro-sanction voices vs anti-sanction voices to highlight the ongoing debate about the implementation and enforcement of social sanctions at Harvard. 
+Visualization of pro-sanction voices versus anti-sanction voices to highlight the ongoing debate about the implementation and enforcement of social sanctions at Harvard. 
 
 #### **USGSO Perspective**
 Select a group from dropdown to visualize a specific subset of clubs (all, sororities, fraternities, male final clubs, female final clubs). Select a button to visualize status of clubs before or after the sanctions announcement. Hover over icons to identify the organization and contextualize their current status in regards to the sanctions. 
@@ -64,3 +64,30 @@ Select a group from dropdown to visualize a specific subset of clubs (all, soror
 #### CSS
 * [bootstrap.css](https://getbootstrap.com/): webpage structure and style
 * [animate.min.css](https://daneden.github.io/animate.css/): fade-in animations
+
+&nbsp;  
+## Sources
+#### Faculty
+* [Report of the Committee on the Unrecognized Single-Gender Social Organizations (USGSO)](https://usgsocommittee.fas.harvard.edu/files/usgso-committee/files/usgso_committee_report_2017_final_draft.pdf)
+* [Final Report of the Implementation Committee for the Policy on Membership in Single Gender Social Organizations](http://osl.fas.harvard.edu/files/osl/files/implementationcommitteefinalreport.pdf)
+* [Dean Khurana Letter to Drew Faust](https://college.harvard.edu/sites/default/files/deankhurana_letter.pdf)
+* [Harry Lewis Op-Ed in The Washington Post](https://www.washingtonpost.com/opinions/harvards-nondiscrimination-hypocrisy/2017/04/21/519cff78-2540-11e7-b503-9d616bd5a305_story.html?utm_term=.d696ca8a3a59)
+#### Peer Institutions
+* [Amherst College](https://www.amherst.edu)
+* [Williams College](https://williams.edu)
+* [Harvard College](https://college.harvard.edu)
+* [Bowdoin College](http://www.bowdoin.edu/)
+#### Student Organizations
+* [Asian American Brotherhood](http://aabrotherhood.com/)
+* [Association of Black Harvard Women](http://blackharvardwomen.wixsite.com/abhw)
+* [Radcliffe Choral Society](https://www.radcliffechoralsociety.com/)
+* [Kappa Alpha Theta](http://www.kappaalphatheta.org/?from=chaptersitebounce)
+#### The Harvard Crimson
+* https://www.thecrimson.com/article/2017/12/6/sanctions-to-stay-mainbar/
+* http://www.thecrimson.com/article/2016/5/10/women-oppose-sanctions/  
+* http://www.thecrimson.com/article/2016/5/26/summers-denounces-sanctions/ 
+* http://www.thecrimson.com/article/2017/12/11/sanctions-handbook-addition/
+* https://www.thecrimson.com/article/2017/12/12/house-bill-sanctions/
+* http://www.thecrimson.com/article/2017/12/8/sanctions-enforcement-next-semester/
+* https://www.thecrimson.com/article/2017/12/12/house-bill-sanctions/
+* http://www.thecrimson.com/widget/2017/5/23/sanctions-timeline/
