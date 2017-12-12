@@ -28,8 +28,8 @@ var RadarChart = {
 	 color: d3.scaleOrdinal(d3.schemeCategory10)
 	};
       
-    console.log(axisdata)
-    console.log(d3.scaleOrdinal(d3.schemeCategory10));
+//    console.log(axisdata)
+//    console.log(d3.scaleOrdinal(d3.schemeCategory10));
 	
 	if('undefined' !== typeof options){
 	  for(var i in options){
@@ -118,7 +118,6 @@ var RadarChart = {
 	d.forEach(function(y, x){
 	  dataValues = [];
       label_school[series] = y[0].school;
-      console.log(label_school[series]);
       label.attr('class', 'd3-tip tooltip-radar').html(function(d) { return "<span class='tooltip-radar-title'>" + label_school[series] + "</span>" }); 
 	  g.selectAll(".nodes")
 		.data(y, function(j, i){
@@ -213,14 +212,14 @@ var RadarChart = {
     // property values for the axes
     var axisproperties = Object.keys(axisdata); 
     
-    console.log(allAxis)
-    console.log(axisdata); 
-      
+//    console.log(allAxis)
+//    console.log(axisdata); 
+     
     // swap array position of axis properties to match existing radar chart
     axisproperties.splice(2, 0, axisproperties[4]);
     axisproperties.splice(5, 1);
       
-    console.log(axisproperties);
+//    console.log(axisproperties);
 
       
     // labels for axes
