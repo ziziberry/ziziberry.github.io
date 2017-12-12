@@ -53,13 +53,13 @@ Categories.prototype.initVis = function(){
         .attr("width", vis.sqwidth)
         .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "black")
+        .attr("stroke", "#7395A3")
         .attr("stroke-width", "5px");
 
     vis.sorlab = vis.svg.append("text")
         .text("Sororities")
-        .attr("stroke", "#557A95")
-        .attr("fill", "#557A95")
+        .attr("stroke", "#5D5C61")
+        .attr("fill", "#5D5C61")
         .attr("font-size", "18px")
         .attr("x", vis.midwidth - vis.spacingx/2 + 40)
         .attr("y", vis.midheight - vis.spacingy/2 - marg);
@@ -70,13 +70,13 @@ Categories.prototype.initVis = function(){
         .attr("width", vis.sqwidth)
         .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "black")
+        .attr("stroke", "#7395A3")
         .attr("stroke-width", "5px");
 
     vis.fratlab = vis.svg.append("text")
         .text("Fraternities")
-        .attr("stroke", "#557A95")
-        .attr("fill", "#557A95")
+        .attr("stroke", "#5D5C61")
+        .attr("fill", "#5D5C61")
         .attr("font-size", "18px")
         .attr("x", vis.midwidth + vis.spacingx/2 + 35)
         .attr("y", vis.midheight - vis.spacingy/2 - marg);
@@ -87,13 +87,13 @@ Categories.prototype.initVis = function(){
         .attr("width", vis.sqwidth)
         .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "black")
+        .attr("stroke", "#7395A3")
         .attr("stroke-width", "5px");
 
     vis.ffclab = vis.svg.append("text")
         .text("Female Final Clubs")
-        .attr("stroke", "#557A95")
-        .attr("fill", "#557A95")
+        .attr("stroke", "#5D5C61")
+        .attr("fill", "#5D5C61")
         .attr("font-size", "18px")
         .attr("x", vis.midwidth - vis.spacingx/2 + 5)
         .attr("y", vis.midheight + vis.spacingy/2 - marg);
@@ -104,13 +104,13 @@ Categories.prototype.initVis = function(){
         .attr("width", vis.sqwidth)
         .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "black")
+        .attr("stroke", "#7395A3")
         .attr("stroke-width", "5px");
 
     vis.mfclab = vis.svg.append("text")
         .text("Male Final Clubs")
-        .attr("stroke", "#557A95")
-        .attr("fill", "#557A95")
+        .attr("stroke", "#5D5C61")
+        .attr("fill", "#5D5C61")
         .attr("font-size", "18px")
         .attr("x", vis.midwidth + vis.spacingx/2 + 15)
         .attr("y", vis.midheight + vis.spacingy/2 - marg);
@@ -121,13 +121,13 @@ Categories.prototype.initVis = function(){
         .attr("width", vis.sqwidth)
         .attr("height", vis.sqheight)
         .attr("fill", "none")
-        .attr("stroke", "black")
+        .attr("stroke", "#7395A3")
         .attr("stroke-width", "5px");
 
     vis.coedlab = vis.svg.append("text")
         .text("Co-Ed (Non-USGSO)")
-        .attr("stroke", "#557A95")
-        .attr("fill", "#557A95")
+        .attr("stroke", "#5D5C61")
+        .attr("fill", "#5D5C61")
         .attr("font-size", "18px")
         .attr("x", vis.midwidth)
         .attr("y", vis.midheight - marg);

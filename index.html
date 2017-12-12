@@ -33,6 +33,7 @@
             var $fade3 = $("#section3 .animated");
             var $fade8 = $("#section8 .animated");
 		    var $fade7 = $("#section7 .animated");
+		    var $fade9 = $("#section9 .animated");
 
             // initialize fullpage.js
 			$('#fullpage').fullpage({
@@ -110,6 +111,12 @@
                       $fade8.eq(5).css('animation-delay', '3.2s');
                       $fade8.eq(4).css('animation-delay', '3.2s');
                     }
+                   else if( index == 9 && nextIndex == 10 ) {
+                     $fade9.addClass('animated fadeIn');
+                     $fade9.eq(0).css('animation-delay', '.8s');
+                     $fade9.eq(1).css('animation-delay', '1.6s');
+                     $fade9.eq(2).css('animation-delay', '2.4s');
+                   }
                 }
 			});
 		});
@@ -353,7 +360,8 @@
                 <div class="openingcontainer1 container">
                     <h1 class="opening animated">Key Characters in the Sanctions</h1>
                     <h3 class="animated">Since May 2016, a multitude of key entities have been involved in the progression of the sanctions,
-                    both opposing and supporting.<br><br>Hover over the images to learn about the main parties: </h3>
+                    both opposing and supporting.</h3>
+                    <p class="bigger">Hover over the images to learn about the main parties:</p>
                 </div>
                 <!--<h3>Drew Gilpin Faust</h3>-->
                 <!--<img src="https://cdn-media.leanin.org/wp-content/uploads/2013/03/DrewFaust_290.jpg">-->
@@ -495,12 +503,16 @@
             <div class="openingcontainer container">
                 <div class="row">
                     <h1 class="opening">Where are we now?</h1>
-                    <h3 class="animated">The past few years have been fraught with tension regarding the current status of Harvard's unrecognized social groups.<br><br>
+                    <p class="animated bigger">The past few years have been fraught with tension regarding the current status of Harvard's unrecognized social groups.</p>
+                    <br>
+                    <p class="animated bigger">
                         While many administrators and faculty alike realize the negative impact of Harvard's final clubs and their associated exclusivity,
-                        many others realize the importance of freedom of association and value of women's spaces. <br><br>
+                        many others realize the importance of freedom of association and value of women's spaces.</p>
+                    <br>
+                    <p class="animated bigger">
                         However, no clear-cut, correct solution has been established,
-                        and the <b><a href="http://www.thecrimson.com/article/2017/12/8/sanctions-enforcement-next-semester/" target="_blank">implementation of the existing policy</a></b> is still to be decided.
-                    </h3>
+                        and the <b><a class='underline' href="http://www.thecrimson.com/article/2017/12/8/sanctions-enforcement-next-semester/" target="_blank">implementation of the existing policy</a></b> is still to be decided.
+                    </p>
                 </div>
             </div>
         </div>
