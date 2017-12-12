@@ -2,6 +2,7 @@
 ======
 ###  ZiZi Zhang, Tessa Muss, Kelly Luo
 ###  CS171 Final Project (Fall 2017)  
+
 &nbsp;
 # Project Links
 ### [Live Website](https://ziziberry.github.io/)
@@ -9,7 +10,8 @@
 ### [Screencast Video](youtube.com)
 ### [Github Repository](https://github.com/ziziberry/ziziberry.github.io)
 
-which parts are your code, which parts are libraries, and so on. The README must contain URLs to your project websites and screencast videos. The README must also explain any non-obvious features of your interface.
+which parts are your code, which parts are libraries, and so on. The README must contain URLs to your project websites and screencast videos. The README must also explain any non-obvious features of your interface.  
+
 &nbsp;
 # Project Code
 
@@ -23,8 +25,10 @@ which parts are your code, which parts are libraries, and so on. The README must
 
 ###  HTML & CSS
 * **index.html**: primary html file for webpage structure and content 
-* **style.css**: primary css file for webpage style
-&nbsp;
+* **style.css**: primary css file for webpage style  
+
+&nbsp;  
+
 # External Libraries
 
 ### Javascript
