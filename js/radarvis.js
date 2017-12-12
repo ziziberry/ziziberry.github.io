@@ -75,9 +75,9 @@ RadarVis.prototype.wrangleData = function(){
     // delete school category
     delete vis.axisdata.school; 
     delete vis.axisdata.top_20_percent; 
-    
-    console.log(vis.axisdata)
-    
+//    
+//    console.log(vis.axisdata)
+//    
     vis.updateVis();
 
 };
@@ -113,7 +113,7 @@ RadarVis.prototype.updateVis = function(){
 	  .attr("height", 10)
 	  .style("fill", function(d, i){ return vis.colorscale(i);});
     
-    console.log(Object.keys(vis.data));
+//    console.log(Object.keys(vis.data));
     
     // create text labels for legend
 	vis.radarlegend.selectAll("text")
