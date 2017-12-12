@@ -34,6 +34,7 @@
             var $fade8 = $("#section8 .animated");
 		    var $fade7 = $("#section7 .animated");
 		    var $fade9 = $("#section9 .animated");
+		    var $fade6 = $("#section6 .animated")
 
             // initialize fullpage.js
 			$('#fullpage').fullpage({
@@ -117,6 +118,13 @@
                      $fade9.eq(1).css('animation-delay', '1.6s');
                      $fade9.eq(2).css('animation-delay', '2.4s');
                    }
+                   else if( index == 6 && nextIndex == 7 ) {
+                    $fade6.addClass('animated fadeIn');
+                    $fade6.eq(0).css('animation-delay', '.8s');
+                    $fade6.eq(1).css('animation-delay', '1.6s');
+                    $fade6.eq(2).css('animation-delay', '1.6s');
+                    $fade6.eq(3).css('animation-delay', '1.6s');
+                  }
                 }
 			});
 		});
@@ -382,7 +390,7 @@
         <div class="section" id="section6">
             <div class="openingcontainer container">
                 <div class="row">
-                    <h1 class="opening animated">Should we follow in the footsteps of our 'peer institutions'?</h1>
+                    <h1 class="opening">Should we follow in the footsteps of our 'peer institutions'?</h1>
                     <h3 class="animated">Both the <b><a href="https://usgsocommittee.fas.harvard.edu/files/usgso-committee/files/usgso_committee_report_2017_final_draft.pdf" target="_blank" class="underline">
                         Faculty Committee's report</a></b> and the <b><a href="http://osl.fas.harvard.edu/files/osl/files/implementationcommitteefinalreport.pdf" target="_blank" class="underline">
                         Implementation Committee's report</a></b> cite "Amherst, Bowdoin, and Williams" as "peer institutions who have
@@ -390,13 +398,13 @@
 
                     <h3 class="animated caveat">The only caveat is that Harvard looks nothing like its Peer Institutions.</h3>
 
-                    <div class="col-md-5 radardescription">
+                    <div class="col-md-5 radardescription animated">
                         <div id="radarvis"></div>
                     </div>
                     <div class="col-md-1"></div>
                     <div class="col-md-1"></div>
                     <div class="col-md-5 peerinstitutions">
-                        <div id='peertable'></div>
+                        <div id='peertable' class="animated"></div>
                     </div>
 
                 </div>
@@ -468,14 +476,7 @@
                             they did prior to the sanctions, showing resistance to these policies.</p>
                             <p class="animated bigger"><br>To visualize how the USGSOs have responded to the sanctions:</p>
                             <ul id="howto" class="animated">
-                                <li class="instr instr1"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
-                                <li>
-                                    <form>
-                                        <label><input type="radio" name="sanctions" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
-                                        <label><input type="radio" name="sanctions" value="after" onclick="afterSanctions()">After Sanctions</label><br>
-                                    </form>
-                                </li>
-                                <li class="instr"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
+                                <li class="instr1"><b>Select a group from dropdown:</b> visualize a specific subset of clubs</li>
                                 <li>
                                     <select class="form-control dropdown" id="sort-type" onchange="filterView()">
                                         <option value="all">All</option>
@@ -485,6 +486,14 @@
                                         <option value="mfc">Male Final Clubs</option>
                                     </select>
                                 </li>
+                                <li class="instr instr"><b>Select a button:</b> visualize status of clubs before or after the sanctions announcement</li>
+                                <li>
+                                    <form>
+                                        <label><input type="radio" name="sanctions" value="before" onclick="beforeSanctions()">Before Sanctions</label><br>
+                                        <label><input type="radio" name="sanctions" value="after" onclick="afterSanctions()">After Sanctions</label><br>
+                                    </form>
+                                </li>
+
                                 <li>
                                     <p class="instr"><b>Hover over icons:</b> identify the organization</p>
                                 </li>

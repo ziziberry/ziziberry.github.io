@@ -72,10 +72,12 @@ var RadarChart = {
     // initialize school label 
  	var label; 
              
-    label = d3.tip()
+    label = d3.tip();
  
     // invoke tooltip 
-    g.call(label)
+    g.call(label);
+
+    d3.select("#peertable").html("<div class='peerpanel panel panel-default'><div class='panel-heading' style='color: black; background-color:none'>School</div><table class='table table-hover'><tbody><tr><th scope='row'>Student Body Population</th><td></td></tr><tr><th scope='row'>Median Family Income</th><td></td></tr><tr><th scope='row'>Percent of Students in Athletics</th><td></td></tr><tr><th scope='row'>Percent of Students in School Housing</th><td></td></tr><tr><th scope='row'>Acceptance Rate</th><td></td></tr><tr><th scope='row'>Yearly Tuition Cost</th><td></td></tr></tbody></table></div>");
       
 	//Circular segments
 	for(var j=0; j<cfg.levels-1; j++){

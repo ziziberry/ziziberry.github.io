@@ -26,7 +26,7 @@ body
     color: white;
     background-color: rgba(0, 0, 0, 0.45);
     padding: 5px;
-    width: 800px;
+    width: 950px;
 }
 
 h1
@@ -303,6 +303,7 @@ button {
 
 .underline{
     text-decoration: underline;
+    color: #7395A3;
 }
 
 .caveat{
