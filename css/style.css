@@ -306,9 +306,17 @@ button {
     color: #7395A3;
 }
 
+.instrradar{
+    color: #5D5C61;
+    font-size: 15px;
+    padding: 0px;
+    text-align: left;
+}
+
 .caveat{
     font-style: normal;
     font-weight: bold;
+    padding: 0px;
     color: #015791;
     font-family: Lato, Tahoma, Geneva, sans-serif;
 }
