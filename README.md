@@ -1,4 +1,4 @@
-[Dean Khurana's Crusade Against Harvard Undergraduate Social Groups](https://www.ziziberry.github.io)
+[Dean Khurana's Crusade Against Harvard Undergraduate Social Groups](https://ziziberry.github.io/)
 ======
 ###  ZiZi Zhang, Tessa Muss, Kelly Luo
 ###  CS171 Final Project (Fall 2017)  
