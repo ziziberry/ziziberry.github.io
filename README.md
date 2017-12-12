@@ -26,7 +26,7 @@ Interactive timeline overview of the development of the social sanctions since t
 The interactive radar chart overlays a school profile of Harvard College versus those of Peer Institutions identified by sanctions policy reports. Hover over individual nodes for specific statistics regarding a certain dimension and click on a layer to learn more information about the particular school.
 
 #### **Diverse Perspectives**
-Visualization of pro-sanction voices vs anti-sanction voices. 
+Visualization of pro-sanction voices vs anti-sanction voices to highlight the ongoing debate about the implementation and enforcement of social sanctions at Harvard. 
 
 #### **USGSO Perspective**
 Select a group from dropdown to visualize a specific subset of clubs (all, sororities, fraternities, male final clubs, female final clubs). Select a button to visualize status of clubs before or after the sanctions announcement. Hover over icons to identify the organization and contextualize their current status in regards to the sanctions. 
