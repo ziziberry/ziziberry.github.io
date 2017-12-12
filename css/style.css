@@ -564,6 +564,7 @@ div.tooltip {
     /*height: 28px;*/
     padding: 10px;
     font: 12px sans-serif;
+    color: black;
     background: lightsteelblue;
     border: 5px;
     border-radius: 6px;
